@@ -38,7 +38,7 @@ Description: "Observation of a patient's current alcohol consumption status. Opt
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#social-history "Social History"
-* code = $sct#160573003 "Alcohol intake (observable entity)"
+* code = $sct#897148007 "Alcoholic beverage intake (observable entity)"
 * subject 1..
 * subject only Reference(LTBasePatient)
 * effective[x] 1..
@@ -51,7 +51,7 @@ Description: "Observation of a patient's current alcohol consumption status. Opt
 * component ^slicing.discriminator[0].path = "code"
 * component ^slicing.rules = #open
 * component contains auditc 0..1
-* component[auditc].code = $sct#763256006 "Alcohol Use Disorders Identification Test - Consumption score (finding)"
+* component[auditc].code = $sct#763256006 "Alcohol Use Disorders Identification Test - Consumption score (observable entity)"
 * component[auditc].value[x] only Quantity
 * component[auditc].valueQuantity 1..1
 * component[auditc].valueQuantity.system = $ucum
@@ -71,7 +71,7 @@ Title: "Example LT Alcohol Consumption – No"
 Description: "Patient is currently not drinking alcohol (sober) at the time of assessment."
 * status = #final
 * category = $observation-category#social-history "Social History"
-* code = $sct#160573003 "Alcohol intake (observable entity)"
+* code = $sct#897148007 "Alcoholic beverage intake (observable entity)"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#105542008 "Current non-drinker of alcohol (finding)"
@@ -87,11 +87,11 @@ Title: "Example LT Alcohol Consumption – Yes with AUDIT-C"
 Description: "Patient currently consumes alcohol; AUDIT-C score provided."
 * status = #final
 * category = $observation-category#social-history "Social History"
-* code = $sct#160573003 "Alcohol intake (observable entity)"
+* code = $sct#897148007 "Alcoholic beverage intake (observable entity)"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#365967005 "Finding of alcohol intake (finding)"
-* component[auditc].code = $sct#763256006 "Alcohol Use Disorders Identification Test - Consumption score (finding)"
+* component[auditc].code = $sct#763256006 "Alcohol Use Disorders Identification Test - Consumption score (observable entity)"
 * component[auditc].valueQuantity.value = 7
 * component[auditc].valueQuantity.system = $ucum
 * component[auditc].valueQuantity.code = #{score}

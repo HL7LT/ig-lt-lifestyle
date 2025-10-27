@@ -1,6 +1,6 @@
 ValueSet: LTFamilyHistoryCVDStatus
 Id: lt-family-history-cvd-status
-Title: "LT Family History of Cardiovascular Disease"
+Title: "LT Family History of Cardiovascular Disease ValueSet"
 Description: "Indicates whether the patient has a family history of cardiovascular disease."
 * ^language = #en
 * ^version = "1.0.0"
@@ -9,13 +9,13 @@ Description: "Indicates whether the patient has a family history of cardiovascul
 * ^publisher = "HL7 Lithuania"
 * $sct#160270001 "No family history: Cardiovascular disease (situation)" //No
 * $sct#266894000 "Family history: Cardiovascular disease (situation)"    //Yes
-* $sct#415667004 "Family history unknown (situation)"                    //Unknown
+* $sct#407559004 "Family history unknown (situation)"                    //Unknown
 
 
 // ValueSet: LT Family History of Diabetes
 ValueSet: LTFamilyHistoryDiabetesStatus
 Id: lt-family-history-diabetes-status
-Title: "LT Family History of Diabetes"
+Title: "LT Family History of Diabetes ValueSet"
 Description: "Indicates whether the patient has a family history of diabetes mellitus."
 * ^language = #en
 * ^version = "1.0.0"
@@ -24,13 +24,13 @@ Description: "Indicates whether the patient has a family history of diabetes mel
 * ^publisher = "HL7 Lithuania"
 * $sct#160274005 "No family history of diabetes mellitus (situation)"  // No
 * $sct#161445009 "History of diabetes mellitus (situation)"            // Yes
-* $sct#415667004 "Family history unknown (situation)"                  // Unknown
+* $sct#407559004 "Family history unknown (situation)"                  // Unknown
 
 
 // ValueSet: LT Family History of Familial Hypercholesterolemia
 ValueSet: LTFamilyHistoryFHStatus
 Id: lt-family-history-fh-status
-Title: "LT Family History of Familial Hypercholesterolemia"
+Title: "LT Family History of Familial Hypercholesterolemia ValueSet"
 Description: "Indicates whether the patient has a family history of familial hypercholesterolemia."
 * ^language = #en
 * ^version = "1.0.0"
@@ -39,7 +39,7 @@ Description: "Indicates whether the patient has a family history of familial hyp
 * ^publisher = "HL7 Lithuania"
 * $sct#160303001 "No family history of disease (situation)"           // No
 * $sct#473145005 "Possible familial hypercholesterolemia (situation)"  // Yes
-* $sct#415667004 "Family history unknown (situation)"                  // Unknown
+* $sct#407559004 "Family history unknown (situation)"                  // Unknown
 
 
 

@@ -21,7 +21,7 @@ Description: "Observation representing the patient's serum or plasma creatinine 
 * valueQuantity.unit = "µmol/L"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #umol/L
-* interpretation from $observation-interpretation (extensible)
+* interpretation from http://hl7.org/fhir/ValueSet/observation-interpretation (extensible)
 * interpretation ^short = "Interpretation of the creatinine result (e.g., Normal, High, Low)"
 * component ..0
 
@@ -50,7 +50,7 @@ Description: "Observation representing estimated glomerular filtration rate (eGF
 * valueQuantity.unit = "mL/min/1.73 m²"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #mL/min/{1.73_m2}
-* interpretation from $observation-interpretation (extensible)
+* interpretation from http://hl7.org/fhir/ValueSet/observation-interpretation (extensible)
 * interpretation ^short = "Interpretation of the eGFR result (e.g., Normal, Low, High)"
 * component ..0
 
@@ -79,7 +79,7 @@ Description: "Observation representing the urine albumin-to-creatinine ratio (AC
 * valueQuantity.unit = "mg/g creatinine"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #mg/g{creat}
-* interpretation from $observation-interpretation (extensible)
+* interpretation from http://hl7.org/fhir/ValueSet/observation-interpretation (extensible)
 * interpretation ^short = "Interpretation of the ACR result (e.g., Normal, High)"
 * component ..0
 
@@ -139,5 +139,5 @@ Description: "Example observation of a patient's urine albumin-to-creatinine rat
 * valueQuantity.unit = "mg/g creatinine"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mg/g{creat}
-* interpretation = $observation-interpretation#N "Normal"
+* interpretation = $v3-obs-interpretation#N "Normal"
 * note.text = "Urine albumin/creatinine ratio within normal range (<30 mg/g creatinine)."
