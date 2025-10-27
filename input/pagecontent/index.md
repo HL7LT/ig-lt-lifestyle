@@ -2,36 +2,27 @@
 
 ## Introduction and Purpose
 
-The **Lithuanian Base Implementation Guide (LTBase IG)** establishes the national foundation for using the **FHIR (Fast Healthcare Interoperability Resources)** standard within the Lithuanian digital health ecosystem.
+This IG specifies how to consistently represent and exchange critical non-clinical patient data related to **lifestyle and health behaviors** using the **Fast Healthcare Interoperability Resources (FHIR)** standard. The accurate capture and sharing of this information is vital for comprehensive patient care, risk stratification, chronic disease management, and public health initiatives.
 
-Its primary purpose is to **simplify the adoption and implementation** of FHIR by providing a standardized, consensus-based framework. By doing so, this guide aims to **ensure consistency** in the representation of clinical and administrative data, **enhance system interoperability**, and accelerate the transition toward a modern, **scalable digital health ecosystem** in Lithuania.
+## Scope and Core Observations
 
-This guide is adapted to the **specific realities, needs, and regulatory features of the Lithuanian national healthcare system.**
+This guide provides structured FHIR profiles and guidance for a core set of lifestyle factors, including:
 
-### Limitations
+* **Tobacco Use:** Smoking status, exposure, and cessation history.
+* **Alcohol Use:** Consumption patterns, screening results (e.g., AUDIT), and intervention history.
+* **Physical Activity:** Exercise frequency, duration, and intensity (e.g., using METs).
+* **Dietary Intake:** Specific nutrient consumption (e.g., sodium, sugar) and overall dietary patterns.
+* **Biometric Data:** Relevant screening observations like **Cholesterol** (Lipid Panel).
 
-This FHIR R5 Implementation Guide (IG) is a work in progress and is not yet ready for production use. It is intended for testing and feedback purposes only. The content is subject to change as the IG is developed further.
+## Why Use This Guide?
 
-## Scope and Components
+By adopting these profiles, implementers can ensure a standardized approach to:
 
-The LTBase IG provides a comprehensive collection of artifacts intended for reuse by all health IT systems and implementation projects across the Republic of Lithuania. It serves as the official source of documentation for basic FHIR conformance in the country.
+1. **Interoperability:** Facilitate seamless, semantic exchange of lifestyle data between Electronic Health Records (EHRs), patient portals, research systems, and public health registries.
+2. **Data Quality:** Improve the consistency, completeness, and clinical utility of recorded observations through mandated value sets and data types.
+3. **Clinical Utility:** Support clinical decision support, quality measure reporting, and population health management efforts that rely on accurate behavioral and biometric context.
 
-The scope encompasses:
-
-- **LT Base Profiles:** A set of **loosely constrained profiles** on core FHIR resources (e.g., Patient, Practitioner, Organization, Location). These profiles specify the minimum conformance expectations, adapt resource elements to local needs, and establish a **common baseline of support** for digital healthcare in the Republic.
-- **National Identifiers and Naming Systems:** Definition of national-specific identifiers (e.g., Personal Code, Medical License Numbers) and corresponding naming systems that **must be used** for unique identification of patients, practitioners, and organizations.
-- **Local Terminology:** Ready-to-use **CodeSystems and ValueSets** developed specifically for Lithuanian healthcare data exchange. Where possible, this includes translations and extensions of international terminologies (such as SNOMED CT, LOINC, ICD-10) to support national codes and classifications.
-- **Guiding Principles:** Instructional materials and policy guidance to support vendors and developers in authoring derived profiles, managing extensions, and ensuring data quality.
-
-## Guiding Principles for Implementation
-
-LTBase profiles are designed to be flexible and highly reusable across various use cases:
-
-1. **Foundation, Not Final Product:** The Base Profiles are intended as a **starting point** for utilizing the possibilities offered by FHIR. They should not be considered suitable for a completely described deployable service in and of itself, but rather must be used as a **base profile to derive additional, use-case-specific profiles** from (e.g., for a specific clinical registry or a data sharing service).
-2. **Minimal Constraints (Open World):** Following the example of the FHIR approach, most of the cardinalities and binding strengths are held to a **minimum** to support open-world modeling, allowing derived profiles to restrict them further as necessary.
-3. **Must Support (MS) Flags:** Elements critical for national data exchange (e.g., patient identifiers, name, gender, birth date) are clearly marked with the **Must Support (MS)** flag, indicating that consuming systems must be able to process and utilize this information.
-
----
+Navigate the sections below to access the profiles, terminology bindings, and detailed examples needed to implement the standard.
 
 ### IP Statements
 <!-- { // not yet supported by i18n in IG publisher: % include ip-statements.xhtml %} -->
@@ -40,5 +31,5 @@ LTBase profiles are designed to be flexible and highly reusable across various u
 
 | Name                                             | Role                          | Organization                                    |
 | ------------------------------------------------ | ----------------------------- | ----------------------------------------------- |
-| [Igor Bossenko](https://www.linkedin.com/in/igor-bossenko/)     | Primary Author                | [HELEX](https://helex.org) |
-| [Some Person](#) | Co-Author                 | [LMB](https://lmb.lt)               |
+| [Igor Bossenko](https://www.linkedin.com/in/igor-bossenko/)     | Primary Author                | [HELEX](https://helex.health) |
+| [Kati Laidus](https://www.linkedin.com/in/kati-laidus/) | Co-Author                 | [HELEX](https://helex.health)               |
