@@ -67,7 +67,7 @@ Description: "This profile constrains the Observation resource to represent Toba
 * ^version = "1.0.0"
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
-* ^publisher = "HL7 Lithuanian"
+* ^publisher = "HL7 Lithuania"
 * category = $observation-category#social-history "Social History"
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[0].path = "system"
@@ -117,7 +117,7 @@ Description: "This profile constrains the Observation resource to represent Toba
 * ^version = "1.0.0"
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
-* ^publisher = "HL7 Lithuanian"
+* ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#social-history "Social History"
 * code = $sct#266918002 "Tobacco smoking consumption (observable entity)"
@@ -158,7 +158,7 @@ Description: "Amount of time (e.g. years) the patient has used smoking or smokel
 * ^version = "1.0.0"
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
-* ^publisher = "HL7 Lithuanian"
+* ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#social-history "Social History"
 * code.coding ^slicing.discriminator[0].type = #value
@@ -204,7 +204,7 @@ Description: "Records how long it has been since the patient stopped smoking, as
 * ^version = "1.0.0"
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
-* ^publisher = "HL7 Lithuanian"
+* ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#social-history "Social History"
 * code = $sct#228486009 "Time since stopped smoking (observable entity)"
@@ -241,7 +241,7 @@ Description: "Records the type of tobacco product currently or previously used b
 * ^version = "1.0.0"
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
-* ^publisher = "HL7 Lithuanian"
+* ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#social-history "Social History"
 * code.coding ^slicing.discriminator[0].type = #value
