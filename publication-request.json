@@ -1,0 +1,14 @@
+{
+   "package-id" : "lt.hl7.fhir.lifestyle",
+   "version" : "0.0.1",
+   "path" : "https://hl7.lt/fhir/lifestyle/0.0.1",
+   "mode" : "milestone",
+   "status" : "draft",
+   "sequence" : "DSTU1",
+   "desc" : "Initial release as LT Lifestyle IG.",
+   "first" : true,
+   "title" : "Lithuanian Lifestyle FHIR Implementation Guide",
+   "ci-build" : "http://build.fhir.org/ig/HL7LT/ig-lt-lifestyle",
+   "category" : "Diagnostics",
+   "introduction" : "A set of the reusable lifestyle resources."
+}
