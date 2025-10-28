@@ -1,4 +1,4 @@
-# Lithuanian Base Implementation Guide
+# Lithuanian Lifestyle Implementation Guide
 
 ## Introduction and Purpose
 
@@ -31,5 +31,6 @@ Navigate the sections below to access the profiles, terminology bindings, and de
 
 | Name                                             | Role                          | Organization                                    |
 | ------------------------------------------------ | ----------------------------- | ----------------------------------------------- |
-| [Igor Bossenko](https://www.linkedin.com/in/igor-bossenko/)     | Primary Author                | [HELEX](https://helex.health) |
+| [Igor Bossenko](https://about.askigor.eu)     | Primary Author                | [HELEX](https://helex.health) |
 | [Kati Laidus](https://www.linkedin.com/in/kati-laidus/) | Co-Author                 | [HELEX](https://helex.health)               |
+| Martynas Bieliauskas                           | Reviewer                 | [LMB](https://lmb.lt)               |
