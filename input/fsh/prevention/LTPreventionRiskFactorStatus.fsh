@@ -61,7 +61,7 @@ Captures both the assessed risk probability and the treatment status.
 * ^version = "1.0.0"
 * ^date = "2025-10-26T11:00:00+03:00"
 * ^experimental = true
-* ^publisher = "HL7 Lithuanian"
+* ^publisher = "HL7 Lithuania"
 * category = $observation-category#social-history "Social History"
 * code 1..1
 * code from LTPreventionRiskFactorType (extensible)
@@ -142,7 +142,7 @@ Treatment status complements the assessed risk factor probability.
 // * ^language = #en
 // * ^version = "1.0.0"
 // * ^date = "2025-10-26T15:00:00+03:00"
-// * ^publisher = "HL7 Lithuanian"
+// * ^publisher = "HL7 Lithuania"
 // * code = $sct#248311001 "Central obesity (disorder)"
 // * component[treatment] 0..0
 
@@ -156,7 +156,7 @@ Treatment status complements the assessed risk factor probability.
 // * ^language = #en
 // * ^version = "1.0.0"
 // * ^date = "2025-10-26T18:00:00+03:00"
-// * ^publisher = "HL7 Lithuanian"
+// * ^publisher = "HL7 Lithuania"
 // * code = $sct#414916001 "Obesity (disorder)"
 // * component[treatment] 0..0
 

@@ -17,7 +17,6 @@ Invariant: auditc-range
 Description: "AUDIT-C score must be between 0 and 12 inclusive."
 Severity: #error
 Expression: "value.ofType(Quantity).value.all($this >= 0 and $this <= 12)"
-
 Invariant: auditc-ucum
 Description: "AUDIT-C score must use UCUM {score}."
 Severity: #error
