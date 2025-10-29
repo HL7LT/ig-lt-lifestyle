@@ -20,7 +20,7 @@ Description: "AUDIT-C koguskoor (0–12) kui kvantitatiivne Observation; vajadus
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 
-* category = $observation-category#social-history "Social History"
+* category = $observation-category#survey "Survey"
 
 // Kood (LOINC + SNOMED) – slicing system’i järgi
 * code.coding ^slicing.discriminator[0].type = #value
@@ -56,7 +56,7 @@ Usage: #example
 Title: "Example AUDIT-C Observation"
 Description: "AUDIT-C koguskoor koos viitega vastusele."
 * status = #final
-* category = $observation-category#social-history "Social History"
+* category = $observation-category#survey "Survey"
 * code.coding[loincCode] = $loinc#75626-2 "Total score [AUDIT-C]"
 * code.coding[sctCode] = $sct#763256006 "Alcohol Use Disorders Identification Test - Consumption score (observable entity)"
 * subject = Reference(example-patient)

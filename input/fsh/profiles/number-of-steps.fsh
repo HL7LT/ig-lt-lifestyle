@@ -47,10 +47,11 @@ Description: "The measurement tracks the count of steps taken by an individual d
 * dataAbsentReason MS
 * dataAbsentReason ^condition = "vs-ns-2"
 
-* extension contains
-    MeasurementSettingExt named MeasurementSetting 0..1 MS
-* extension[MeasurementSetting] ^short = "Measurement setting"
-* interpretation from NumericResultInterpretationNonPanic (extensible)
+// TODO add dependencies to vital signs and uncomment text
+// * extension contains
+//     MeasurementSettingExt named MeasurementSetting 0..1 MS
+// * extension[MeasurementSetting] ^short = "Measurement setting"
+// * interpretation from NumericResultInterpretationNonPanic (extensible)
 
 * component 0..0
 * bodySite ..0
@@ -85,7 +86,7 @@ Usage: #example
 Title: "Example Number of Steps Measurement"
 Description: "Example observation representing the number of steps taken by a person in 24 hours."
 * status = #final
-* category[VSCat] = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#activity "Activity"
 * category[NumberOfStepsCode] = $loinc#41950-7 "Number of steps in 24 hour Measured"
 * code = $loinc#41950-7 "Number of steps in 24 hour Measured"
 * subject = Reference(example-patient)

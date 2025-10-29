@@ -22,7 +22,7 @@ Description: "This profile constrains the Observation resource to represent the 
 * ^date = "2025-10-27T09:00:00+03:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-* category = $observation-category#social-history "Social History"
+* category = $observation-category#activity "Activity"
 * code = $sct#68130003 "Physical activity (observable entity)"
 * subject 1..
 * subject only Reference(LTBasePatient)
@@ -41,7 +41,7 @@ Title: "Example LT Physical Activity - Below Recommended Level"
 Description: "Example instance showing a patient whose physical activity level is below recommended standards."
 
 * status = #final
-* category = $observation-category#social-history "Social History"
+* category = $observation-category#activity "Activity"
 * code = $sct#68130003 "Physical activity (observable entity)"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
