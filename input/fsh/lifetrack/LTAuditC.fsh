@@ -75,6 +75,6 @@ Title: "Example AUDIT-C QuestionnaireResponse"
 Description: "Minimal QR to which the Observation refers."
 * status = #completed
 * subject = Reference(example-patient)
-// Viide US Core AUDIT-C näidisküsimustikule (valikuline, võib jätta ka puudu)
+// Reference to the US Core AUDIT-C sample questionnaire (optional, may be omitted)
 * questionnaire = "http://hl7.org/fhir/us/core/Questionnaire/AUDIT-C|8.0.0"
 * authored = "2025-10-28T09:58:00+03:00"
