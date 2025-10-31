@@ -1,3 +1,11 @@
+Extension: MedicationTiming
+Id: MedicationTiming
+Description: "The timing instructions for the medication (e.g., 'Before Meals', 'With Food')."
+Context: Element
+* ^url = "https://hl7.lt/fhir/lifestyle/StructureDefinition/medication-timing"
+* value[x] only string
+* valueString ^short = "The timing instruction for the medication."
+
 Profile: LtScreeningMedicationStatement
 Parent: MedicationStatement
 Id: lt-screening-medication-statement
@@ -11,6 +19,9 @@ Description: "A simplified profile for MedicationStatement focusing on essential
 * subject only Reference(Patient)
 * subject ^type[0].targetProfile = LTBasePatient
 * dosage 1..1 MS
+* dosage.extension contains MedicationTiming named medicationTiming 0..1
+* dosage.extension[medicationTiming] 0..1 MS
+
 * dosage.doseAndRate.doseQuantity 1..1 MS
 * dosage.doseAndRate.doseQuantity.value 1..1 MS
 * dosage.doseAndRate.doseQuantity.code 0..1 MS
@@ -28,9 +39,9 @@ Usage: #example
 * dosage
   * doseAndRate
     * doseQuantity
-      * value = 20
-      * unit = "tablets"
-  * text = "some timing"
+      * value = 1
+      * unit = "tablet"
+  * extension[medicationTiming].valueString = "3 times per day after meals"
 * reason.concept = $sct#166643006 "Liver enzymes abnormal"
 * note.text = "Patient cannot take acetaminophen as per Dr instructions"
 
