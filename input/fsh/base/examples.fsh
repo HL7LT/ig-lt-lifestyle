@@ -1,7 +1,7 @@
 Instance: example-patient
 InstanceOf: LTBasePatient // Links this instance to the specific profile
 Usage: #example
-Title: "Jonas Petrauskas - LT Base Patient Example"
+Title: "Example Patient - Jonas Petrauskas"
 Description: "An example Patient conforming to the Lithuanian Base Profile."
 
 // Identifiers (Required: 1..* MS)
