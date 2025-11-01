@@ -13,11 +13,11 @@ Description: "Defines the interpretation categories for cardiovascular disease r
 * $observation-interpretation#H "High"
 * $observation-interpretation#HU "Significantly high"
 
-Profile: LTPreventionRiskGroup
+Profile: LTScreeningRiskGroup
 Parent: LTBaseObservation
-Id: lt-prevention-risk-group
-Title: "LT Prevention Risk Group"
-Description: "Records the patient’s cardiovascular prevention risk classification, expressed as a percentage value and interpreted using HL7 Observation Interpretation codes."
+Id: lt-Screening-risk-group
+Title: "LT Screening Risk Group"
+Description: "Records the patient’s cardiovascular Screening risk classification, expressed as a percentage value and interpreted using HL7 Observation Interpretation codes."
 * ^status = #draft
 * ^language = #en
 * ^version = "1.0.0"
@@ -45,9 +45,9 @@ The interpretation category is derived from the numeric cardiovascular risk perc
 
 // Example
 Instance: example-cvd-risk-group
-InstanceOf: LTPreventionRiskGroup
+InstanceOf: LTScreeningRiskGroup
 Usage: #example
-Title: "Example LT Prevention Risk Group - High"
+Title: "Example LT Screening Risk Group - High"
 Description: "Example showing a patient assessed as having a 24% cardiovascular disease risk, categorized as High."
 * status = #final
 * category = $observation-category#social-history "Social History"

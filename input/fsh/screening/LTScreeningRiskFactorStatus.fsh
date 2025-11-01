@@ -1,8 +1,8 @@
 // Valueset for Treatment Status
-ValueSet: LTPreventionTreatmentStatus
-Id: lt-prevention-treatment-status
-Title: "Prevention Treatment Status"
-Description: "Indicates whether a preventive treatment or intervention has been provided for a risk factor."
+ValueSet: LTScreeningTreatmentStatus
+Id: lt-screening-treatment-status
+Title: "Screening Treatment Status"
+Description: "Indicates whether a screening treatment or intervention has been provided for a risk factor."
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active
@@ -12,10 +12,10 @@ Description: "Indicates whether a preventive treatment or intervention has been 
 * $sct#182992009 "Treatment completed (situation)"
 * $sct#183964008 "Treatment not indicated (situation)"
 
-ValueSet: LTPreventionRiskFactorType
-Id: lt-prevention-risk-factor-type
-Title: "LT Prevention Risk Factor Types"
-Description: "SNOMED CT concepts representing prevention-related risk factors."
+ValueSet: LTScreeningRiskFactorType
+Id: lt-Screening-risk-factor-type
+Title: "LT Screening Risk Factor Types"
+Description: "SNOMED CT concepts representing Screening-related risk factors."
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active
@@ -47,12 +47,12 @@ Description: "SNOMED CT concepts representing prevention-related risk factors."
 
 
 // Generic profile, reusable across multiple risk factors (hypertension, dyslipidemia, diabetes, etc).
-Profile: LTPreventionRiskFactorStatus
+Profile: LTScreeningRiskFactorStatus
 Parent: LTBaseObservation
-Id: lt-prevention-risk-factor-status
-Title: "LT Prevention Risk Factor Status"
+Id: lt-Screening-risk-factor-status
+Title: "LT Screening Risk Factor Status"
 Description: """
-Generic structure for recording prevention-related risk factors, 
+Generic structure for recording Screening-related risk factors, 
 such as hypertension, diabetes, or dyslipidemia. 
 Captures both the assessed risk probability and the treatment status.
 """
@@ -64,7 +64,7 @@ Captures both the assessed risk probability and the treatment status.
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#social-history "Social History"
 * code 1..1
-* code from LTPreventionRiskFactorType (extensible)
+* code from LTScreeningRiskFactorType (extensible)
 * code ^short = "Type of risk factor (e.g., hypertension, diabetes, dyslipidemia)"
 * subject 1..
 * subject only Reference(LTBasePatient)
@@ -92,7 +92,7 @@ Examples:
 // --- Treatment slice ---
 * component[treatment].code = $sct#443938003 "Procedure carried out on subject"
 * component[treatment].value[x] only CodeableConcept
-* component[treatment].valueCodeableConcept from LTPreventionTreatmentStatus (extensible)
+* component[treatment].valueCodeableConcept from LTScreeningTreatmentStatus (extensible)
 * component[treatment] ^short = "Indicates whether treatment has been given or not."
 * component[treatment] ^comment = """
 Treatment status complements the assessed risk factor probability.
@@ -101,42 +101,42 @@ Treatment status complements the assessed risk factor probability.
 """
 
 // // Hypertension profile
-// Profile: LTPreventionHypertension
-// Parent: LTPreventionRiskFactorStatus
-// Id: lt-prevention-hypertension
-// Title: "LT Prevention Hypertension Status"
+// Profile: LTScreeningHypertension
+// Parent: LTScreeningRiskFactorStatus
+// Id: lt-Screening-hypertension
+// Title: "LT Screening Hypertension Status"
 // Description: "Specialization of Risk Factor Status for Hypertension."
 // * code = $sct#38341003 "Hypertensive disorder, systemic arterial (disorder)"
 
 // // Dyslipidemia profile
-// Profile: LTPreventionDyslipidemia
-// Parent: LTPreventionRiskFactorStatus
-// Id: lt-prevention-dyslipidemia
-// Title: "LT Prevention Dyslipidemia Status"
+// Profile: LTScreeningDyslipidemia
+// Parent: LTScreeningRiskFactorStatus
+// Id: lt-Screening-dyslipidemia
+// Title: "LT Screening Dyslipidemia Status"
 // Description: "Specialization of Risk Factor Status for Dyslipidemia."
 // * code = $sct#370992007 "Dyslipidemia (disorder)"
 
 // // Diabetes profile 
-// Profile: LTPreventionDiabetes
-// Parent: LTPreventionRiskFactorStatus
-// Id: lt-prevention-diabetes
-// Title: "LT Prevention Diabetes Status"
+// Profile: LTScreeningDiabetes
+// Parent: LTScreeningRiskFactorStatus
+// Id: lt-Screening-diabetes
+// Title: "LT Screening Diabetes Status"
 // Description: "Specialization of Risk Factor Status for Diabetes mellitus."
 // * code = $sct#73211009 "Diabetes mellitus (disorder)"
 
 // // Impaired Glucose Tolerance or Fasting Glycemia profile 
-// Profile: LTPreventionImpairedGlucoseTolerance
-// Parent: LTPreventionRiskFactorStatus
-// Id: lt-prevention-impaired-glucose-tolerance
-// Title: "LT Prevention Impaired Glucose Tolerance or Fasting Glycemia Status"
+// Profile: LTScreeningImpairedGlucoseTolerance
+// Parent: LTScreeningRiskFactorStatus
+// Id: lt-Screening-impaired-glucose-tolerance
+// Title: "LT Screening Impaired Glucose Tolerance or Fasting Glycemia Status"
 // Description: "Specialization of Risk Factor Status for Impaired glucose tolerance or impaired fasting glycemia."
 // * code from LTRiskFactorImpairedGlucoseVS (required)
 
-// // Profile: LTPreventionCentralObesity
+// // Profile: LTScreeningCentralObesity
 // Profile: LTPreventio3nCentralObesity
-// Parent: LTPreventionRiskFactorStatus
-// Id: lt-prevention-central-obesity
-// Title: "LT Prevention Central (Abdominal) Obesity Status"
+// Parent: LTScreeningRiskFactorStatus
+// Id: lt-Screening-central-obesity
+// Title: "LT Screening Central (Abdominal) Obesity Status"
 // Description: "Specialization of Risk Factor Status for Central (Abdominal) Obesity. Indicates whether central obesity is present or absent."
 // * ^status = #draft
 // * ^language = #en
@@ -146,11 +146,11 @@ Treatment status complements the assessed risk factor probability.
 // * code = $sct#248311001 "Central obesity (disorder)"
 // * component[treatment] 0..0
 
-// // Profile: LTPreventionObesity
-// Profile: LTPreventionObesity
-// Parent: LTPreventionRiskFactorStatus
-// Id: lt-prevention-obesity
-// Title: "LT Prevention Obesity Status"
+// // Profile: LTScreeningObesity
+// Profile: LTScreeningObesity
+// Parent: LTScreeningRiskFactorStatus
+// Id: lt-Screening-obesity
+// Title: "LT Screening Obesity Status"
 // Description: "Specialization of Risk Factor Status for general Obesity. Indicates whether obesity is present or absent."
 // * ^status = #draft
 // * ^language = #en
@@ -163,7 +163,7 @@ Treatment status complements the assessed risk factor probability.
 
 // Example: Hypertension Risk - Negligible, Treatment Not Indicated
 Instance: example-hypertension-negligible-risk
-InstanceOf: LTPreventionRiskFactorStatus
+InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
 Title: "Example LT Hypertension Risk - Negligible"
 Description: "Example showing a patient with negligible risk for hypertension; treatment not indicated."
@@ -182,7 +182,7 @@ Description: "Example showing a patient with negligible risk for hypertension; t
 
 // Example: Dyslipidemia - Treated
 Instance: example-dyslipidemia-treated
-InstanceOf: LTPreventionRiskFactorStatus
+InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
 Title: "Example LT Dyslipidemia - Treated"
 Description: "Example showing a patient with confirmed dyslipidemia currently under lipid-lowering therapy."
@@ -200,7 +200,7 @@ Description: "Example showing a patient with confirmed dyslipidemia currently un
 
 // Example: Diabetes - Untreated
 Instance: example-diabetes-untreated
-InstanceOf: LTPreventionRiskFactorStatus
+InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
 Title: "Example LT Diabetes - Untreated"
 Description: "Example showing a patient with confirmed diabetes mellitus but not yet receiving treatment."
@@ -218,7 +218,7 @@ Description: "Example showing a patient with confirmed diabetes mellitus but not
 
 // Example: Impaired Glucose Tolerance or Fasting Glycemia - Exists
 Instance: example-impaired-glucose-tolerance
-InstanceOf: LTPreventionRiskFactorStatus
+InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
 Title: "Example LT Impaired Glucose Tolerance or Fasting Glycemia - Exists"
 Description: "Example showing a patient identified with impaired glucose tolerance or impaired fasting glycemia."
@@ -236,7 +236,7 @@ Description: "Example showing a patient identified with impaired glucose toleran
 
 // Example of patient with central  obesity
 Instance: example-central-obesity-present
-InstanceOf: LTPreventionRiskFactorStatus
+InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
 Title: "Example LT Central Obesity - Exists"
 Description: "Example showing a patient identified as having central (abdominal) obesity."
@@ -252,7 +252,7 @@ Description: "Example showing a patient identified as having central (abdominal)
 
 // Example: Obesity - Exists
 Instance: example-obesity-present
-InstanceOf: LTPreventionRiskFactorStatus
+InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
 Title: "Example LT Obesity - Exists"
 Description: "Example showing a patient identified as having general obesity."

@@ -12,17 +12,17 @@ Description: "A simplified profile for CarePlan focusing on essential elements."
 
 
 
-// FHIR R5 CarePlan Instance: Plan for Heart and Blood Vessel Disease Prevention Measures
-Instance: CVDPreventionPlanExample
+// FHIR R5 CarePlan Instance: Plan for Heart and Blood Vessel Disease Screening Measures
+Instance: CVDScreeningPlanExample
 InstanceOf: LtScreeningCarePlan
 Usage: #example
-Title: "CVD Prevention Plan Example"
+Title: "CVD Screening Plan Example"
 Description: "An example instance of a CarePlan for a patient at risk of Cardiovascular Disease (CVD), covering goals and activities related to lifestyle changes."
 
 // === 1. Metadata and Administrative Details ===
 * status = #active
 * intent = #plan
-* title = "Plan for Heart and Blood Vessel Disease Prevention Measures"
+* title = "Plan for Heart and Blood Vessel Disease Screening Measures"
 * description = "Comprehensive plan detailing lifestyle modifications, pharmacological advice, and biometric targets for CVD risk reduction."
 * created = 2025-10-31T10:00:00+02:00 // Plan creation date
 

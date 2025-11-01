@@ -225,19 +225,19 @@ Description: "Example instance showing a patient who is a light cigarette smoker
 * note.text = "Patient reports smoking approximately 8 cigarettes per day."
 
 
-// Example: Tobacco Smoking Consumption - LOINC Code Used
-Instance: example-tobacco-smoking-consumption-loinc
-InstanceOf: LTLifeTrackTobaccoSmokingConsumption
-Usage: #example
-Title: "Example LT Smoking Consumption - LOINC-based Observation"
-Description: "Example instance showing a patient's smoking consumption using the LOINC code for Tobacco smoking status."
-* status = #final
-* category = $observation-category#social-history "Social History"
-* code = $loinc#72166-2 "Tobacco smoking status"
-* subject = Reference(example-patient)
-* effectiveDateTime = "2025-10-01T09:00:00Z"
-* valueCodeableConcept = $sct#160605003 "Heavy cigarette smoker (20-39 cigs/day)"
-* note.text = "Patient reports smoking around 25 cigarettes per day. Recorded using LOINC-based Observation code."
+// // Example: Tobacco Smoking Consumption - LOINC Code Used
+// Instance: example-tobacco-smoking-consumption-loinc
+// InstanceOf: LTLifeTrackTobaccoSmokingConsumption
+// Usage: #example
+// Title: "Example LT Smoking Consumption - LOINC-based Observation"
+// Description: "Example instance showing a patient's smoking consumption using the LOINC code for Tobacco smoking status."
+// * status = #final
+// * category = $observation-category#social-history "Social History"
+// * code = $loinc#72166-2 "Tobacco smoking status"
+// * subject = Reference(example-patient)
+// * effectiveDateTime = "2025-10-01T09:00:00Z"
+// * valueCodeableConcept = $sct#160605003 "Heavy cigarette smoker (20-39 cigs/day)"
+// * note.text = "Patient reports smoking around 25 cigarettes per day. Recorded using LOINC-based Observation code."
 
 
 

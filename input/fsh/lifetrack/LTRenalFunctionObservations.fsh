@@ -1,3 +1,16 @@
+ValueSet: LTEstimatedGFRMethods
+Id: lt-estimated-gfr-methods
+Title: "LT Estimated Glomerular Filtration Rate (eGFR) Methods"
+Description: "LOINC codes representing eGFR measurements calculated using CKD-EPI formulas (original and 2021 revision)."
+* ^language = #en
+* ^version = "1.0.0"
+* ^status = #active
+* ^experimental = true
+* ^publisher = "HL7 Lithuania"
+* $loinc#62238-1 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)/1.73 sq M"
+* $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
+
+
 
 Profile: LTCreatinineTest
 Parent: LTBaseObservation
@@ -32,7 +45,7 @@ Profile: LTEstimatedGFR
 Parent: LTBaseObservation
 Id: lt-estimated-gfr
 Title: "LT Estimated Glomerular Filtration Rate (eGFR)"
-Description: "Observation representing estimated glomerular filtration rate (eGFR) calculated using the CKD-EPI 2021 formula."
+Description: "Observation representing estimated glomerular filtration rate (eGFR) calculated using the CKD-EPI or CKD-EPI 2021 formula."
 * ^status = #draft
 * ^language = #en
 * ^version = "1.0.0"
@@ -40,7 +53,7 @@ Description: "Observation representing estimated glomerular filtration rate (eGF
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
+* code from LTEstimatedGFRMethods (preferred)
 * subject 1..
 * subject only Reference(LTBasePatient)
 * effective[x] 1..
@@ -105,12 +118,12 @@ Description: "Example observation of serum creatinine concentration."
 * note.text = "Patient's creatinine level within normal range."
 
 
-// Example: eGFR 
+// Example: Estimated Glomerular Filtration Rate (eGFR)
 Instance: example-egfr
 InstanceOf: LTEstimatedGFR
 Usage: #example
-Title: "Example LT eGFR (CKD-EPI 2021)"
-Description: "Example observation representing an estimated glomerular filtration rate."
+Title: "Example LT Estimated Glomerular Filtration Rate (eGFR)"
+Description: "Example showing a patient's eGFR result calculated using the CKD-EPI 2021 formula."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
@@ -120,8 +133,8 @@ Description: "Example observation representing an estimated glomerular filtratio
 * valueQuantity.unit = "mL/min/1.73 m²"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #mL/min/{1.73_m2}
-* interpretation = $observation-interpretation#N "Normal"
-* note.text = "Patient's eGFR within normal range (CKD-EPI 2021)."
+* interpretation = $v3-obs-interpretation#N "Normal"
+* note.text = "Estimated GFR calculated using CKD-EPI 2021 creatinine-based formula."
 
 
 // Example: Albumin/Creatinine Ratio

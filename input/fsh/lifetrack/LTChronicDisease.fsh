@@ -1,7 +1,7 @@
 ValueSet: LTCVDHighRiskConditions
 Id: lt-cvd-high-risk-conditions
 Title: "LT CVD High Risk Condition Diagnoses"
-Description: "ICD-10 codes representing conditions that significantly increase cardiovascular disease risk, often used for risk stratification in prevention programs."
+Description: "ICD-10 codes representing conditions that significantly increase cardiovascular disease risk, often used for risk stratification in Screening programs."
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active
@@ -45,7 +45,7 @@ Description: "ICD-10 codes representing conditions that significantly increase c
 
 Profile: LTCvdChronicCondition
 Parent: LTBaseCondition
-Id: lt-prevention-condition
+Id: lt-Screening-condition
 Title: "LT LifeTrack CVD High Risk Condition"
 Description: "This profile constrains the Observation resource to represent Tobacco use assessment in a patient summary."
 * ^status = #draft
