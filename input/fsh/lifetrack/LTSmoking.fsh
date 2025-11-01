@@ -87,25 +87,6 @@ Description: "This profile constrains the Observation resource to represent Toba
 * component ..0
 
 
-// Example: current smoker
-Instance: example-LTSmoking-current-smoker
-InstanceOf: LTLifeTrackTobaccoUse
-Usage: #example
-Title: "Example LT Smoking Status - Current Smoker"
-Description: "Example instance showing a patient who currently smokes."
-
-* status = #final
-* category = $observation-category#social-history "Social History"
-* code.coding[loincCode].system = $loinc
-* code.coding[loincCode].code = #72166-2
-* code.coding[sctCode].system = $sct
-* code.coding[sctCode].code = #229819007 "Tobacco use and exposure (observable entity)"
-* subject = Reference(example-patient)
-* effectiveDateTime = "2025-10-01T09:00:00Z"
-* valueCodeableConcept = $sct#77176002 "Smoker (finding)"
-* note.text = "Patient reports smoking approximately 10 cigarettes per day for 5 years."
-
-
 
 Profile: LTLifeTrackTobaccoSmokingConsumption
 Parent: LTBaseObservation
@@ -118,7 +99,6 @@ Description: "This profile constrains the Observation resource to represent Toba
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 * category = $observation-category#social-history "Social History"
 * code = $sct#266918002 "Tobacco smoking consumption (observable entity)"
 * subject 1..
@@ -129,23 +109,6 @@ Description: "This profile constrains the Observation resource to represent Toba
 * valueCodeableConcept 1..1
 * valueCodeableConcept from LTTobaccoSmokingConsumption (preferred)
 * component ..0
-
-
-// Example: Tobacco Smoking Consumption
-Instance: example-tobacco-smoking-consumption
-InstanceOf: LTLifeTrackTobaccoSmokingConsumption
-Usage: #example
-Title: "Example LT Smoking Consumption - Light cigarette smoker (1–9 cigs/day)"
-Description: "Example instance showing a patient who is a light cigarette smoker."
-
-* status = #final
-* category = $observation-category#social-history "Social History"
-* code = $sct#266918002 "Tobacco smoking consumption (observable entity)"
-* subject = Reference(example-patient)
-* effectiveDateTime = "2025-10-01T09:00:00Z"
-* valueCodeableConcept = $sct#160603005 "Light cigarette smoker (1–9 cigs/day)"
-* note.text = "Patient reports smoking approximately 8 cigarettes per day."
-
 
 
 Profile: LTLifeTrackTobaccoUseDuration
@@ -159,7 +122,6 @@ Description: "Amount of time (e.g. years) the patient has used smoking or smokel
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 * category = $observation-category#social-history "Social History"
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[0].path = "system"
@@ -178,22 +140,6 @@ Description: "Amount of time (e.g. years) the patient has used smoking or smokel
 * component ..0
 
 
-// Example: Tobacco Use Duration
-Instance: example-tobacco-use-duration
-InstanceOf: LTLifeTrackTobaccoUseDuration
-Usage: #example
-Title: "Example LT Tobacco Use Duration - 5 years"
-Description: "Example instance showing a patient who has been smoking for 5 years."
-* status = #final
-* category = $observation-category#social-history "Social History"
-* code.coding[loincCode] = $loinc#88029-4  "Tobacco use duration"
-* subject = Reference(example-patient)
-* effectiveDateTime = "2025-10-01T09:00:00Z"
-* valueQuantity = $ucum#a "years"
-  * value = 5
-* note.text = "Patient reports smoking approximately for 5 years."
-
-
 Profile: LTLifeTrackStoppedSmoking
 Parent: LTBaseObservation
 Id: lt-lifetrack-stopped-smoking
@@ -205,7 +151,6 @@ Description: "Records how long it has been since the patient stopped smoking, as
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 * category = $observation-category#social-history "Social History"
 * code = $sct#228486009 "Time since stopped smoking (observable entity)"
 * subject 1.. 
@@ -214,21 +159,6 @@ Description: "Records how long it has been since the patient stopped smoking, as
 * value[x] only Quantity
 * valueQuantity from $units-of-time (required)
 * component ..0
-
-// Example: Stopped Smoking
-Instance: example-stopped-smoking
-InstanceOf: LTLifeTrackStoppedSmoking
-Usage: #example
-Title: "Example LT Stopped Smoking - 2 years ago"
-Description: "Example instance showing a patient who has stopped smoking 2 years ago."
-* status = #final
-* category = $observation-category#social-history "Social History"
-* code = $sct#228486009 "Time since stopped smoking (observable entity)"
-* subject = Reference(example-patient)
-* effectiveDateTime = "2025-10-01T09:00:00Z"
-* valueQuantity = $ucum#a "years"
-  * value = 2
-* note.text = "Patient reports stopped smoking 2 years ago."
 
 
 Profile: LTLifeTrackTypeOfTobaccoUsed 
@@ -242,7 +172,6 @@ Description: "Records the type of tobacco product currently or previously used b
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 * category = $observation-category#social-history "Social History"
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[0].path = "system"
@@ -260,6 +189,91 @@ Description: "Records the type of tobacco product currently or previously used b
 * valueCodeableConcept 1..1
 * valueCodeableConcept from LTTypeOfTobaccoUsed (preferred)
 * component ..0
+
+
+
+// Example: current smoker
+Instance: example-LTSmoking-current-smoker
+InstanceOf: LTLifeTrackTobaccoUse
+Usage: #example
+Title: "Example LT Smoking Status - Current Smoker"
+Description: "Example instance showing a patient who currently smokes."
+* status = #final
+* category = $observation-category#social-history "Social History"
+* code.coding[loincCode].system = $loinc
+* code.coding[loincCode].code = #72166-2
+* code.coding[sctCode].system = $sct
+* code.coding[sctCode].code = #229819007 "Tobacco use and exposure (observable entity)"
+* subject = Reference(example-patient)
+* effectiveDateTime = "2025-10-01T09:00:00Z"
+* valueCodeableConcept = $sct#77176002 "Smoker (finding)"
+* note.text = "Patient reports smoking approximately 10 cigarettes per day for 5 years."
+
+
+// Example: Tobacco Smoking Consumption
+Instance: example-tobacco-smoking-consumption
+InstanceOf: LTLifeTrackTobaccoSmokingConsumption
+Usage: #example
+Title: "Example LT Smoking Consumption - Light cigarette smoker (1–9 cigs/day)"
+Description: "Example instance showing a patient who is a light cigarette smoker."
+* status = #final
+* category = $observation-category#social-history "Social History"
+* code = $sct#266918002 "Tobacco smoking consumption (observable entity)"
+* subject = Reference(example-patient)
+* effectiveDateTime = "2025-10-01T09:00:00Z"
+* valueCodeableConcept = $sct#160603005 "Light cigarette smoker (1–9 cigs/day)"
+* note.text = "Patient reports smoking approximately 8 cigarettes per day."
+
+
+// Example: Tobacco Smoking Consumption - LOINC Code Used
+Instance: example-tobacco-smoking-consumption-loinc
+InstanceOf: LTLifeTrackTobaccoSmokingConsumption
+Usage: #example
+Title: "Example LT Smoking Consumption - LOINC-based Observation"
+Description: "Example instance showing a patient's smoking consumption using the LOINC code for Tobacco smoking status."
+* status = #final
+* category = $observation-category#social-history "Social History"
+* code = $loinc#72166-2 "Tobacco smoking status"
+* subject = Reference(example-patient)
+* effectiveDateTime = "2025-10-01T09:00:00Z"
+* valueCodeableConcept = $sct#160605003 "Heavy cigarette smoker (20-39 cigs/day)"
+* note.text = "Patient reports smoking around 25 cigarettes per day. Recorded using LOINC-based Observation code."
+
+
+
+// Example: Tobacco Use Duration
+Instance: example-tobacco-use-duration
+InstanceOf: LTLifeTrackTobaccoUseDuration
+Usage: #example
+Title: "Example LT Tobacco Use Duration - 5 years"
+Description: "Example instance showing a patient who has been smoking for 5 years."
+* status = #final
+* category = $observation-category#social-history "Social History"
+* code.coding[loincCode] = $loinc#88029-4  "Tobacco use duration"
+* subject = Reference(example-patient)
+* effectiveDateTime = "2025-10-01T09:00:00Z"
+* valueQuantity = $ucum#a "years"
+  * value = 5
+* note.text = "Patient reports smoking approximately for 5 years."
+
+
+
+// Example: Stopped Smoking
+Instance: example-stopped-smoking
+InstanceOf: LTLifeTrackStoppedSmoking
+Usage: #example
+Title: "Example LT Stopped Smoking - 2 years ago"
+Description: "Example instance showing a patient who has stopped smoking 2 years ago."
+* status = #final
+* category = $observation-category#social-history "Social History"
+* code = $sct#228486009 "Time since stopped smoking (observable entity)"
+* subject = Reference(example-patient)
+* effectiveDateTime = "2025-10-01T09:00:00Z"
+* valueQuantity = $ucum#a "years"
+  * value = 2
+* note.text = "Patient reports stopped smoking 2 years ago."
+
+
 
 // Example: Type of Tobacco Used
 Instance: example-type-of-tobacco-used

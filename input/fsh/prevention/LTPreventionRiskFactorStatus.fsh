@@ -161,22 +161,23 @@ Treatment status complements the assessed risk factor probability.
 // * component[treatment] 0..0
 
 
-// Example: patient with hypertension
-Instance: example-generic-risk-factor-treated
+// Example: Hypertension Risk - Negligible, Treatment Not Indicated
+Instance: example-hypertension-negligible-risk
 InstanceOf: LTPreventionRiskFactorStatus
 Usage: #example
-Title: "Example LT Risk Factor Status - Treated"
-Description: "Example showing a patient with a confirmed risk factor currently under treatment."
+Title: "Example LT Hypertension Risk - Negligible"
+Description: "Example showing a patient with negligible risk for hypertension; treatment not indicated."
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $sct#38341003 "Hypertensive disorder, systemic arterial (disorder)"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[risk]
-  * valueCodeableConcept = $risk-probability#certain "Certain"
+  * valueCodeableConcept = $risk-probability#negligible "Negligible"
 * component[treatment]
-  * valueCodeableConcept = $sct#182992009 "Treatment completed (situation)"
-* note.text = "Patient has confirmed hypertension and is under treatment."
+  * valueCodeableConcept = $sct#183964008 "Treatment not indicated (situation)"
+* note.text = "Blood pressure within normal range; risk negligible and no preventive treatment required."
+
 
 
 // Example: Dyslipidemia - Treated

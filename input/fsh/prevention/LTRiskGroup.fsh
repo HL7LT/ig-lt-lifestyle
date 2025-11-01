@@ -24,7 +24,6 @@ Description: "Records the patient’s cardiovascular prevention risk classificat
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 * category = $observation-category#social-history "Social History"
 * code = $sct#827181004 "Risk of cardiovascular disease"
 * effective[x] 1.. MS
