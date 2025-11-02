@@ -39,6 +39,7 @@ No – Diabetes duration less than 10 years
 Yes – Diabetes duration of 10 years or more
 """
 * ^status = #active
+* ^experimental = false
 * ^language = #en
 * ^publisher = "HL7 Lithuania"
 // No
@@ -215,7 +216,7 @@ Description: "Example showing a patient with negligible risk for hypertension; t
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[risk]
-  * valueCodeableConcept = $risk-probability#negligible "Negligible"
+  * valueCodeableConcept = $risk-probability#negligible "Negligible likelihood"
 * component[treatment]
   * valueCodeableConcept = $sct#183964008 "Treatment not indicated (situation)"
 * note.text = "Blood pressure within normal range; risk negligible and no preventive treatment required."

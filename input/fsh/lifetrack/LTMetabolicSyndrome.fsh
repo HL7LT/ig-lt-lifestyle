@@ -2,11 +2,14 @@ ValueSet: LTMetabolicSyndromeAssessment
 Id: lt-metabolic-syndrome-assessment
 Title: "LT Metabolic Syndrome Assessment (NCEP ATP III)"
 Description: "Assessment of metabolic syndrome presence according to NCEP ATP III criteria."
-* ^language = #en
 * ^status = #active
+* ^experimental = false
+* ^language = #en
 * ^publisher = "HL7 Lithuania"
-* $sct#373067005 "No (qualifier value)" 
-* $sct#373066001 "Yes (qualifier value)" 
+// No
+* $sct#373067005 "No (qualifier value)"
+// Yes
+* $sct#373066001 "Yes (qualifier value)"
 
 
 Profile: LTMetabolicSyndrome
@@ -20,7 +23,7 @@ Description: "Observation indicating presence of metabolic syndrome according to
 * ^date = "2025-10-31T12:00:00+02:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-* category = $observation-category#exam "Examination"
+* category = $observation-category#exam "Exam"
 * code = $sct#237602007 "Metabolic syndrome X (disorder)"
 * subject 1..1
 * subject only Reference(LTBasePatient)
@@ -40,7 +43,7 @@ Usage: #example
 Title: "Example LT Metabolic Syndrome Assessment"
 Description: "Example showing metabolic syndrome present according to NCEP ATP III criteria."
 * status = #final
-* category = $observation-category#exam "Examination"
+* category = $observation-category#exam "Exam"
 * code = $sct#237602007 "Metabolic syndrome X (disorder)"
 * subject = Reference(Patient/example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"

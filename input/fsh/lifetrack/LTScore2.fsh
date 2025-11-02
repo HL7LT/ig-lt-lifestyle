@@ -34,7 +34,7 @@ Description: "SCORE2 (Systematic Coronary Risk Estimation) cardiovascular diseas
 * ^date = "2025-10-31"
 * ^publisher = "HL7 Lithuania"
 // Observation identification
-* category = $observation-category#exam "Examination"
+* category = $observation-category#exam "Exam"
 * code = $sct#441829007 "Assessment for risk of cardiovascular disease (procedure)"
 // Subject and timing
 * subject 1..
@@ -54,11 +54,11 @@ Description: "SCORE2 (Systematic Coronary Risk Estimation) cardiovascular diseas
 * component ^slicing.rules = #open
 * component contains cvdRiskDegree 1..1
 // Qualitative risk degree slice
+// Qualitative risk degree slice
 * component[cvdRiskDegree] ^short = "Qualitative SCORE2 risk category"
-* component[cvdRiskDegree].code = $sct#441829007 "Assessment for risk of cardiovascular disease (procedure)"
+* component[cvdRiskDegree].code = $sct#1281820001 "Finding of risk level (finding)"
 * component[cvdRiskDegree].value[x] only CodeableConcept
 * component[cvdRiskDegree].valueCodeableConcept from LTCVDRiskDegree (required)
-
 
 
 Instance: example-cvd-risk-assessment
@@ -67,7 +67,7 @@ Usage: #example
 Title: "Example LT SCORE2 Cardiovascular Disease Risk Assessment"
 Description: "Example of SCORE2 risk assessment showing 24% estimated risk (high)."
 * status = #final
-* category = $observation-category#exam "Examination"
+* category = $observation-category#exam "Exam"
 * code = $sct#441829007 "Assessment for risk of cardiovascular disease (procedure)"
 * subject = Reference(Patient/example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
@@ -75,5 +75,5 @@ Description: "Example of SCORE2 risk assessment showing 24% estimated risk (high
 * valueQuantity.unit = "%"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #%
-* component[cvdRiskDegree].valueCodeableConcept = $sct#24484000 "Severe (qualifier value)"
+* component[cvdRiskDegree].valueCodeableConcept = $sct#24484000 "Severe"
 * note.text = "According to SCORE2 table: 24% risk corresponds to high cardiovascular risk (orange zone)."
