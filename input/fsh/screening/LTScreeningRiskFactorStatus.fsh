@@ -30,6 +30,23 @@ Description: "SNOMED CT concepts representing Screening-related risk factors."
 * $sct#248311001 "Central obesity (disorder)"
 * $sct#414916001 "Obesity (disorder)"
 
+ValueSet: LTDiabetesDurationOver10Years
+Id: lt-diabetes-duration-over-10-years
+Title: "LT Diabetes Mellitus Duration Over 10 Years"
+Description: """
+Indicates whether the patient has had Diabetes Mellitus for more than 10 years.
+No – Diabetes duration less than 10 years
+Yes – Diabetes duration of 10 years or more
+"""
+* ^status = #active
+* ^language = #en
+* ^publisher = "HL7 Lithuania"
+// No
+* $sct#373067005 "No (qualifier value)"
+// Yes
+* $sct#373066001 "Yes (qualifier value)"
+
+
 // // ValueSet for impaired glucose tolerance and fasting glycemia
 // ValueSet: LTRiskFactorImpairedGlucoseVS
 // Id: lt-risk-factor-impaired-glucose-vs
@@ -160,6 +177,31 @@ Treatment status complements the assessed risk factor probability.
 // * code = $sct#414916001 "Obesity (disorder)"
 // * component[treatment] 0..0
 
+Profile: LTDiabetesDurationStatus
+Parent: LTBaseObservation
+Id: lt-diabetes-duration-status
+Title: "LT Diabetes Mellitus Duration Over 10 Years"
+Description: """
+Observation indicating whether the patient has had Diabetes Mellitus
+for 10 years or more.
+"""
+* ^status = #draft
+* ^language = #en
+* ^version = "1.0.0"
+* ^date = "2025-11-02"
+* ^publisher = "HL7 Lithuania"
+* category = $observation-category#social-history "Social History"
+* code = $sct#161445009 "History of diabetes mellitus (situation)"
+* code ^short = "Presence and duration of diabetes in patient history"
+* subject 1..
+* subject only Reference(LTBasePatient)
+* effective[x] 1..
+* effective[x] only dateTime
+* value[x] only CodeableConcept
+* valueCodeableConcept from LTDiabetesDurationOver10Years (required)
+* valueCodeableConcept ^short = "Indicates whether diabetes duration exceeds 10 years."
+
+
 
 // Example: Hypertension Risk - Negligible, Treatment Not Indicated
 Instance: example-hypertension-negligible-risk
@@ -264,3 +306,17 @@ Description: "Example showing a patient identified as having general obesity."
 * component[risk]
   * valueCodeableConcept = $risk-probability#certain "Certain"
 * note.text = "Patient classified as obese based on BMI ≥ 30 kg/m²."
+
+
+Instance: example-diabetes-duration-gt10
+InstanceOf: LTDiabetesDurationStatus
+Usage: #example
+Title: "Example LT Diabetes Mellitus Duration > 10 Years"
+Description: "Example showing a patient who has had Diabetes Mellitus for more than 10 years."
+* status = #final
+* category = $observation-category#social-history "Social History"
+* code = $sct#161445009 "History of diabetes mellitus (situation)"
+* subject = Reference(Patient/example-patient)
+* effectiveDateTime = "2025-10-01T09:00:00Z"
+* valueCodeableConcept = $sct#373066001 "Yes (qualifier value)"
+* note.text = "Patient reports having diabetes for approximately 12 years."
