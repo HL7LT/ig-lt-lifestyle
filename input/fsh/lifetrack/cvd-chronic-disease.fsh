@@ -1,6 +1,6 @@
-ValueSet: LTCVDHighRiskConditions
-Id: lt-cvd-high-risk-conditions
-Title: "LT CVD High Risk Condition Diagnoses"
+ValueSet: CVDHighRiskCondition
+Id: lt-cvd-high-risk-condition
+Title: "CVD High Risk Conditions"
 Description: "ICD-10 codes representing conditions that significantly increase cardiovascular disease risk, often used for risk stratification in Screening programs."
 * ^language = #en
 * ^version = "1.0.0"
@@ -43,10 +43,10 @@ Description: "ICD-10 codes representing conditions that significantly increase c
 * $icd-10#O14 "Pre-eclampsia"
 * $icd-10#O15 "Eclampsia"
 
-Profile: LTCvdChronicCondition
+Profile: LTScreeningCvdChronicCondition
 Parent: LTBaseCondition
 Id: lt-Screening-condition
-Title: "LT LifeTrack CVD High Risk Condition"
+Title: "CVD High Risk Condition"
 Description: "This profile constrains the Observation resource to represent Tobacco use assessment in a patient summary."
 * ^status = #draft
 * ^language = #en
@@ -54,12 +54,12 @@ Description: "This profile constrains the Observation resource to represent Toba
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^publisher = "HL7 Lithuanian"
 
-* code from LTCVDHighRiskConditions (required)
+* code from CVDHighRiskCondition (required)
 * clinicalStatus =  $condition-clinical#active
 
 // Example: heart failure
 Instance: example-LTCvdChronicCondition-heart-failure
-InstanceOf: LTCvdChronicCondition
+InstanceOf: LTScreeningCvdChronicCondition
 Usage: #example
 Title: "Example LT CVD High Risk Condition - Heart failure"
 Description: "Example instance showing a patient with a high-risk condition of heart failure."

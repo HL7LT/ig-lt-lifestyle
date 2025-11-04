@@ -9,11 +9,11 @@ Severity: #error
 Expression: "value.ofType(Quantity).all(system = 'http://unitsofmeasure.org' and code = '{score}')"
 
 
-Profile: LTAuditC
+Profile: LTLifestyleAuditC
 Parent: LTBaseObservation
-Id: lt-auditc
-Title: "LT AUDIT-C Total Score"
-Description: "AUDIT-C koguskoor (0–12) kui kvantitatiivne Observation; vajadusel seotud QuestionnaireResponse’iga."
+Id: lt-lifestyle-auditc
+Title: "AUDIT-C Total Score"
+Description: "AUDIT-C total score (0–12) as a quantitative Observation; linked to QuestionnaireResponse if necessary."
 * ^status = #draft
 * ^language = #en
 * ^version = "1.0.0"
@@ -51,10 +51,10 @@ Description: "AUDIT-C koguskoor (0–12) kui kvantitatiivne Observation; vajadus
 
 
 Instance: example-auditc
-InstanceOf: LTAuditC
+InstanceOf: LTLifestyleAuditC
 Usage: #example
-Title: "Example AUDIT-C Observation"
-Description: "AUDIT-C koguskoor koos viitega vastusele."
+Title: "Example of AUDIT-C Observation"
+Description: "AUDIT-C total score with reference to the answer."
 * status = #final
 * category = $observation-category#survey "Survey"
 * code.coding[loincCode] = $loinc#75626-2 "Total score [AUDIT-C]"
@@ -64,14 +64,14 @@ Description: "AUDIT-C koguskoor koos viitega vastusele."
 * valueQuantity.value = 7
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #{score}
-* derivedFrom = Reference(QuestionnaireResponse/example-auditc-qr)
+* derivedFrom = Reference(QuestionnaireResponse/example-questionnaire-response-auditc)
 * note.text = "Computed from patient’s latest AUDIT-C responses."
 
 
-Instance: example-auditc-qr
+Instance: example-questionnaire-response-auditc
 InstanceOf: QuestionnaireResponse
 Usage: #example
-Title: "Example AUDIT-C QuestionnaireResponse"
+Title: "Example of AUDIT-C QuestionnaireResponse"
 Description: "Minimal QR to which the Observation refers."
 * status = #completed
 * subject = Reference(example-patient)

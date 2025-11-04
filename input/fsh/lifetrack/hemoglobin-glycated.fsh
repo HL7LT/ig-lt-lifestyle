@@ -1,7 +1,7 @@
-Profile: LTGlycatedHemoglobin
+Profile: LTHemoglobinGlycated
 Parent: LTBaseObservation
-Id: lt-glycated-hemoglobin
-Title: "LT Glycated Hemoglobin (HbA1c) Test"
+Id: lt-hemoglobin-glycated
+Title: "HbA1c. Glycated Hemoglobin Test"
 Description: "Observation representing Glycated Hemoglobin (HbA1c) test results in blood, reported as a percentage."
 * ^status = #draft
 * ^language = #en
@@ -41,7 +41,7 @@ Description: "Observation representing Glycated Hemoglobin (HbA1c) test results 
 
 // --- Example ---
 Instance: example-hba1c
-InstanceOf: LTGlycatedHemoglobin
+InstanceOf: LTHemoglobinGlycated
 Usage: #example
 Title: "Example LT HbA1c Test Result"
 Description: "Example of HbA1c test result for a patient with moderately elevated glycemia."
