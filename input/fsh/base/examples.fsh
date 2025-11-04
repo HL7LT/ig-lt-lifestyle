@@ -39,3 +39,16 @@ Description: "An example Patient conforming to the Lithuanian Base Profile."
 * address[0].country = "LT"
 * address[0].postalCode = "LT-01103"
 
+
+
+Instance: example-practitioner
+InstanceOf: Practitioner
+Usage: #example
+* name.text = "Registrar"
+* qualification.code = $sct#224538006 "Triage nurse (occupation)"
+
+
+Instance: example-organization
+InstanceOf: Organization
+Usage: #example
+* name = "Vilnius Heart Clinic"

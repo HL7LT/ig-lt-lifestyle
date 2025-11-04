@@ -1,34 +1,15 @@
-Instance: example-patient-screening
-InstanceOf: Patient
-Usage: #example
-* name.family = "Petrauskas"
-* name.given = "Jonas"
-* gender = #male
-* birthDate = "1970-05-12"
-
-Instance: example-registrar
-InstanceOf: Practitioner
-Usage: #example
-* name.text = "Registrar"
-* qualification.code = $sct#224538006 "Triage nurse (occupation)"
-
-Instance: example-institution
-InstanceOf: Organization
-Usage: #example
-* name = "Vilnius Heart Clinic"
-
-Instance: example-cvd-Screening-plan
+Instance: example-cvd-screening-plan
 InstanceOf: CarePlan
 Usage: #example
-Title: "LT Cardiovascular Disease Screening Plan"
+Title: "Example of Cardiovascular Disease Screening Plan"
 Description: "CVD screening plan for a patient at high cardiovascular risk, including goals, risk group, lifestyle recommendations and medication instructions."
 * status = #active
 * intent = #plan
 * created = 2025-10-31T10:00:00+02:00
-* subject = Reference(example-patient-screening)
-* contributor[0] = Reference(example-registrar)
+* subject = Reference(example-patient)
+* contributor[0] = Reference(example-practitioner)
 * contributor[0].display = "Registrar"
-* contributor[+] = Reference(example-institution)
+* contributor[+] = Reference(example-organization)
 * contributor[=].display = "Vilnius Heart Clinic"
 * supportingInfo[0].display = "Specialist’s workstation: Cardiologist"
 * supportingInfo[+].reference = "Observation/example-cvd-risk-group"
@@ -76,7 +57,7 @@ Usage: #inline
 * description.text = "Target BMI 22.5 kg/m² (healthy weight range 18.5–24.9)."
 * target[0].measure = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * target[0].detailQuantity.value = 22.5
-* target[0].detailQuantity.unit = "kg/m²"
+* target[0].detailQuantity.unit = "kg/m2"
 * target[0].detailQuantity.system = $ucum
 * target[0].detailQuantity.code = #kg/m2
 
