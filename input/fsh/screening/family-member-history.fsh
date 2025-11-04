@@ -61,6 +61,6 @@ Description: "Patient reports a positive family member history of cardiovascular
 * patient = Reference(example-patient)
 * date = "2025-10-01T09:00:00Z"
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
-* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unable-to-obtain
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
 * note.text = "Patient reports no known history of diabetes, cancer, or heart disease in mother."
 

@@ -76,9 +76,9 @@ Description: "Example lipid panel with high LDL and normal HDL."
 
 * contained[0] = triglyceride
 
-* hasMember[0] = Reference(Observation/cholesterol-total)
-* hasMember[+] = Reference(Observation/hdl)
-* hasMember[+] = Reference(Observation/ldl)
-* hasMember[+] = Reference(triglyceride)
+* hasMember[totalCholesterol] = Reference(Observation/cexample-total-cholesterol)
+* hasMember[ldlCholesterol] = Reference(Observation/example-cholesterol-hdl)
+* hasMember[hdlCholesterol] = Reference(Observation/example-cholesterol-ldl)
+* hasMember[triglycerides] = Reference(triglyceride)
 
 * note.text = "LDL cholesterol elevated; overall lipid profile suggests need for dietary modification and monitoring."
