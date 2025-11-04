@@ -1,4 +1,3 @@
-// Valueset for Treatment Status
 ValueSet: TreatmentStatus
 Id: treatment-status
 Title: "Treatment Status"

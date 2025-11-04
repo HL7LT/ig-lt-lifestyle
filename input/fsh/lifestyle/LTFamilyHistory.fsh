@@ -1,6 +1,6 @@
 ValueSet: LTFamilyHistoryCVDStatus
 Id: lt-family-history-cvd-status
-Title: "Family History of Cardiovascular Disease ValueSet"
+Title: "Family History of Cardiovascular Disease"
 Description: "Indicates whether the patient has a family history of cardiovascular disease."
 * ^language = #en
 * ^version = "1.0.0"
@@ -12,10 +12,9 @@ Description: "Indicates whether the patient has a family history of cardiovascul
 * $sct#407559004 "Family history unknown (situation)"                    //Unknown
 
 
-// ValueSet: LT Family History of Diabetes
 ValueSet: LTFamilyHistoryDiabetesStatus
 Id: lt-family-history-diabetes-status
-Title: "Family History of Diabetes ValueSet"
+Title: "Family History of Diabetes"
 Description: "Indicates whether the patient has a family history of diabetes mellitus."
 * ^language = #en
 * ^version = "1.0.0"
@@ -27,10 +26,9 @@ Description: "Indicates whether the patient has a family history of diabetes mel
 * $sct#407559004 "Family history unknown (situation)"                  // Unknown
 
 
-// ValueSet: LT Family History of Familial Hypercholesterolemia
 ValueSet: LTFamilyHistoryFHStatus
 Id: lt-family-history-fh-status
-Title: "Family History of Familial Hypercholesterolemia ValueSet"
+Title: "Family History of Familial Hypercholesterolemia"
 Description: "Indicates whether the patient has a family history of familial hypercholesterolemia."
 * ^language = #en
 * ^version = "1.0.0"

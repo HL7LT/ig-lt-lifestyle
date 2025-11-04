@@ -83,7 +83,7 @@ Description: "For single vital signs observations (that do not require use of co
 Instance: example-number-of-steps
 InstanceOf: NumberOfSteps
 Usage: #example
-Title: "Example Number of Steps Measurement"
+Title: "Example of Number of Steps Measurement"
 Description: "Example observation representing the number of steps taken by a person in 24 hours."
 * status = #final
 * category[VSCat] = $observation-category#activity "Activity"
@@ -102,7 +102,7 @@ Description: "Example observation representing the number of steps taken by a pe
 Instance: example-physical-activity-device
 InstanceOf: PhysicalActivityMeasurementDevice
 Usage: #example
-Title: "Example Physical Activity Measurement Device"
+Title: "Example of Physical Activity Measurement Device"
 Description: "A smartwatch used to measure and record the number of steps taken."
 * status = #active
 * manufacturer = "Fitbit Inc."

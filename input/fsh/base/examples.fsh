@@ -43,7 +43,7 @@ Description: "An example Patient conforming to the Lithuanian Base Profile."
 
 Instance: example-practitioner
 InstanceOf: Practitioner
-Title: "Example of practitioner"
+Title: "Example of Practitioner"
 Usage: #example
 * name.text = "Registrar"
 * qualification.code = $sct#224538006 "Triage nurse (occupation)"
@@ -51,6 +51,6 @@ Usage: #example
 
 Instance: example-organization
 InstanceOf: Organization
-Title: "Example of organization"
+Title: "Example of Organization"
 Usage: #example
 * name = "Vilnius Heart Clinic"
