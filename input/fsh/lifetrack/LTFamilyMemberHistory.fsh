@@ -8,6 +8,9 @@ Description: "Indicates whether the patient has a family member history related 
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * $sct#49601007 "Disorder of cardiovascular system"
+* $sct#46635009 "Diabetes mellitus type 1"
+* $sct#44054006 "Diabetes mellitus type 2"
+* $sct#398036000 "Familial hypercholesterolemia"
 
 
 Profile: LTScreeningFamilyMemberHistory
@@ -26,53 +29,38 @@ Description: "Family Member History record."
 * patient only Reference(Patient)
 * patient ^type[0].targetProfile = https://hl7.lt/fhir/base/StructureDefinition/lt-patient
 * status MS
-* condition 1..1 MS
-* condition.code 1..1 MS
-* condition.code from LTFamilymemberHistoryScreening
+* condition MS
+* condition.code MS
+* condition.code from LTFamilymemberHistoryScreening (preferred)
 * date ..1 MS
-
-
+* dataAbsentReason MS
 
 
 // Example CVD
-Instance: example-screening-family-member-history-cvd-positive
+Instance: example-family-member-history-positive
 InstanceOf: LTScreeningFamilyMemberHistory
 Usage: #example
 Title: "Example of Family Member History of Cardiovascular Disease"
-Description: "Patient reports a positive family member history of cardiovascular disease."
+Description: "Patient reports a positive family member history of cardiovascular disease, diabetes milites and familial hypercholesterolemia."
 * status = #completed
 * patient = Reference(example-patient)
 * date = "2025-10-01T09:00:00Z"
 * relationship.text = "Unspecified family member"
-* condition.code = $sct#49601007 "Disorder of cardiovascular system"
-* note.text = "Patient reports cardiovascular disease in a first-degree relative."
+* condition[0].code = $sct#49601007 "Disorder of cardiovascular system"
+* condition[+].code = $sct#44054006 "Diabetes mellitus type 2"
+* condition[+].code = $sct#398036000 "Familial hypercholesterolemia"
+* note.text = "Patient reports cardiovascular disease, diabetes milites and familial hypercholesterolemia in a first-degree relative."
 
 
-// // Example Diabetes 
-// Instance: example-screening-family-history-diabetes-positive
-// InstanceOf: LTScreeningFamilyHistoryDiabetes
-// Usage: #example
-// Title: "Example of Family History of Diabetes – Positive"
-// Description: "Patient reports a family history of diabetes mellitus."
-// * status = #final
-// * category = $observation-category#social-history "Social History"
-// * code = $sct#161445009 "History of diabetes mellitus (situation)"
-// * subject = Reference(example-patient)
-// * effectiveDateTime = "2025-10-01T09:00:00Z"
-// * valueCodeableConcept = $sct#161445009 "History of diabetes mellitus (situation)"
-// * note.text = "Patient reports diabetes mellitus in a first-degree relative."
+Instance: example-family-member-history-mother-disease-absent
+InstanceOf: LTScreeningFamilyMemberHistory
+Usage: #example
+Title: "Example of Family Member History - absent of disease in mother"
+Description: "Patient reports a positive family member history of cardiovascular disease."
+* status = #completed
+* patient = Reference(example-patient)
+* date = "2025-10-01T09:00:00Z"
+* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
+* dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unable-to-obtain
+* note.text = "Patient reports no known history of diabetes, cancer, or heart disease in mother."
 
-
-// // Example: Familial Hypercholesterolemia
-// Instance: example-screening-family-history-fh-positive
-// InstanceOf: LTScreeningFamilyHistoryFH
-// Usage: #example
-// Title: "Example of Family History of Familial Hypercholesterolemia – Positive"
-// Description: "Patient reports a family history of familial hypercholesterolemia."
-// * status = #final
-// * category = $observation-category#social-history "Social History"
-// * code = $sct#473145005 "Possible familial hypercholesterolemia (situation)"
-// * subject = Reference(example-patient)
-// * effectiveDateTime = "2025-10-01T09:00:00Z"
-// * valueCodeableConcept = $sct#473145005 "Possible familial hypercholesterolemia (situation)"
-// * note.text = "Patient reports elevated cholesterol and confirmed familial hypercholesterolemia in a first-degree relative."
