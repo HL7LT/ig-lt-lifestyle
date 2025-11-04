@@ -1,6 +1,6 @@
 ValueSet: LTCholesterolLDLMethod
 Id: lt-cholesterol-ldl-method
-Title: "LT Cholesterol LDL Methods"
+Title: "Cholesterol LDL Method"
 Description: "Allowed LOINC codes for LDL cholesterol measurements (direct or calculated)."
 * ^language = #en
 * ^version = "1.0.0"
@@ -17,7 +17,7 @@ Description: "Allowed LOINC codes for LDL cholesterol measurements (direct or ca
 Profile: LTLabTotalCholesterol
 Parent: LTBaseObservation
 Id: lt-lab-total-cholesterol
-Title: "LT Total Cholesterol"
+Title: "Cholesterol Total"
 Description: "Observation representing the patient's total cholesterol concentration in serum or plasma."
 * ^status = #draft
 * ^language = #en
@@ -47,7 +47,7 @@ Description: "Observation representing the patient's total cholesterol concentra
 Profile: LTLabCholesterolNonHDL
 Parent: LTBaseObservation
 Id: lt-lab-cholesterol-non-hdl
-Title: "LT Cholesterol Non-HDL"
+Title: "Cholesterol Non-HDL"
 Description: "Observation representing the patient's non-HDL cholesterol concentration in serum or plasma, calculated as total cholesterol minus HDL cholesterol."
 * ^status = #draft
 * ^language = #en
@@ -74,7 +74,7 @@ Description: "Observation representing the patient's non-HDL cholesterol concent
 Profile: LTLabCholesterolHDL
 Parent: LTBaseObservation
 Id: lt-lab-cholesterol-hdl
-Title: "LT Cholesterol HDL"
+Title: "Cholesterol HDL"
 Description: "Observation representing the patient's high-density lipoprotein (HDL) cholesterol concentration in serum or plasma."
 * ^status = #draft
 * ^language = #en
@@ -105,7 +105,7 @@ Description: "Observation representing the patient's high-density lipoprotein (H
 Profile: LTLabCholesterolLDL
 Parent: LTBaseObservation
 Id: lt-lab-cholesterol-ldl
-Title: "LT Cholesterol LDL"
+Title: "Cholesterol LDL"
 Description: "Observation representing the patient's low-density lipoprotein (LDL) cholesterol concentration in serum or plasma, measured either directly or by calculation."
 * ^status = #draft
 * ^language = #en
@@ -135,7 +135,7 @@ Description: "Observation representing the patient's low-density lipoprotein (LD
 Profile: LTLabTriglycerides
 Parent: LTBaseObservation
 Id: lt-lab-triglycerides
-Title: "LT Triglycerides"
+Title: "Triglycerides"
 Description: "Observation representing the patient's triglyceride concentration in serum or plasma, used to assess lipid metabolism and cardiovascular risk."
 * ^status = #draft
 * ^language = #en
@@ -170,7 +170,7 @@ Description: "Observation representing the patient's triglyceride concentration 
 Instance: example-total-cholesterol
 InstanceOf: LTLabTotalCholesterol
 Usage: #example
-Title: "Example LT Total Cholesterol: Normal"
+Title: "Example of Cholesterol Total - Normal"
 Description: "Example observation showing a patient's total cholesterol level within normal range."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -188,7 +188,7 @@ Description: "Example observation showing a patient's total cholesterol level wi
 Instance: example-cholesterol-non-hdl
 InstanceOf: LTLabCholesterolNonHDL
 Usage: #example
-Title: "Example LT Cholesterol Non-HDL: Normal"
+Title: "Example of Cholesterol Non-HDL - Normal"
 Description: "Example observation showing a patient's non-HDL cholesterol level within normal range."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -206,7 +206,7 @@ Description: "Example observation showing a patient's non-HDL cholesterol level 
 Instance: example-cholesterol-hdl
 InstanceOf: LTLabCholesterolHDL
 Usage: #example
-Title: "Example LT Cholesterol HDL: Normal"
+Title: "Example of Cholesterol HDL - Normal"
 Description: "Example observation showing a patient's HDL cholesterol level within normal range."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -224,7 +224,7 @@ Description: "Example observation showing a patient's HDL cholesterol level with
 Instance: example-triglycerides
 InstanceOf: LTLabTriglycerides
 Usage: #example
-Title: "Example LT Triglycerides: Normal"
+Title: "Example of Triglycerides - Normal"
 Description: "Example observation showing a patient's triglyceride level within normal range."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -242,7 +242,7 @@ Description: "Example observation showing a patient's triglyceride level within 
 Instance: example-cholesterol-ldl
 InstanceOf: LTLabCholesterolLDL
 Usage: #example
-Title: "Example LT Cholesterol LDL: Calculated"
+Title: "Example of Cholesterol LDL - Calculated"
 Description: "Example observation showing a patient's calculated LDL cholesterol level."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"

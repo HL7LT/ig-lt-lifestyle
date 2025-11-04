@@ -1,6 +1,6 @@
 ValueSet: LTNutritionStatus
 Id: lt-nutrition-status
-Title: "LT Nutrition Status"
+Title: "Nutrition Status"
 Description: "Categorical assessment of whether the patient’s nutrition is balanced or unbalanced."
 * ^language = #en
 * ^version = "1.0.0"

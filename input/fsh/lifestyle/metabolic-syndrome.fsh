@@ -54,7 +54,7 @@ Description: "Observation indicating presence of metabolic syndrome according to
 Instance: example-metabolic-syndrome
 InstanceOf: LTScreeningMetabolicSyndrome
 Usage: #example
-Title: "Example LT Metabolic Syndrome Assessment"
+Title: "Example of Metabolic Syndrome Assessment"
 Description: "Example showing metabolic syndrome present according to NCEP ATP III criteria."
 * status = #final
 * category = $observation-category#exam "Exam"

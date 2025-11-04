@@ -28,7 +28,7 @@ Description: "A simplified profile for MedicationStatement focusing on essential
 
 Instance: example-lt-screening-medication-statement
 InstanceOf: LtScreeningMedicationStatement
-Title: "Example LT Screening Medication Statement"
+Title: "Example of Screening Medication Statement"
 Description: "Example instance of a MedicationStatement for screening programs."
 Usage: #example
 * status = #recorded

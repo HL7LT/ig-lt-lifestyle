@@ -43,7 +43,7 @@ Description: "Observation representing Glycated Hemoglobin (HbA1c) test results 
 Instance: example-hba1c
 InstanceOf: LTHemoglobinGlycated
 Usage: #example
-Title: "Example LT HbA1c Test Result"
+Title: "Example of HbA1c Test Result"
 Description: "Example of HbA1c test result for a patient with moderately elevated glycemia."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"

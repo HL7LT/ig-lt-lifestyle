@@ -130,7 +130,7 @@ Description: "Observation indicating whether the patient has had Diabetes Mellit
 Instance: example-hypertension-negligible-risk
 InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
-Title: "Example LT Hypertension Risk - Negligible"
+Title: "Example of Hypertension Risk - Negligible"
 Description: "Example showing a patient with negligible risk for hypertension; treatment not indicated."
 * status = #final
 * category = $observation-category#exam "Exam"
@@ -149,7 +149,7 @@ Description: "Example showing a patient with negligible risk for hypertension; t
 Instance: example-dyslipidemia-treated
 InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
-Title: "Example LT Dyslipidemia - Treated"
+Title: "Example of Dyslipidemia - Treated"
 Description: "Example showing a patient with confirmed dyslipidemia currently under lipid-lowering therapy."
 * status = #final
 * category = $observation-category#exam "Exam"
@@ -169,7 +169,7 @@ Description: "Example showing a patient with confirmed dyslipidemia currently un
 Instance: example-diabetes-untreated
 InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
-Title: "Example LT Diabetes - Untreated"
+Title: "Example of Diabetes - Untreated"
 Description: "Example showing a patient with confirmed diabetes mellitus but not yet receiving treatment."
 * status = #final
 * category = $observation-category#exam "Exam"
@@ -187,7 +187,7 @@ Description: "Example showing a patient with confirmed diabetes mellitus but not
 Instance: example-impaired-glucose-tolerance
 InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
-Title: "Example LT Impaired Glucose Tolerance or Fasting Glycemia - Exists"
+Title: "Example of Impaired Glucose Tolerance or Fasting Glycemia - Exists"
 Description: "Example showing a patient identified with impaired glucose tolerance or impaired fasting glycemia."
 * status = #final
 * category = $observation-category#exam "Exam"
@@ -205,7 +205,7 @@ Description: "Example showing a patient identified with impaired glucose toleran
 Instance: example-central-obesity-present
 InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
-Title: "Example LT Central Obesity - Exists"
+Title: "Example of Central Obesity - Exists"
 Description: "Example showing a patient identified as having central (abdominal) obesity."
 * status = #final
 * category = $observation-category#exam "Exam"
@@ -221,7 +221,7 @@ Description: "Example showing a patient identified as having central (abdominal)
 Instance: example-obesity-present
 InstanceOf: LTScreeningRiskFactorStatus
 Usage: #example
-Title: "Example LT Obesity - Exists"
+Title: "Example of Obesity - Exists"
 Description: "Example showing a patient identified as having general obesity."
 * status = #final
 * category = $observation-category#exam "Exam"
@@ -236,7 +236,7 @@ Description: "Example showing a patient identified as having general obesity."
 Instance: example-diabetes-duration-gt10
 InstanceOf: LTDiabetesDurationStatus
 Usage: #example
-Title: "Example LT Diabetes Mellitus Duration > 10 Years"
+Title: "Example of Diabetes Mellitus Duration > 10 Years"
 Description: "Example showing a patient who has had Diabetes Mellitus for more than 10 years."
 * status = #final
 * category = $observation-category#exam "Exam"

@@ -1,7 +1,7 @@
 Profile: LTLabLipidogram
 Parent: LTBaseObservation
 Id: lt-lab-lipidogram
-Title: "LT Lipidogram (Lipid Panel – Serum or Plasma)"
+Title: "Lipidogram (Lipid Panel – Serum or Plasma)"
 Description: "Lipid panel (Lipidogram) including Total Cholesterol, LDL-C, HDL-C, and Triglycerides. Based on LOINC 24331-1."
 
 * ^status = #draft
@@ -64,7 +64,7 @@ Usage: #inline
 Instance: example-lipidogram
 InstanceOf: LTLabLipidogram
 Usage: #example
-Title: "Example Lipidogram – Serum/Plasma"
+Title: "Example of Lipidogram – Serum/Plasma"
 Description: "Example lipid panel with high LDL and normal HDL."
 
 * status = #final
@@ -80,17 +80,5 @@ Description: "Example lipid panel with high LDL and normal HDL."
 * hasMember[+] = Reference(Observation/hdl)
 * hasMember[+] = Reference(Observation/ldl)
 * hasMember[+] = Reference(triglyceride)
-
-// Results
-// * component[totalCholesterol].valueQuantity.value = 6.2
-// * component[ldlCholesterol].valueQuantity.value = 4.3
-// * component[hdlCholesterol].valueQuantity.value = 1.4
-// * component[triglycerides].valueQuantity.value = 1.3
-
-// Interpretations
-// * component[totalCholesterol].interpretation = $v3-ObservationInterpretation#H "High"
-// * component[ldlCholesterol].interpretation = $v3-ObservationInterpretation#H "High"
-// * component[hdlCholesterol].interpretation = $v3-ObservationInterpretation#N "Normal"
-// * component[triglycerides].interpretation = $v3-ObservationInterpretation#N "Normal"
 
 * note.text = "LDL cholesterol elevated; overall lipid profile suggests need for dietary modification and monitoring."

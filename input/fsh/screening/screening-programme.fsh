@@ -1,8 +1,8 @@
 
 ValueSet: ScreeningProgramme
 Id: screening-programme
-Title: "Screening Programmes"
-Description: "Represents the various screening programmes available in Lithuania."
+Title: "Screening Programme"
+Description: "Represents the various screening programmes supported in Lithuania."
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

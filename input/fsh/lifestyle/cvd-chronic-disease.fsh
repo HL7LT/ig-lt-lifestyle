@@ -61,7 +61,7 @@ Description: "This profile constrains the Observation resource to represent Toba
 Instance: example-LTCvdChronicCondition-heart-failure
 InstanceOf: LTScreeningCvdChronicCondition
 Usage: #example
-Title: "Example LT CVD High Risk Condition - Heart failure"
+Title: "Example of CVD High Risk Condition - Heart failure"
 Description: "Example instance showing a patient with a high-risk condition of heart failure."
 
 * code = $icd-10#I50 "Heart failure"

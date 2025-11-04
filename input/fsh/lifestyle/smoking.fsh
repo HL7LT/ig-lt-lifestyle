@@ -196,7 +196,7 @@ Description: "Records the type of tobacco product currently or previously used b
 Instance: example-LTSmoking-current-smoker
 InstanceOf: LTLifeStyleTobaccoUse
 Usage: #example
-Title: "Example LT Smoking Status - Current Smoker"
+Title: "Example of Smoking Status - Current Smoker"
 Description: "Example instance showing a patient who currently smokes."
 * status = #final
 * category = $observation-category#social-history "Social History"
@@ -214,7 +214,7 @@ Description: "Example instance showing a patient who currently smokes."
 Instance: example-tobacco-smoking-consumption
 InstanceOf: LTLifeStyleTobaccoSmokingConsumption
 Usage: #example
-Title: "Example LT Smoking Consumption - Light cigarette smoker (1–9 cigs/day)"
+Title: "Example of Smoking Consumption - Light cigarette smoker (1–9 cigs/day)"
 Description: "Example instance showing a patient who is a light cigarette smoker."
 * status = #final
 * category = $observation-category#social-history "Social History"
@@ -229,7 +229,7 @@ Description: "Example instance showing a patient who is a light cigarette smoker
 // Instance: example-tobacco-smoking-consumption-loinc
 // InstanceOf: LTLifeStyleTobaccoSmokingConsumption
 // Usage: #example
-// Title: "Example LT Smoking Consumption - LOINC-based Observation"
+// Title: "Example of Tobacco Smoking Consumption - LOINC-based Observation"
 // Description: "Example instance showing a patient's smoking consumption using the LOINC code for Tobacco smoking status."
 // * status = #final
 // * category = $observation-category#social-history "Social History"
@@ -245,7 +245,7 @@ Description: "Example instance showing a patient who is a light cigarette smoker
 Instance: example-tobacco-use-duration
 InstanceOf: LTLifeStyleTobaccoUseDuration
 Usage: #example
-Title: "Example LT Tobacco Use Duration - 5 years"
+Title: "Example of Tobacco Use Duration - 5 years"
 Description: "Example instance showing a patient who has been smoking for 5 years."
 * status = #final
 * category = $observation-category#social-history "Social History"
@@ -262,7 +262,7 @@ Description: "Example instance showing a patient who has been smoking for 5 year
 Instance: example-stopped-smoking
 InstanceOf: LTLifeStyleTobaccoSmokingStopped
 Usage: #example
-Title: "Example LT Stopped Smoking - 2 years ago"
+Title: "Example of Tobacco Smoking Stopped - 2 years ago"
 Description: "Example instance showing a patient who has stopped smoking 2 years ago."
 * status = #final
 * category = $observation-category#social-history "Social History"
@@ -279,7 +279,7 @@ Description: "Example instance showing a patient who has stopped smoking 2 years
 Instance: example-type-of-tobacco-used
 InstanceOf: LTLifeStyleTobaccoTypeUsed
 Usage: #example
-Title: "Example LT Tobacco Type Used - Cigarette smoker"
+Title: "Example of Tobacco Type Used - Cigarette smoker"
 Description: "Example instance showing a patient who is a cigarette smoker."
 * status = #final
 * category = $observation-category#social-history "Social History"

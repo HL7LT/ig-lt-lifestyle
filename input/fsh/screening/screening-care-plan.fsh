@@ -16,7 +16,7 @@ Description: "A simplified profile for CarePlan focusing on essential elements."
 Instance: CVDScreeningPlanExample
 InstanceOf: LtScreeningCarePlan
 Usage: #example
-Title: "CVD Screening Plan Example"
+Title: "Example of CVD Screening Plan"
 Description: "An example instance of a CarePlan for a patient at risk of Cardiovascular Disease (CVD), covering goals and activities related to lifestyle changes."
 
 // === 1. Metadata and Administrative Details ===
