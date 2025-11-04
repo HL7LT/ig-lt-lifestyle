@@ -17,7 +17,7 @@ Description: "A simplified profile for MedicationStatement focusing on essential
 * medication.concept.text MS
 * subject 1..1 MS
 * subject only Reference(Patient)
-* subject ^type[0].targetProfile = LTBasePatient
+* subject ^type[0].targetProfile = https://hl7.lt/fhir/base/StructureDefinition/lt-patient
 * dosage 1..1 MS
 * dosage.extension contains MedicationTiming named medicationTiming 0..1
 * dosage.extension[medicationTiming] 0..1 MS

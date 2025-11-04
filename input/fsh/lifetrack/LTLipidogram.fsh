@@ -2,7 +2,7 @@ Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-
 
 
 Profile: LTLipidogram
-Parent: Observation
+Parent: LTBaseObservation
 Id: lt-lipidogram
 Title: "LT Lipidogram (Lipid Panel – Serum or Plasma)"
 Description: "Lipid panel (Lipidogram) including Total Cholesterol, LDL-C, HDL-C, and Triglycerides. Based on LOINC 24331-1."
@@ -17,7 +17,7 @@ Description: "Lipid panel (Lipidogram) including Total Cholesterol, LDL-C, HDL-C
 * code = $loinc#24331-1 "Lipid 1996 panel - Serum or Plasma"
 
 * subject 1..1
-* subject only Reference(LTBasePatient)
+* subject only Reference(https://hl7.lt/fhir/base/StructureDefinition/lt-patient)
 * effective[x] 1..1
 * effective[x] only dateTime
 * specimen 0..1
@@ -94,7 +94,7 @@ Description: "Example lipid panel with high LDL and normal HDL."
 
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#24331-1 "Lipid panel - Serum or Plasma"
+* code = $loinc#24331-1 "Lipid 1996 panel - Serum or Plasma"
 * subject = Reference(Patient/example-patient)
 * effectiveDateTime = "2025-10-31T09:00:00Z"
 * specimen.display = "Serum sample"
