@@ -1,6 +1,6 @@
-ValueSet: LTCVDRiskGroup
+ValueSet: CVDRiskGroup
 Id: lt-cvd-risk-group
-Title: "LT Cardiovascular Disease Risk Group"
+Title: "Cardiovascular Disease Risk Group"
 Description: "Defines the interpretation categories for cardiovascular disease risk assessment results, based on HL7 Observation Interpretation codes."
 * ^language = #en
 * ^version = "1.0.0"
@@ -15,8 +15,8 @@ Description: "Defines the interpretation categories for cardiovascular disease r
 
 Profile: LTScreeningRiskGroup
 Parent: LTBaseObservation
-Id: lt-Screening-risk-group
-Title: "LT Screening Risk Group"
+Id: lt-screening-risk-group
+Title: "Screening CVD Risk Group"
 Description: "Records the patient’s cardiovascular Screening risk classification, expressed as a percentage value and interpreted using HL7 Observation Interpretation codes."
 * ^status = #draft
 * ^language = #en
@@ -24,14 +24,14 @@ Description: "Records the patient’s cardiovascular Screening risk classificati
 * ^date = "2025-10-25T19:10:07+03:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-* category = $observation-category#social-history "Social History"
+* category = $observation-category#exam "Exam"
 * code = $sct#827181004 "Risk of cardiovascular disease"
 * effective[x] 1.. MS
 * effective[x] only dateTime
 * effectiveDateTime ^comment = "The date and time when the cardiovascular risk assessment was performed."
 * value[x] only Quantity
 * valueQuantity = $ucum#% "%"
-* interpretation from LTCVDRiskGroup (extensible)
+* interpretation from CVDRiskGroup (extensible)
 * interpretation ^short = "Risk group classification (Normal, High, Significantly high)"
 * interpretation ^comment = """
 The interpretation category is derived from the numeric cardiovascular risk percentage:
@@ -50,7 +50,7 @@ Usage: #example
 Title: "Example LT Screening Risk Group - High"
 Description: "Example showing a patient assessed as having a 24% cardiovascular disease risk, categorized as High."
 * status = #final
-* category = $observation-category#social-history "Social History"
+* category = $observation-category#exam "Exam"
 * code = $sct#827181004 "Risk of cardiovascular disease"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
