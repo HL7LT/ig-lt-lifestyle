@@ -10,13 +10,13 @@ Description: "Allowed LOINC codes for LDL cholesterol measurements (direct or ca
 * $loinc#69419-0 "Cholesterol in LDL [Moles/volume] in Serum or Plasma by Direct assay"
 * $loinc#39469-2 "Cholesterol in LDL [Moles/volume] in Serum or Plasma by calculation"
 * $loinc#96258-9 "Cholesterol in LDL [Moles/volume] in Serum or Plasma Calculated by Martin-Hopkins"
+//* $loinc#13457-7 "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation"
 
+// Question: [Moles/volume] vs [Mass/volume]?
 
-
-
-Profile: LTTotalCholesterol
+Profile: LTLabTotalCholesterol
 Parent: LTBaseObservation
-Id: lt-total-cholesterol
+Id: lt-lab-total-cholesterol
 Title: "LT Total Cholesterol"
 Description: "Observation representing the patient's total cholesterol concentration in serum or plasma."
 * ^status = #draft
@@ -27,6 +27,7 @@ Description: "Observation representing the patient's total cholesterol concentra
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#14647-2 "Cholesterol [Moles/volume] in Serum or Plasma"
+// * component[totalCholesterol].code = $loinc#2093-3 "Cholesterol [Mass/volume] in Serum or Plasma"
 * subject 1..
 * subject only Reference(LTBasePatient)
 * effective[x] 1..
@@ -39,11 +40,13 @@ Description: "Observation representing the patient's total cholesterol concentra
 * interpretation from http://hl7.org/fhir/ValueSet/observation-interpretation (extensible)
 * interpretation ^short = "Interpretation of the total cholesterol result (e.g., Normal, High, Low)"
 * component ..0
+* referenceRange.high.value = 5.0
+* referenceRange.high.unit = "mmol/L"
+* referenceRange.text = "< 5.0 mmol/L"
 
-
-Profile: LTCholesterolNonHDL
+Profile: LTLabCholesterolNonHDL
 Parent: LTBaseObservation
-Id: lt-cholesterol-non-hdl
+Id: lt-lab-cholesterol-non-hdl
 Title: "LT Cholesterol Non-HDL"
 Description: "Observation representing the patient's non-HDL cholesterol concentration in serum or plasma, calculated as total cholesterol minus HDL cholesterol."
 * ^status = #draft
@@ -68,9 +71,9 @@ Description: "Observation representing the patient's non-HDL cholesterol concent
 * component ..0
 
 
-Profile: LTCholesterolHDL
+Profile: LTLabCholesterolHDL
 Parent: LTBaseObservation
-Id: lt-cholesterol-hdl
+Id: lt-lab-cholesterol-hdl
 Title: "LT Cholesterol HDL"
 Description: "Observation representing the patient's high-density lipoprotein (HDL) cholesterol concentration in serum or plasma."
 * ^status = #draft
@@ -81,6 +84,7 @@ Description: "Observation representing the patient's high-density lipoprotein (H
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#14646-4 "Cholesterol in HDL [Moles/volume] in Serum or Plasma"
+// * component[hdlCholesterol].code = $loinc#2085-9 "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
 * subject 1..
 * subject only Reference(LTBasePatient)
 * effective[x] 1..
@@ -94,10 +98,13 @@ Description: "Observation representing the patient's high-density lipoprotein (H
 * interpretation ^short = "Interpretation of the HDL cholesterol result (e.g., Normal, Low, High)"
 * component ..0
 
+* referenceRange.low.value = 1.0
+* referenceRange.low.unit = "mmol/L"
+* referenceRange.text = "> 1.0 mmol/L"
 
-Profile: LTCholesterolLDL
+Profile: LTLabCholesterolLDL
 Parent: LTBaseObservation
-Id: lt-cholesterol-ldl
+Id: lt-lab-cholesterol-ldl
 Title: "LT Cholesterol LDL"
 Description: "Observation representing the patient's low-density lipoprotein (LDL) cholesterol concentration in serum or plasma, measured either directly or by calculation."
 * ^status = #draft
@@ -120,11 +127,14 @@ Description: "Observation representing the patient's low-density lipoprotein (LD
 * interpretation from http://hl7.org/fhir/ValueSet/observation-interpretation (extensible)
 * interpretation ^short = "Interpretation of the LDL cholesterol result (e.g., Normal, High, Low)"
 * component ..0
+* referenceRange.high.value = 3.0
+* referenceRange.high.unit = "mmol/L"
+* referenceRange.text = "< 3.0 mmol/L"
 
 
-Profile: LTTriglycerides
+Profile: LTLabTriglycerides
 Parent: LTBaseObservation
-Id: lt-triglycerides
+Id: lt-lab-triglycerides
 Title: "LT Triglycerides"
 Description: "Observation representing the patient's triglyceride concentration in serum or plasma, used to assess lipid metabolism and cardiovascular risk."
 * ^status = #draft
@@ -135,6 +145,7 @@ Description: "Observation representing the patient's triglyceride concentration 
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#14927-8 "Triglyceride [Moles/volume] in Serum or Plasma"
+// * component[triglycerides].code = $loinc#2571-8 "Triglyceride [Mass/volume] in Serum or Plasma"
 * subject 1..
 * subject only Reference(LTBasePatient)
 * effective[x] 1..
@@ -147,6 +158,9 @@ Description: "Observation representing the patient's triglyceride concentration 
 * interpretation from http://hl7.org/fhir/ValueSet/observation-interpretation (extensible)
 * interpretation ^short = "Interpretation of the triglyceride result (e.g., Normal, High, Low)"
 * component ..0
+* referenceRange.high.value = 1.7
+* referenceRange.high.unit = "mmol/L"
+* referenceRange.text = "< 1.7 mmol/L"
 
 
 
@@ -154,7 +168,7 @@ Description: "Observation representing the patient's triglyceride concentration 
 //Examples
 
 Instance: example-total-cholesterol
-InstanceOf: LTTotalCholesterol
+InstanceOf: LTLabTotalCholesterol
 Usage: #example
 Title: "Example LT Total Cholesterol: Normal"
 Description: "Example observation showing a patient's total cholesterol level within normal range."
@@ -172,7 +186,7 @@ Description: "Example observation showing a patient's total cholesterol level wi
 
 
 Instance: example-cholesterol-non-hdl
-InstanceOf: LTCholesterolNonHDL
+InstanceOf: LTLabCholesterolNonHDL
 Usage: #example
 Title: "Example LT Cholesterol Non-HDL: Normal"
 Description: "Example observation showing a patient's non-HDL cholesterol level within normal range."
@@ -190,7 +204,7 @@ Description: "Example observation showing a patient's non-HDL cholesterol level 
 
 
 Instance: example-cholesterol-hdl
-InstanceOf: LTCholesterolHDL
+InstanceOf: LTLabCholesterolHDL
 Usage: #example
 Title: "Example LT Cholesterol HDL: Normal"
 Description: "Example observation showing a patient's HDL cholesterol level within normal range."
@@ -208,7 +222,7 @@ Description: "Example observation showing a patient's HDL cholesterol level with
 
 
 Instance: example-triglycerides
-InstanceOf: LTTriglycerides
+InstanceOf: LTLabTriglycerides
 Usage: #example
 Title: "Example LT Triglycerides: Normal"
 Description: "Example observation showing a patient's triglyceride level within normal range."
@@ -226,7 +240,7 @@ Description: "Example observation showing a patient's triglyceride level within 
 
 
 Instance: example-cholesterol-ldl
-InstanceOf: LTCholesterolLDL
+InstanceOf: LTLabCholesterolLDL
 Usage: #example
 Title: "Example LT Cholesterol LDL: Calculated"
 Description: "Example observation showing a patient's calculated LDL cholesterol level."
