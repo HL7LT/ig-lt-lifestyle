@@ -1,7 +1,7 @@
 
 ValueSet: LTCurrentSmokingStatus
 Id: lt-current-smoking-status
-Title: "Current Smoking Status"
+Title: "Tobacco. Current Smoking Status"
 Description: "HL7 LT SNOMED value set for smoking status."
 * ^language = #en
 * ^version = "1.0.0"
@@ -37,7 +37,7 @@ Description: "Categorical representation of average cigarettes smoked per day."
 
 ValueSet: LTTypeOfTobaccoUsed 
 Id: lt-type-of-tobacco-used 
-Title: "Type Of Tobacco Used" 
+Title: "Tobacco Type Used" 
 Description: "Records the type of tobacco product currently or previously used by the patient (e.g., cigarettes, cigars, e-cigarettes)."
 * ^language = #en
 * ^version = "1.0.0"
@@ -57,10 +57,10 @@ Description: "Records the type of tobacco product currently or previously used b
 * $sct#733460004 "Marijuana user (finding)"
 
 
-Profile: LTLifeTrackTobaccoUse
+Profile: LTLifeStyleTobaccoUse
 Parent: LTBaseObservation
-Id: lt-lifetrack-tobaccouse
-Title: "LT LifeTrack Tobacco Use"
+Id: lt-lifestyle-tobaccouse
+Title: "Tobacco Use"
 Description: "This profile constrains the Observation resource to represent Tobacco use assessment in a patient summary."
 * ^status = #draft
 * ^language = #en
@@ -88,10 +88,10 @@ Description: "This profile constrains the Observation resource to represent Toba
 
 
 
-Profile: LTLifeTrackTobaccoSmokingConsumption
+Profile: LTLifeStyleTobaccoSmokingConsumption
 Parent: LTBaseObservation
-Id: lt-lifetrack-tobacco-smoking-consumption
-Title: "LT LifeTrack Tobacco Smoking Consumption"
+Id: lt-lifestyle-tobacco-smoking-consumption
+Title: "Tobacco Smoking Consumption"
 Description: "This profile constrains the Observation resource to represent Tobacco smoking consumption assessment in a patient summary."
 * ^status = #draft
 * ^language = #en
@@ -111,10 +111,10 @@ Description: "This profile constrains the Observation resource to represent Toba
 * component ..0
 
 
-Profile: LTLifeTrackTobaccoUseDuration
+Profile: LTLifeStyleTobaccoUseDuration
 Parent: LTBaseObservation
-Id: lt-lifetrack-tobacco-use-duration
-Title: "LT LifeTrack Tobacco Use Duration - Number in Years"
+Id: lt-lifestyle-tobacco-use-duration
+Title: "Tobacco Use Duration - Number in Years"
 Description: "Amount of time (e.g. years) the patient has used smoking or smokeless tobacco products"
 * ^status = #draft
 * ^language = #en
@@ -140,10 +140,10 @@ Description: "Amount of time (e.g. years) the patient has used smoking or smokel
 * component ..0
 
 
-Profile: LTLifeTrackStoppedSmoking
+Profile: LTLifeStyleTobaccoSmokingStopped
 Parent: LTBaseObservation
-Id: lt-lifetrack-stopped-smoking
-Title: "LT LifeTrack Stopped Smoking - Number of Years Ago"
+Id: lt-lifestyle-tobacco-smoking-stopped
+Title: "Tobacco Smoking Stopped - Number of Years Ago"
 Description: "Records how long it has been since the patient stopped smoking, as a quantitative time interval (e.g., years). "
 * ^status = #draft
 * ^language = #en
@@ -161,10 +161,10 @@ Description: "Records how long it has been since the patient stopped smoking, as
 * component ..0
 
 
-Profile: LTLifeTrackTypeOfTobaccoUsed 
+Profile: LTLifeStyleTobaccoTypeUsed
 Parent: LTBaseObservation
-Id: lt-lifetrack-type-of-tobacco-used 
-Title: "LT LifeTrack Type of tobacco used"
+Id: lt-lifestyle-tobacco-type-used
+Title: "Tobacco Type Used"
 Description: "Records the type of tobacco product currently or previously used by the patient (e.g., cigarettes, cigars, e-cigarettes)."
 * ^status = #draft
 * ^language = #en
@@ -194,7 +194,7 @@ Description: "Records the type of tobacco product currently or previously used b
 
 // Example: current smoker
 Instance: example-LTSmoking-current-smoker
-InstanceOf: LTLifeTrackTobaccoUse
+InstanceOf: LTLifeStyleTobaccoUse
 Usage: #example
 Title: "Example LT Smoking Status - Current Smoker"
 Description: "Example instance showing a patient who currently smokes."
@@ -212,7 +212,7 @@ Description: "Example instance showing a patient who currently smokes."
 
 // Example: Tobacco Smoking Consumption
 Instance: example-tobacco-smoking-consumption
-InstanceOf: LTLifeTrackTobaccoSmokingConsumption
+InstanceOf: LTLifeStyleTobaccoSmokingConsumption
 Usage: #example
 Title: "Example LT Smoking Consumption - Light cigarette smoker (1–9 cigs/day)"
 Description: "Example instance showing a patient who is a light cigarette smoker."
@@ -227,7 +227,7 @@ Description: "Example instance showing a patient who is a light cigarette smoker
 
 // // Example: Tobacco Smoking Consumption - LOINC Code Used
 // Instance: example-tobacco-smoking-consumption-loinc
-// InstanceOf: LTLifeTrackTobaccoSmokingConsumption
+// InstanceOf: LTLifeStyleTobaccoSmokingConsumption
 // Usage: #example
 // Title: "Example LT Smoking Consumption - LOINC-based Observation"
 // Description: "Example instance showing a patient's smoking consumption using the LOINC code for Tobacco smoking status."
@@ -243,7 +243,7 @@ Description: "Example instance showing a patient who is a light cigarette smoker
 
 // Example: Tobacco Use Duration
 Instance: example-tobacco-use-duration
-InstanceOf: LTLifeTrackTobaccoUseDuration
+InstanceOf: LTLifeStyleTobaccoUseDuration
 Usage: #example
 Title: "Example LT Tobacco Use Duration - 5 years"
 Description: "Example instance showing a patient who has been smoking for 5 years."
@@ -260,7 +260,7 @@ Description: "Example instance showing a patient who has been smoking for 5 year
 
 // Example: Stopped Smoking
 Instance: example-stopped-smoking
-InstanceOf: LTLifeTrackStoppedSmoking
+InstanceOf: LTLifeStyleTobaccoSmokingStopped
 Usage: #example
 Title: "Example LT Stopped Smoking - 2 years ago"
 Description: "Example instance showing a patient who has stopped smoking 2 years ago."
@@ -277,9 +277,9 @@ Description: "Example instance showing a patient who has stopped smoking 2 years
 
 // Example: Type of Tobacco Used
 Instance: example-type-of-tobacco-used
-InstanceOf: LTLifeTrackTypeOfTobaccoUsed 
+InstanceOf: LTLifeStyleTobaccoTypeUsed
 Usage: #example
-Title: "Example LT LifeTrack Type Of Tobacco Used - Cigarette smoker"
+Title: "Example LT Tobacco Type Used - Cigarette smoker"
 Description: "Example instance showing a patient who is a cigarette smoker."
 * status = #final
 * category = $observation-category#social-history "Social History"

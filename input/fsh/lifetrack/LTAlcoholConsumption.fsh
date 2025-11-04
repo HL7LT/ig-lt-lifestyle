@@ -1,6 +1,6 @@
 ValueSet: LTAlcoholConsumptionStatus
 Id: lt-alcohol-consumption-status
-Title: "LT Alcohol Consumption Status"
+Title: "Alcohol Consumption Status"
 Description: "Whether the patient currently consumes alcohol, does not consume alcohol, or the status is unknown."
 * ^language = #en
 * ^version = "1.0.0"
@@ -15,10 +15,10 @@ Description: "Whether the patient currently consumes alcohol, does not consume a
 
 
 // Profile: LT Alcohol Consumption 
-Profile: LTAlcoholConsumption
+Profile: LTLifestyleAlcoholConsumption
 Parent: LTBaseObservation
-Id: lt-alcohol-consumption
-Title: "LT Alcohol Consumption"
+Id: lt-lifestyle-alcohol-consumption
+Title: "Alcohol Consumption"
 Description: "Observation of a patient's current alcohol consumption status. Optionally includes an AUDIT-C score component when alcohol intake is present."
 * ^status = #draft
 * ^language = #en
@@ -41,9 +41,9 @@ Description: "Observation of a patient's current alcohol consumption status. Opt
 
 // Example
 Instance: example-alcohol-consumption-no
-InstanceOf: LTAlcoholConsumption
+InstanceOf: LTLifestyleAlcoholConsumption
 Usage: #example
-Title: "Example LT Alcohol Consumption – No"
+Title: "Example of Alcohol Consumption – No"
 Description: "Patient is currently not drinking alcohol (sober) at the time of assessment."
 * status = #final
 * category = $observation-category#social-history "Social History"

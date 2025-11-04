@@ -1,6 +1,6 @@
 ValueSet: LTPhysicalActivityLevel
 Id: lt-physical-activity-level
-Title: "LT Physical Activity Level"
+Title: "Physical Activity Level"
 Description: "Categorical assessment of whether the patient's physical activity meets, exceeds, or falls below recommended levels."
 * ^language = #en
 * ^version = "1.0.0"
@@ -11,10 +11,10 @@ Description: "Categorical assessment of whether the patient's physical activity 
 * $sct#424805008 "Exercise above recommended level (finding)"
 * $sct#413300002 "Exercise below recommended level (finding)"
 
-Profile: LTLifeTrackPhysicalActivity
+Profile: LTLifestylePhysicalActivity
 Parent: LTBaseObservation
-Id: lt-lifetrack-physical-activity
-Title: "LT LifeTrack Physical Activity"
+Id: lt-lifestyle-physical-activity
+Title: "Physical Activity"
 Description: "This profile constrains the Observation resource to represent the patient’s level of physical activity compared to recommended standards."
 * ^status = #draft
 * ^language = #en
@@ -35,9 +35,9 @@ Description: "This profile constrains the Observation resource to represent the 
 
 // Example
 Instance: example-physical-activity-below
-InstanceOf: LTLifeTrackPhysicalActivity
+InstanceOf: LTLifestylePhysicalActivity
 Usage: #example
-Title: "Example LT Physical Activity - Below Recommended Level"
+Title: "Example of Physical Activity - Below Recommended Level"
 Description: "Example instance showing a patient whose physical activity level is below recommended standards."
 
 * status = #final

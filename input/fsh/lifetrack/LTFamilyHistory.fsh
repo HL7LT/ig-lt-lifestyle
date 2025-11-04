@@ -1,6 +1,6 @@
 ValueSet: LTFamilyHistoryCVDStatus
 Id: lt-family-history-cvd-status
-Title: "LT Family History of Cardiovascular Disease ValueSet"
+Title: "Family History of Cardiovascular Disease ValueSet"
 Description: "Indicates whether the patient has a family history of cardiovascular disease."
 * ^language = #en
 * ^version = "1.0.0"
@@ -15,7 +15,7 @@ Description: "Indicates whether the patient has a family history of cardiovascul
 // ValueSet: LT Family History of Diabetes
 ValueSet: LTFamilyHistoryDiabetesStatus
 Id: lt-family-history-diabetes-status
-Title: "LT Family History of Diabetes ValueSet"
+Title: "Family History of Diabetes ValueSet"
 Description: "Indicates whether the patient has a family history of diabetes mellitus."
 * ^language = #en
 * ^version = "1.0.0"
@@ -30,7 +30,7 @@ Description: "Indicates whether the patient has a family history of diabetes mel
 // ValueSet: LT Family History of Familial Hypercholesterolemia
 ValueSet: LTFamilyHistoryFHStatus
 Id: lt-family-history-fh-status
-Title: "LT Family History of Familial Hypercholesterolemia ValueSet"
+Title: "Family History of Familial Hypercholesterolemia ValueSet"
 Description: "Indicates whether the patient has a family history of familial hypercholesterolemia."
 * ^language = #en
 * ^version = "1.0.0"
@@ -44,10 +44,10 @@ Description: "Indicates whether the patient has a family history of familial hyp
 
 
 
-Profile: LTFamilyHistoryCVD
+Profile: LTScreeningFamilyHistoryCVD
 Parent: LTBaseObservation
-Id: lt-family-history-cvd
-Title: "LT Family History of Cardiovascular Disease"
+Id: lt-screening-family-history-cvd
+Title: "Family History of Cardiovascular Disease"
 Description: "Observation indicating whether the patient has a family history of cardiovascular disease."
 * ^status = #draft
 * ^language = #en
@@ -67,10 +67,10 @@ Description: "Observation indicating whether the patient has a family history of
 
 
 // Profile: LT Family History of Diabetes
-Profile: LTFamilyHistoryDiabetes
+Profile: LTScreeningFamilyHistoryDiabetes
 Parent: LTBaseObservation
-Id: lt-family-history-diabetes
-Title: "LT Family History of Diabetes"
+Id: lt-screening-family-history-diabetes
+Title: "Family History of Diabetes"
 Description: "Observation indicating whether the patient has a family history of diabetes mellitus."
 * ^status = #draft
 * ^language = #en
@@ -90,10 +90,10 @@ Description: "Observation indicating whether the patient has a family history of
 
 
 // Profile: LT Family History of Familial Hypercholesterolemia
-Profile: LTFamilyHistoryFH
+Profile: LTScreeningFamilyHistoryFH
 Parent: LTBaseObservation
-Id: lt-family-history-fh
-Title: "LT Family History of Familial Hypercholesterolemia"
+Id: lt-screening-family-history-fh
+Title: "Family History of Familial Hypercholesterolemia"
 Description: "Observation indicating whether the patient has a family history of familial hypercholesterolemia."
 * ^status = #draft
 * ^language = #en
@@ -115,10 +115,10 @@ Description: "Observation indicating whether the patient has a family history of
 
 
 // Example CVD
-Instance: example-family-history-cvd-positive
-InstanceOf: LTFamilyHistoryCVD
+Instance: example-screening-family-history-cvd-positive
+InstanceOf: LTScreeningFamilyHistoryCVD
 Usage: #example
-Title: "Example LT Family History of Cardiovascular Disease – Positive"
+Title: "Example of Family History of Cardiovascular Disease – Positive"
 Description: "Patient reports a positive family history of cardiovascular disease."
 * status = #final
 * category = $observation-category#social-history "Social History"
@@ -130,10 +130,10 @@ Description: "Patient reports a positive family history of cardiovascular diseas
 
 
 // Example Diabetes 
-Instance: example-family-history-diabetes-positive
-InstanceOf: LTFamilyHistoryDiabetes
+Instance: example-screening-family-history-diabetes-positive
+InstanceOf: LTScreeningFamilyHistoryDiabetes
 Usage: #example
-Title: "Example LT Family History of Diabetes – Positive"
+Title: "Example of Family History of Diabetes – Positive"
 Description: "Patient reports a family history of diabetes mellitus."
 * status = #final
 * category = $observation-category#social-history "Social History"
@@ -145,10 +145,10 @@ Description: "Patient reports a family history of diabetes mellitus."
 
 
 // Example: Familial Hypercholesterolemia
-Instance: example-family-history-fh-positive
-InstanceOf: LTFamilyHistoryFH
+Instance: example-screening-family-history-fh-positive
+InstanceOf: LTScreeningFamilyHistoryFH
 Usage: #example
-Title: "Example LT Family History of Familial Hypercholesterolemia – Positive"
+Title: "Example of Family History of Familial Hypercholesterolemia – Positive"
 Description: "Patient reports a family history of familial hypercholesterolemia."
 * status = #final
 * category = $observation-category#social-history "Social History"

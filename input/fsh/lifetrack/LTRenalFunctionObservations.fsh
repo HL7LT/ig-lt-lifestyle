@@ -1,6 +1,6 @@
-ValueSet: LTEstimatedGFRMethods
-Id: lt-estimated-gfr-methods
-Title: "LT Estimated Glomerular Filtration Rate (eGFR) Methods"
+ValueSet: LTEGFRMethods
+Id: lt-egfr-methods
+Title: "eGFR. Estimated Glomerular Filtration Rate Methods"
 Description: "LOINC codes representing eGFR measurements calculated using CKD-EPI formulas (original and 2021 revision)."
 * ^language = #en
 * ^version = "1.0.0"
@@ -12,10 +12,10 @@ Description: "LOINC codes representing eGFR measurements calculated using CKD-EP
 
 
 
-Profile: LTCreatinineTest
+Profile: LTLifestyleCreatinineTest
 Parent: LTBaseObservation
-Id: lt-creatinine-test
-Title: "LT Creatinine Test"
+Id: lt-lifestyle-creatinine-test
+Title: "Creatinine Test"
 Description: "Observation representing the patient's serum or plasma creatinine concentration."
 * ^status = #draft
 * ^language = #en
@@ -41,10 +41,10 @@ Description: "Observation representing the patient's serum or plasma creatinine 
 
 
 // Profile: LT Estimated Glomerular Filtration Rate (eGFR)
-Profile: LTEstimatedGFR
+Profile: LTLifestyleEGFR
 Parent: LTBaseObservation
-Id: lt-estimated-gfr
-Title: "LT Estimated Glomerular Filtration Rate (eGFR)"
+Id: lt-egfr
+Title: "eGFR. Estimated Glomerular Filtration Rate"
 Description: "Observation representing estimated glomerular filtration rate (eGFR) calculated using the CKD-EPI or CKD-EPI 2021 formula."
 * ^status = #draft
 * ^language = #en
@@ -53,7 +53,7 @@ Description: "Observation representing estimated glomerular filtration rate (eGF
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#laboratory "Laboratory"
-* code from LTEstimatedGFRMethods (preferred)
+* code from LTEGFRMethods (preferred)
 * subject 1..
 * subject only Reference(LTBasePatient)
 * effective[x] 1..
@@ -70,10 +70,10 @@ Description: "Observation representing estimated glomerular filtration rate (eGF
 
 
 // Profile: LT Albumin/Creatinine Ratio (ACR)
-Profile: LTAlbuminCreatinineRatio
+Profile: LTLifestyleAlbuminCreatinineRatio
 Parent: LTBaseObservation
-Id: lt-albumin-creatinine-ratio
-Title: "LT Albumin/Creatinine Ratio (ACR)"
+Id: lt-lifestyle-albumin-creatinine-ratio
+Title: "Albumin/Creatinine Ratio (ACR)"
 Description: "Observation representing the urine albumin-to-creatinine ratio (ACR), used to assess kidney function in diabetic patients."
 * ^status = #draft
 * ^language = #en
@@ -101,9 +101,9 @@ Description: "Observation representing the urine albumin-to-creatinine ratio (AC
 
 // Example
 Instance: example-creatinine-test
-InstanceOf: LTCreatinineTest
+InstanceOf: LTLifestyleCreatinineTest
 Usage: #example
-Title: "Example LT Creatinine Test"
+Title: "Example of Creatinine Test"
 Description: "Example observation of serum creatinine concentration."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -120,9 +120,9 @@ Description: "Example observation of serum creatinine concentration."
 
 // Example: Estimated Glomerular Filtration Rate (eGFR)
 Instance: example-egfr
-InstanceOf: LTEstimatedGFR
+InstanceOf: LTLifestyleEGFR
 Usage: #example
-Title: "Example LT Estimated Glomerular Filtration Rate (eGFR)"
+Title: "Example of Estimated Glomerular Filtration Rate (eGFR)"
 Description: "Example showing a patient's eGFR result calculated using the CKD-EPI 2021 formula."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
@@ -139,9 +139,9 @@ Description: "Example showing a patient's eGFR result calculated using the CKD-E
 
 // Example: Albumin/Creatinine Ratio
 Instance: example-albumin-creatinine-ratio
-InstanceOf: LTAlbuminCreatinineRatio
+InstanceOf: LTLifestyleAlbuminCreatinineRatio
 Usage: #example
-Title: "Example LT Albumin/Creatinine Ratio (ACR)"
+Title: "Example of Albumin/Creatinine Ratio (ACR)"
 Description: "Example observation of a patient's urine albumin-to-creatinine ratio."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"

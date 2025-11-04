@@ -12,10 +12,10 @@ Description: "Categorical assessment of whether the patient’s nutrition is bal
 * $sct#707847004 "Imbalance of nutrient intake (finding)" // Unbalanced
 
 
-Profile: LTNutrition
+Profile: LTLifestyleNutrition
 Parent: LTBaseObservation
-Id: lt-nutrition
-Title: "LT Nutrition"
+Id: lt-lifestyle-nutrition
+Title: "Nutrition"
 Description: "Observation profile representing the patient’s nutrition status (balanced vs. unbalanced)."
 * ^status = #draft
 * ^language = #en
@@ -36,10 +36,10 @@ Description: "Observation profile representing the patient’s nutrition status 
 
 
 
-Instance: example-nutrition-balanced
-InstanceOf: LTNutrition
+Instance: example-lifestyle-nutrition-balanced
+InstanceOf: LTLifestyleNutrition
 Usage: #example
-Title: "Example LT Nutrition – Balanced"
+Title: "Example of Nutrition – Balanced"
 Description: "Example showing a patient with balanced (healthy) nutrition."
 * status = #final
 * category = $observation-category#social-history "Social History"

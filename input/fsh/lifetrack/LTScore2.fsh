@@ -1,6 +1,6 @@
 ValueSet: LTCVDRiskDegree
 Id: lt-cvd-risk-degree
-Title: "LT Cardiovascular Disease Risk Degree (SCORE2)"
+Title: "Cardiovascular Disease Risk Degree (SCORE2)"
 Description: """
 Degree of cardiovascular disease risk according to SCORE2 risk estimation table.
 Interpretation based on color zones:
@@ -23,10 +23,10 @@ Interpretation based on color zones:
 
 
 
-Profile: LTCVDRiskAssessment
+Profile: LTScreeningCVDRiskAssessment
 Parent: LTBaseObservation
-Id: lt-cvd-risk-assessment
-Title: "LT General Assessment of Cardiovascular Disease Risk (SCORE2)"
+Id: lt-screening-cvd-risk-assessment
+Title: "SCORE2. General Assessment of Cardiovascular Disease Risk"
 Description: "SCORE2 (Systematic Coronary Risk Estimation) cardiovascular disease risk assessment estimate."
 * ^status = #draft
 * ^language = #en
@@ -35,7 +35,7 @@ Description: "SCORE2 (Systematic Coronary Risk Estimation) cardiovascular diseas
 * ^publisher = "HL7 Lithuania"
 // Observation identification
 * category = $observation-category#exam "Exam"
-* code = $sct#441829007 "Assessment for risk of cardiovascular disease (procedure)"
+* code = $sct#827181004 "Risk of cardiovascular disease"
 // Subject and timing
 * subject 1..
 * subject only Reference(LTBasePatient)
@@ -61,14 +61,14 @@ Description: "SCORE2 (Systematic Coronary Risk Estimation) cardiovascular diseas
 * component[cvdRiskDegree].valueCodeableConcept from LTCVDRiskDegree (required)
 
 
-Instance: example-cvd-risk-assessment
-InstanceOf: LTCVDRiskAssessment
+Instance: example-screening-cvd-risk-assessment
+InstanceOf: LTScreeningCVDRiskAssessment
 Usage: #example
-Title: "Example LT SCORE2 Cardiovascular Disease Risk Assessment"
+Title: "Example of SCORE2 Cardiovascular Disease Risk Assessment"
 Description: "Example of SCORE2 risk assessment showing 24% estimated risk (high)."
 * status = #final
 * category = $observation-category#exam "Exam"
-* code = $sct#441829007 "Assessment for risk of cardiovascular disease (procedure)"
+* code = $sct#827181004 "Risk of cardiovascular disease"
 * subject = Reference(Patient/example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueQuantity.value = 24
