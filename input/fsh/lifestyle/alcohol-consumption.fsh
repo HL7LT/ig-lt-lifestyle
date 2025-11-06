@@ -8,7 +8,7 @@ Description: "Whether the patient currently consumes alcohol, does not consume a
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
 * $sct#105542008 "Current non-drinker of alcohol (finding)"   // No
-* $sct#365967005 "Finding of alcohol intake (finding)"         // Yes
+* $sct#219006 "Current drinker of alcohol (finding)"   // Yes
 * $sct#160580001 "Alcohol consumption unknown (finding)"       // Unknown
 
 
