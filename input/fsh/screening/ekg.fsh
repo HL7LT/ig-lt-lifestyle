@@ -13,7 +13,17 @@ Description: "Electrocardiogram (EKG/ECG) observation using 12 leads and Sampled
 * ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#procedure "Procedure"
-* code = $EKG#131328 "MDC_ECG_ELEC_POTL"
+* // --- Dual coding: MDC + SNOMED CT ---
+* code.coding ^slicing.discriminator[0].type = #value
+* code.coding ^slicing.discriminator[0].path = "system"
+* code.coding ^slicing.rules = #open
+* code.coding contains mdcCode 1..1 and sctCode 1..1
+
+* code.coding[mdcCode].system = $EKG
+* code.coding[mdcCode] = $EKG#131328 "MDC_ECG_ELEC_POTL"
+* code.coding[sctCode].system = $sct
+* code.coding[sctCode] = $sct#268400002 "12 lead ECG (procedure)"
+
 * subject 1.. 
 * subject only Reference(LTBasePatient)
 * effective[x] 1..
