@@ -21,6 +21,7 @@ Description: "Electrocardiogram (EKG/ECG) observation using 12 leads and Sampled
 * note MS
 * component MS
 * component.value[x] only SampledData
+* value[x] ..0
 * interpretation MS
 * interpretation from NumericResultInterpretation
 
