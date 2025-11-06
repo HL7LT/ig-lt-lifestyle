@@ -13,7 +13,7 @@ Description: "Electrocardiogram (EKG/ECG) observation using 12 leads and Sampled
 * ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#procedure "Procedure"
-// --- Dual coding: MDC + SNOMED CT ---
+
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[0].path = "system"
 * code.coding ^slicing.rules = #open
