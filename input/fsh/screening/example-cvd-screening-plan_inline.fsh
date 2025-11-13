@@ -1,7 +1,7 @@
 Instance: example-cvd-screening-plan
 InstanceOf: CarePlan
 Usage: #example
-Title: "Example of Cardiovascular Disease Screening Plan"
+Title: "Example of Cardiovascular Disease Screening Plan using inline goals"
 Description: "CVD screening plan for a patient at high cardiovascular risk, including goals, risk group, lifestyle recommendations and medication instructions."
 * status = #active
 * intent = #plan
