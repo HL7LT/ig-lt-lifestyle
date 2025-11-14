@@ -1,3 +1,8 @@
+Alias: $sct = http://snomed.info/sct
+Alias: $loinc = http://loinc.org
+Alias: $ucum = http://unitsofmeasure.org
+
+
 Profile: LTGlucoseVenous
 Parent: Observation
 Id: lt-glucose-venous
@@ -45,8 +50,8 @@ Title: "Example Glucose in Venous Blood"
 Description: "Example of laboratory glucose measurement in venous blood."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code.coding[0] = $loinc#41652-9 "Glucose [Mass/volume] in Venous blood"
-* code.coding[1] = $sct#122555007 "Venous blood specimen (specimen)"
+* code.coding[loincCode] = $loinc#41652-9 "Glucose [Mass/volume] in Venous blood"
+* code.coding[sctCode]   = $sct#122555007 "Venous blood specimen (specimen)"
 * subject = Reference(example-patient)
 * effectiveDateTime = "2025-11-06T09:00:00Z"
 * valueQuantity.value = 5.4
@@ -55,6 +60,7 @@ Description: "Example of laboratory glucose measurement in venous blood."
 * valueQuantity.code = #mmol/L
 * specimen = Reference(example-specimen-venous)
 * note.text = "Normal fasting glucose level."
+
 
 Instance: example-specimen-venous
 InstanceOf: Specimen

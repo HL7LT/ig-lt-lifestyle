@@ -17,11 +17,11 @@ Description: "CVD screening plan for a patient at high cardiovascular risk, wher
 * goal[0] = Reference(Goal/example-goal-ldl)
 * goal[+] = Reference(Goal/example-goal-bmi)
 * goal[+] = Reference(Goal/example-goal-bp)
-* activity[0].performedActivity.concept = $sct#710081004 "Tobacco use cessation education (procedure)"
+* activity[0].performedActivity.concept = $sct#702388001 "Tobacco use cessation education (procedure)"
 * activity[0].progress[0].text = "Pharmacological and behavior change tools selected."
-* activity[1].performedActivity.concept = $sct#710818004 "Dietary regime management (procedure)"
+* activity[1].performedActivity.concept = $sct#370847001 "Dietary needs education (procedure)"
 * activity[1].progress[0].text = "Dietary recommendations include fruits and vegetables >200 g/day, fiber 35–45 g/day, fish twice a week, limited meat and alcohol, salt <5 g/day."
-* activity[2].performedActivity.concept = $sct#229065009 "Physical activity education (procedure)"
+* activity[2].performedActivity.concept = $sct#819961005 "Physical activity guidance (procedure)"
 * activity[2].progress[0].text = "30–60 minutes of moderate activity daily."
 * note[0].text = "Follow-up visit with cardiologist in 3 months."
 

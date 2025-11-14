@@ -22,16 +22,16 @@ Description: "CVD screening plan for a patient at high cardiovascular risk, incl
 * goal[+].reference = "#goal-bp-cvdp"
 
 // Activities
-* activity[0].performedActivity.concept = $sct#710081004 "Tobacco use cessation education (procedure)"
+* activity[0].performedActivity.concept = $sct#702388001 "Tobacco use cessation education (procedure)"
 * activity[0].progress[0].text = "Pharmacological and behavior change tools selected."
-* activity[1].performedActivity.concept = $sct#710818004 "Dietary regime management (procedure)"
+* activity[1].performedActivity.concept = $sct#370847001 "Dietary needs education (procedure)"
 * activity[1].progress[0].text = "Dietary recommendations: fruits and vegetables >200 g/day, 35–45 g of fiber (mainly from grains), moderate unsalted nuts (30 g/day),
 fish 1–2 servings per week (one fatty), limited lean meat, low-fat dairy, and vegetable oils.
 Saturated fats <10% of total fat intake (replace with polyunsaturated fats),
 trans fats <1% of total energy (avoid processed foods).
 Salt <5–6 g/day. Alcohol <100 g per week (<15 g/day).
 Avoid sugary soft drinks and high-energy foods."
-* activity[2].performedActivity.concept = $sct#229065009 "Physical activity education (procedure)"
+* activity[2].performedActivity.concept = $sct#819961005 "Physical activity guidance (procedure)"
 * activity[2].progress[0].text = "30–60 minutes of moderate activity daily."
 * note[0].text = "Follow-up visit with cardiologist in 3 months."
 
