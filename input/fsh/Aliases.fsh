@@ -36,6 +36,7 @@ Alias: $identifier-use = http://hl7.org/fhir/identifier-use
 Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 Alias: $iso-3166 = urn:iso:std:iso:3166
 Alias: $issue-severity = http://hl7.org/fhir/issue-severity
+Alias: $laterality = http://hl7.org/fhir/ValueSet/bodysite-laterality
 Alias: $location-status = http://hl7.org/fhir/location-status
 Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 Alias: $name-use = http://hl7.org/fhir/name-use
