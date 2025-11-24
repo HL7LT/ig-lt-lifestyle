@@ -22,6 +22,7 @@ publisher:
 
 dependencies:
   lt.hl7.fhir.base: 0.2.0
+  hl7.fhir.eu.base-r5: 0.1.0
 
 #  lt.hl7.fhir.vitalsigns: dev
 #  hl7.fhir.us.core: 8.0.0

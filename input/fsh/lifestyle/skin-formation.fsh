@@ -12,7 +12,7 @@ Description: "Types of breast skin findings."
 
 // BodyStructure profile
 Profile: BodyStructureBreastLt
-Parent: BodyStructure
+Parent: BodyStructureEuCore
 Id: body-structure-breast-lt
 * includedStructure 1..* MS
 * includedStructure.structure 1..1 MS
