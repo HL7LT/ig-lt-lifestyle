@@ -4,6 +4,7 @@ Title: "Breast quadrant locations"
 Description: "Anatomic quadrants of right and left breast."
 * ^language = #en
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * $sct#110496004 "Structure of upper outer quadrant of right breast"
 * $sct#110497008 "Structure of lower outer quadrant of right breast"
