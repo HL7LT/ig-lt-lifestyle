@@ -4,7 +4,7 @@ Alias: $ucum = http://unitsofmeasure.org
 
 
 Profile: LTGlucoseVenous
-Parent: Observation
+Parent: LTBaseObservation
 Id: lt-glucose-venous
 Title: "LT Glucose in Venous Blood"
 Description: "This profile constrains the Observation resource to represent glucose concentration in venous blood. It uses LOINC 41652-9 and SNOMED CT reference for venous blood specimen."
