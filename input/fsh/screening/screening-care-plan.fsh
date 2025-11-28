@@ -51,14 +51,14 @@ Description: "An example instance of a CarePlan for a patient at risk of Cardiov
 
 // Activity 1: Quitting smoking
 * activity[0]
-  * performedActivity.concept = $sct#44621000124107 "Tobacco cessation counseling"
+  * performedActivity.concept = $sct#702388001 "Tobacco use cessation education (procedure)"
   * progress.text = "Quitting smoking intervention selected: Pharmacological and Behavior change tools."
 //   * detail.extension[0].url = "https://hl7.lt/fhir/base/StructureDefinition/LT-ActivityNote"
 //   * detail.extension[0].valueString = "Avoid passive smoking." // Informational text at the end of section
 
 // Activity 2: Healthy nutrition
 * activity[1]
-  * performedActivity.concept = $sct#224538006 "Dietary management"
+  * performedActivity.concept = $sct#11816003 "Diet education (procedure)"
   * progress[0].text = """
     Healthy Nutrition Plan: Diet should include consumption of fruits and vegetables > 200 g/day, 35–45 g of fiber (recommended from grains), moderate consumption of nuts (30 g/day, unsalted), 1–2 servings of fish per week (one fatty fish), limited amounts of lean meat, low-fat dairy products, and liquid vegetable oils.
     Saturated fats <10% of total fat intake, replacing them with polyunsaturated fats, reducing trans fats, preferably not from processed foods and making up <1% of total energy intake.
@@ -72,7 +72,7 @@ Description: "An example instance of a CarePlan for a patient at risk of Cardiov
 
 // Activity 3: Physical activity (Required)
 * activity[2]
-  * performedActivity.concept = $sct#410600000 "Physical activity regimen"
+  * performedActivity.concept = $sct#1287704009 "Physical activity consultation (procedure)"
   * progress[0].text = "30-60 minutes of moderate physical activity daily, beneficial and irregular physical activity."
 //   * detail.doNotPerform = false // Assuming this is an instruction to perform
 
@@ -121,7 +121,7 @@ Title: "Goal: Target LDL Cholesterol"
 * subject = Reference(Patient/example-patient)
 //* achievementStatus = $goal-achievement-status#in-progress "In Progress"
 * description.text = "Target LDL Cholesterol, considering the cardiovascular disease risk group"
-* target[0].measure = $loinc#13457-7 "LDL Cholesterol"
+* target[0].measure = $loinc#13457-7 "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation"
 * target[0].detailQuantity.value = 1.4
 * target[0].detailQuantity.unit = "mmol/L"
 * target[0].detailQuantity.system = $ucum
