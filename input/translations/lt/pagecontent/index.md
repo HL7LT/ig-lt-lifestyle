@@ -12,7 +12,6 @@
 - **Alkoholio vartojimas**: Vartojimo įpročiai, patikros rezultatai (pvz., AUDIT) ir intervencijos istorija.
 - **Fizinis aktyvumas**: Mankštos dažnumas, trukmė ir intensyvumas (pvz., naudojant MET).
 - **Mitybos įpročiai**: Specifinių maistinių medžiagų suvartojimas (pvz., natrio, cukraus) ir bendrieji mitybos modeliai.
-- **Biometriniai duomenys**: Reikšmingi patikros stebėjimai, tokie kaip Cholesterolis (lipidograma).
 
 ## Kodėl verta naudoti šį gidą?
 

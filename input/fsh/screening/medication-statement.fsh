@@ -2,9 +2,10 @@ Extension: MedicationTiming
 Id: MedicationTiming
 Description: "The timing instructions for the medication (e.g., 'Before Meals', 'With Food')."
 Context: Element
-* ^url = "https://hl7.lt/fhir/lifestyle/StructureDefinition/medication-timing"
+* ^url = "https://hl7.lt/fhir/lifestyle/StructureDefinition/MedicationTiming"
 * value[x] only string
 * valueString ^short = "The timing instruction for the medication."
+
 
 Profile: LtScreeningMedicationStatement
 Parent: MedicationStatement
