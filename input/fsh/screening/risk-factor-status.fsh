@@ -26,8 +26,8 @@ Description: "SNOMED CT concepts representing screening-related risk factors."
 * $sct#73211009  "Diabetes mellitus (disorder)"
 * $sct#9414007   "Impaired glucose tolerance (disorder)"
 * $sct#390951007 "Impaired fasting glycemia (disorder)"
-* $sct#248311001 "Central obesity (disorder)"
-* $sct#414916001 "Obesity (disorder)"
+//* $sct#248311001 "Central obesity (disorder)"
+//* $sct#414916001 "Obesity (disorder)"
 
 ValueSet: MedicationTaken
 Id: medication-taken
@@ -199,7 +199,7 @@ Description: "Example showing a patient identified with impaired glucose toleran
   * valueCodeableConcept = $sct#183964008 "Treatment not indicated (situation)"
 * note.text = "Patient shows impaired fasting glucose; monitoring recommended, no treatment initiated."
 
-
+/*
 // Example of patient with central  obesity
 Instance: example-central-obesity-present
 InstanceOf: LTScreeningRiskFactorStatus
@@ -230,7 +230,7 @@ Description: "Example showing a patient identified as having general obesity."
 * component[risk]
   * valueCodeableConcept = $risk-probability#certain "Certain"
 * note.text = "Patient classified as obese based on BMI ≥ 30 kg/m²."
-
+*/
 
 Instance: example-diabetes-duration-gt10
 InstanceOf: LTDiabetesDurationStatus

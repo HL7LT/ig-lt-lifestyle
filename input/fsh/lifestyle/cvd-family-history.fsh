@@ -25,7 +25,7 @@ Description: "Indicates whether the patient has a family history of diabetes mel
 * $sct#160303001 "Family history of diabetes mellitus (situation)"         // Yes
 * $sct#407559004 "Family history unknown (situation)"                  // Unknown
 
-
+/*
 ValueSet: LTFamilyHistoryFHStatus
 Id: lt-family-history-fh-status
 Title: "Family History of Familial Hypercholesterolemia"
@@ -38,7 +38,7 @@ Description: "Indicates whether the patient has a family history of familial hyp
 * $sct#160303001 "No family history of disease (situation)"           // No
 * $sct#473145005 "Possible familial hypercholesterolemia (situation)"  // Yes
 * $sct#407559004 "Family history unknown (situation)"                  // Unknown
-
+*/
 
 
 
@@ -86,7 +86,7 @@ Description: "Observation indicating whether the patient has a family history of
 * valueCodeableConcept 1..1
 * valueCodeableConcept from LTFamilyHistoryDiabetesStatus (preferred)
 
-
+/*
 // Profile: LT Family History of Familial Hypercholesterolemia
 Profile: LTScreeningFamilyHistoryFH
 Parent: LTBaseObservation
@@ -108,7 +108,7 @@ Description: "Observation indicating whether the patient has a family history of
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from LTFamilyHistoryFHStatus (preferred)
-
+*/
 
 
 
@@ -141,7 +141,7 @@ Description: "Patient reports a family history of diabetes mellitus."
 * valueCodeableConcept = $sct#161445009 "History of diabetes mellitus (situation)"
 * note.text = "Patient reports diabetes mellitus in a first-degree relative."
 
-
+/*
 // Example: Familial Hypercholesterolemia
 Instance: example-screening-family-history-fh-positive
 InstanceOf: LTScreeningFamilyHistoryFH
@@ -155,3 +155,4 @@ Description: "Patient reports a family history of familial hypercholesterolemia.
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#473145005 "Possible familial hypercholesterolemia (situation)"
 * note.text = "Patient reports elevated cholesterol and confirmed familial hypercholesterolemia in a first-degree relative."
+*/
