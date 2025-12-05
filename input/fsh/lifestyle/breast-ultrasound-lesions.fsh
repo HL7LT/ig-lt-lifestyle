@@ -39,6 +39,18 @@ Description: "Types of lesions identified during breast ultrasound, allowing for
 * $sct#28432003 "Abscess of breast (disorder)" // disorder
 * $sct#74964007 "Other (qualifier value)" ////////////////////////////////// 
 
+ValueSet: BreastLaterality
+Id: breast-laterality
+Title: "Breast Laterality"
+Description: "Sides of the body (Left, Right, Bilateral) for breast findings."
+* ^status = #active
+* ^experimental = false
+* ^publisher = "HL7 Lithuania"
+* ^language = #en
+* $sct#7771000 "Left (qualifier value)"
+* $sct#24028007 "Right (qualifier value)"
+* $sct#51440002 "Right and left (qualifier value)"
+
 Profile: LTUltrasoundLesion
 Parent: LTBaseObservation
 Id: lt-ultrasound-lesion
@@ -68,11 +80,10 @@ Description: "A radiology Observation representing one specific ultrasound lesio
 * component[side] ^definition = "The side of the body (left or right) where the breast lesion is located."
 * component[side].code = $sct#272741003 "Laterality" 
 * component[side].value[x] only CodeableConcept
-* component[side].valueCodeableConcept from http://hl7.org/fhir/ValueSet/bodysite-laterality (required)
-//https://build.fhir.org/ig/HL7/fhir-mCODE-ig/ValueSet-mcode-laterality-qualifier-vs
-// or this VS? https://build.fhir.org/valueset-bodystructure-laterality
-// or this VS? https://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/artifacts
-//moreover, I dont know if I can put links here
+* component[side].valueCodeableConcept from BreastLaterality (required)
+
+//https://build.fhir.org/valueset-bodystructure-laterality
+
 
 //clocks
 * component contains clock-position 1..1
