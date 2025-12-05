@@ -40,7 +40,7 @@ Description: "Types of lesions identified during breast ultrasound, allowing for
 * $sct#74964007 "Other (qualifier value)" ////////////////////////////////// 
 
 Profile: LTUltrasoundLesion
-Parent: Observation
+Parent: LTBaseObservation
 Id: lt-ultrasound-lesion
 Title: "Ultrasound Breast Lesion"
 Description: "A radiology Observation representing one specific ultrasound lesion with localization, dimensions, and characteristics."
@@ -51,7 +51,7 @@ Description: "A radiology Observation representing one specific ultrasound lesio
 * code = $sct#15633961000119104 "Ultrasonography of breast abnormal (finding)"
 * subject 1..1
 * subject only Reference(LTBasePatient)
-* effective[x] 1..
+* effective[x] 1..1
 * effective[x] only dateTime
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
@@ -68,7 +68,8 @@ Description: "A radiology Observation representing one specific ultrasound lesio
 * component[side] ^definition = "The side of the body (left or right) where the breast lesion is located."
 * component[side].code = $sct#272741003 "Laterality" 
 * component[side].value[x] only CodeableConcept
-* component[side].valueCodeableConcept from https://build.fhir.org/ig/HL7/fhir-mCODE-ig/ValueSet-mcode-laterality-qualifier-vs (required)
+* component[side].valueCodeableConcept from http://hl7.org/fhir/ValueSet/bodysite-laterality (required)
+//https://build.fhir.org/ig/HL7/fhir-mCODE-ig/ValueSet-mcode-laterality-qualifier-vs
 // or this VS? https://build.fhir.org/valueset-bodystructure-laterality
 // or this VS? https://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/artifacts
 //moreover, I dont know if I can put links here
@@ -88,7 +89,7 @@ Description: "A radiology Observation representing one specific ultrasound lesio
 * component[length-mm].code = $sct#439932008 "Length of structure by imaging measurement"
 * component[length-mm].value[x] only Quantity
 * component[length-mm].valueQuantity.unit = "mm"
-* component[length-mm].valueQuantity.system = "https://unitsofmeasurement.org/"
+* component[length-mm].valueQuantity.system = "http://unitsofmeasure.org"
 * component[length-mm].valueQuantity.code = #mm
 
 //Width (mm)
@@ -98,7 +99,7 @@ Description: "A radiology Observation representing one specific ultrasound lesio
 * component[width-mm].code = $sct#440357003 "Width of structure by imaging measurement"
 * component[width-mm].value[x] only Quantity
 * component[width-mm].valueQuantity.unit = "mm"
-* component[width-mm].valueQuantity.system = "https://unitsofmeasurement.org/"
+* component[width-mm].valueQuantity.system = "http://unitsofmeasure.org"
 * component[width-mm].valueQuantity.code = #mm
 
 //description
@@ -143,7 +144,7 @@ Usage: #example
 Title: "Breast Lesion - Right Cyst"
 Description: "Ultrasound finding of a cyst in the right breast at 10 o'clock."
 * status = #final
-* subject = Reference(LTBasePatient-example)
+* subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#399294002 "Cyst of breast (disorder)"
 * component[side].valueCodeableConcept = $sct#24028007 "Right"
@@ -159,7 +160,7 @@ Usage: #example
 Title: "Example Lesion - Left Fibroadenoma"
 Description: "Ultrasound finding of a fibroadenoma in the left breast at 3 o'clock."
 * status = #final
-* subject = Reference(LTBasePatient-example)
+* subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#254845004 "Fibroadenoma of breast (disorder)"
 * component[side].valueCodeableConcept = $sct#7771000 "Left"
@@ -175,7 +176,7 @@ Usage: #example
 Title: "Example Lesion - Right Malignant Tumor"
 Description: "Ultrasound finding of a malignant tumor in the right breast at 6 o'clock."
 * status = #final
-* subject = Reference(LTBasePatient-example)
+* subject = Reference(example-patient)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#254837009 "Malignant neoplasm of breast (disorder)"
 * component[side].valueCodeableConcept = $sct#24028007 "Right"
