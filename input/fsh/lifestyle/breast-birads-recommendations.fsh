@@ -1,6 +1,6 @@
-ValueSet: BiradsRecommendationTypeVS
-Id: lt-birads-recommendation-type-vs
-Title: "BI-RADS Recommentadion Type Value Set"
+ValueSet: BiradsRecommendationType
+Id: lt-birads-recommendation-type
+Title: "BI-RADS Recommendation Types"
 Description: "All clinical recommendations triggered by the BI-RADS diagnostic assessment."
 * ^language = #en
 * ^status = #active
@@ -21,4 +21,4 @@ Description: "Observation representing a clinical recommendation generated from 
 
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from BiradsRecommendationTypeVS (required)
+* valueCodeableConcept from BiradsRecommendationType (required)
