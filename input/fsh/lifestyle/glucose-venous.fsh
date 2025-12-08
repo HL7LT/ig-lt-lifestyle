@@ -22,7 +22,7 @@ Description: "This profile constrains the Observation resource to represent gluc
 * code.coding[sctCode] = $sct#122555007 "Venous blood specimen (specimen)"
 // --- Subject ---
 * subject 1..1
-* subject only Reference(LTBasePatient)
+* subject only Reference(Patient) // or LTBasePatient if defined in the same IG
 // --- Timing ---
 * effective[x] 1..1
 * effective[x] only dateTime
