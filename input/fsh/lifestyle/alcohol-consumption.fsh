@@ -39,6 +39,59 @@ Description: "Observation of a patient's current alcohol consumption status. Opt
 
 
 
+
+
+Profile: LTAlcoholUseHistory
+Parent: LTBaseObservation
+Id: lt-alcohol-use-history
+Title: "Alcohol Use History"
+Description: "This profile constrains the Observation resource to represent a simple yes/no alcohol use history item."
+
+* ^status = #draft
+* ^language = #en
+* ^version = "1.0.0"
+* ^date = "2025-10-25T19:10:07+03:00"
+* ^experimental = true
+* ^publisher = "HL7 Lithuania"
+
+// Category and code
+* category = $observation-category#social-history "Social History"
+* code = $sct#160573003 "Alcohol consumption (observable entity)"
+
+// Subject and timing
+* subject 1..
+* subject only Reference(LTBasePatient)
+* effective[x] 1..
+* effective[x] only dateTime
+
+// Value (Yes/No)
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from YesNo (preferred)
+
+// Optional free-text note
+* note 0..1
+* note.text ^short = "Optional free-text note describing details"
+
+// Optional structured components
+* component 0..*
+* component ^short = "Optional additional structured details"
+* component ^definition = "For extra details such as frequency or duration."
+
+// Example optional slice: frequency
+* component contains Frequency 0..1
+* component[Frequency].code = $sct#370870000 "Frequency (qualifier value)"
+* component[Frequency].value[x] only CodeableConcept
+* component[Frequency].valueCodeableConcept from AlcoholUseFrequencyVS (preferred)
+* component[Frequency].valueCodeableConcept ^short = "Daily / Weekly / Monthly"
+
+// Example optional slice: duration
+* component contains Duration 0..1
+* component[Duration].code = $sct#424717009 "Duration (attribute)"
+* component[Duration].value[x] only string
+* component[Duration].valueString ^short = "For how long"
+
+
 // Example
 Instance: example-alcohol-consumption-no
 InstanceOf: LTLifestyleAlcoholConsumption
@@ -55,5 +108,26 @@ Description: "Patient is currently not drinking alcohol (sober) at the time of a
 
 
 
+Instance: example-alcohol-history-yes
+InstanceOf: LTLifestyleAlcoholConsumption
+Usage: #example
+Title: "Example – Alcohol Consumption History (Yes)"
+Description: "Patient reports alcohol consumption with additional structured details."
 
+* status = #final
+* category = $observation-category#social-history "Social History"
 
+// YES/NO alcohol use 
+* valueCodeableConcept = $sct#373066001 "Yes (qualifier value)"
+// Subject and timing
+* subject = Reference(example-patient)
+* effectiveDateTime = "2025-10-01T09:00:00Z"
+// Frequency slice 
+* component[Frequency].code = $sct#370870000 "Frequency (qualifier value)"
+* component[Frequency].valueCodeableConcept = $sct#229065009 "Daily (qualifier value)"
+// Type slice 
+* component contains Type 0..1
+* component[Type].code = $sct#424226004 "Type (qualifier value)"
+* component[Type].valueString = "Wine"
+// Optional free-text note
+* note.text = "Patient drinks daily, typically wine."

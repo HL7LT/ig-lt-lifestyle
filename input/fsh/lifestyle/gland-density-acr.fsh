@@ -27,34 +27,26 @@ Description: "Gland density observation according to ACR BI-RADS classification.
 * ^version = "1.0.0"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 * category = $observation-category#exam "Exam"
-
 // Observation code
 * code = $sct#733851004 "Breast consistency (observable entity)"
-
 // Subject + timing
 * subject 1..1
 * subject only Reference(LTBasePatient)
 * effective[x] 1..1
 * effective[x] only dateTime
-
 // Value
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from LTGlandDensityACR (required)
-
 // Components (optional side of breast)
 * component 0..*
 * component ^short = "Optional breast side if density is side-specific"
-
 // Slicing
 * component ^slicing.discriminator[0].type = #pattern
 * component ^slicing.discriminator[0].path = "code"
 * component ^slicing.rules = #open
-
 * component contains Side 0..1
-
 // Side component (matches other breast profiles)
 * component[Side].code = $sct#76752008 "Breast structure (body structure)"
 * component[Side].value[x] only CodeableConcept

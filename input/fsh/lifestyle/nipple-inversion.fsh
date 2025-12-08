@@ -1,4 +1,4 @@
-Alias: $sct = http://snomed.info/sct
+
 
 // ValueSet: NippleInversionFindingsVS
 ValueSet: NippleInversionFindingsVS
