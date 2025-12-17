@@ -38,9 +38,9 @@ Description: "Observation representing mammographic breast changes using BodyStr
 * valueCodeableConcept from YesNo (required)
 * valueCodeableConcept 1..1
 // BodyStructure describes side + quadrant
-* bodySite 0..*
-* bodySite only Reference(BodyStructure)
-* bodySite ^short = "Breast side + quadrant represented via BodyStructure"
+* focus 0..*
+* focus only Reference(BodyStructure)
+* focus ^short = "Breast side + quadrant represented via BodyStructure"
 // Structured components
 * component 0..*
 * component ^short = "Details of mammographic finding"
@@ -70,6 +70,7 @@ Instance: bs-left-uoq
 InstanceOf: BodyStructure
 Usage: #example
 Title: "Left Breast Upper Outer Quadrant"
+* patient = Reference(example-patient)
 * includedStructure[0].structure = $sct#76752008 "Breast structure"
 * includedStructure[0].laterality = $sct#7771000 "Left"
 * includedStructure[0].qualifier = $sct#110501003 "Upper outer quadrant of breast"
@@ -79,6 +80,7 @@ Instance: bs-right-liq
 InstanceOf: BodyStructure
 Usage: #example
 Title: "Right Breast Lower Inner Quadrant"
+* patient = Reference(example-patient)
 * includedStructure[0].structure = $sct#76752008 "Breast structure"
 * includedStructure[0].laterality = $sct#24028007 "Right"
 * includedStructure[0].qualifier = $sct#110495000 "Lower inner quadrant of breast"
@@ -87,6 +89,7 @@ Title: "Right Breast Lower Inner Quadrant"
 Instance: bs-left-uiq
 InstanceOf: BodyStructure
 Usage: #example
+* patient = Reference(example-patient)
 * includedStructure[0].structure = $sct#76752008
 * includedStructure[0].laterality = $sct#7771000 "Left"
 * includedStructure[0].qualifier = $sct#110499006 "Upper inner quadrant of breast"
@@ -94,6 +97,7 @@ Usage: #example
 Instance: bs-right-uiq
 InstanceOf: BodyStructure
 Usage: #example
+* patient = Reference(example-patient)
 * includedStructure[0].structure = $sct#76752008
 * includedStructure[0].laterality = $sct#24028007 "Right"
 * includedStructure[0].qualifier = $sct#110499006 "Upper inner quadrant of breast"
@@ -112,7 +116,7 @@ Title: "Mammographic Mass – Left UOQ (12 mm)"
 // Type
 * component[Type].valueCodeableConcept = $sct#129788004 "Mammographic mass of breast"
 // Location via BodyStructure
-* bodySite = Reference(bs-left-uoq)
+* focus = Reference(bs-left-uoq)
 // Diameter
 * component[Diameter].valueQuantity.value = 12
 * component[Diameter].valueQuantity.unit = "mm"
@@ -127,7 +131,7 @@ Title: "Mammographic Calcification – Right LIQ"
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * valueCodeableConcept = $sct#373066001 "Yes"
 * component[Type].valueCodeableConcept = $sct#697944008 "Mammographic calcification of breast"
-* bodySite = Reference(bs-right-liq)
+* focus = Reference(bs-right-liq)
 
 // Example 3 — No finding
 Instance: example-mammo-change-no-distortion
@@ -149,5 +153,5 @@ Title: "Asymmetric Tissue – Bilateral UIQ"
 * effectiveDateTime = "2024-11-20T10:00:00+02:00"
 * valueCodeableConcept = $sct#373066001 "Yes"
 * component[Type].valueCodeableConcept = $sct#129789007 "Focal asymmetric breast tissue finding"
-* bodySite[0] = Reference(bs-left-uiq)
-* bodySite[+] = Reference(bs-right-uiq)
+* focus[0] = Reference(bs-left-uiq)
+* focus[+] = Reference(bs-right-uiq)

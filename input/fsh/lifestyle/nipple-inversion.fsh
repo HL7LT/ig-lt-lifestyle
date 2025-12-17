@@ -24,23 +24,17 @@ Description: "Observation representing nipple inversion assessment in a patient 
 * ^version = "1.0.0"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 * category = $observation-category#exam "Exam"
 * code = $sct#271955004 "Retraction of nipple (finding)"
-
 * subject 1..1
 * subject only Reference(LTBasePatient)
-
 * effective[x] 1..1
 * effective[x] only dateTime
-
 * bodyStructure 1..1
 * bodyStructure only Reference(BodyStructureBreastLt)
-
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from YesNo (preferred)
-
 * component ..0
 
 
@@ -63,6 +57,7 @@ Usage: #example
 Title: "Example Nipple Inversion Observation"
 Description: "An example instance of a nipple inversion observation."
 * status = #final
+* encounter = Reference(ExampleBreastStep1Encounter)
 * subject = Reference(LTBasePatient/example-patient)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 * contained[0] = lt-nipple-inversion-body-structure-example

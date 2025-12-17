@@ -57,6 +57,7 @@ InstanceOf: LTSkinFormations
 Usage: #example
 Title: "Example – Skin Formations Present"
 * status = #final
+* encounter = Reference(ExampleBreastStep1Encounter)
 * subject = Reference(example-patient)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 * contained[0] = example-breast-structure-1

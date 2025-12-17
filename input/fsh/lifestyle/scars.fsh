@@ -1,5 +1,3 @@
-
-
 // ValueSet: BreastScarFindingsVS
 ValueSet: BreastScarFindingsVS
 Id: breast-scar-findings-vs
@@ -57,6 +55,7 @@ Usage: #example
 Title: "Example Breast Scar Observation"
 Description: "An example instance of a breast scar observation."
 * status = #final
+* encounter = Reference(ExampleBreastStep1Encounter)
 * subject = Reference(LTBasePatient/example-patient)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 * contained[0] = lt-breast-scar-body-structure-example
