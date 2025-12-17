@@ -1,5 +1,6 @@
 Alias: $sct = http://snomed.info/sct
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $laterality = http://hl7.org/fhir/ValueSet/bodysite-laterality
 
 ValueSet: BreastClockPosition
 Id: breast-clock-position
@@ -39,18 +40,6 @@ Description: "Types of lesions identified during breast ultrasound, allowing for
 * $sct#28432003 "Abscess of breast (disorder)"
 * $sct#79604008 "Disorder of breast (disorder)"
 
-ValueSet: BreastLaterality
-Id: breast-laterality
-Title: "Breast Laterality"
-Description: "Sides of the body (Left, Right, Bilateral) for breast findings."
-* ^status = #active
-* ^experimental = false
-* ^publisher = "HL7 Lithuania"
-* ^language = #en
-* $sct#7771000 "Left (qualifier value)"
-* $sct#24028007 "Right (qualifier value)"
-* $sct#51440002 "Right and left (qualifier value)"
-
 Profile: LTUltrasoundLesion
 Parent: LTBaseObservation
 Id: lt-ultrasound-lesion
@@ -80,7 +69,7 @@ Description: "A radiology Observation representing one specific ultrasound lesio
 * component[side] ^definition = "The side of the body (left or right) where the breast lesion is located."
 * component[side].code = $sct#272741003 "Laterality" 
 * component[side].value[x] only CodeableConcept
-* component[side].valueCodeableConcept from BreastLaterality (required)
+* component[side].valueCodeableConcept from BreastQuadrants (required)
 
 //https://build.fhir.org/valueset-bodystructure-laterality
 
