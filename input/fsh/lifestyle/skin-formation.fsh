@@ -5,6 +5,7 @@ Title: "Breast Findings Value Set"
 Description: "Types of breast skin findings."
 * ^language = #en
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * $sct#297960002 "Mass of skin"
 * $sct#442523003 "Surgical scar finding"
@@ -29,16 +30,12 @@ Title: "Breast Skin Formations"
 Description: "Observation representing breast skin formations (e.g., skin mass, scars)."
 * category = $observation-category#exam "Exam"
 * code = $sct#364370007 "Breast observable"
-
 * subject 1..1
 * subject only Reference(LTBasePatient)
-
 * effective[x] 1..1
 * effective[x] only dateTime
-
 * bodyStructure 1..1
 * bodyStructure only Reference(BodyStructureBreastLt)
-
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from YesNo (required)
@@ -60,6 +57,7 @@ InstanceOf: LTSkinFormations
 Usage: #example
 Title: "Example – Skin Formations Present"
 * status = #final
+* encounter = Reference(ExampleBreastStep1Encounter)
 * subject = Reference(example-patient)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 * contained[0] = example-breast-structure-1

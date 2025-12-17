@@ -1,5 +1,3 @@
-
-
 // ValueSet: BreastScarFindingsVS
 ValueSet: BreastScarFindingsVS
 Id: breast-scar-findings-vs
@@ -24,23 +22,17 @@ Description: "This profile constrains the Observation resource to represent brea
 * ^version = "1.0.0"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 * category = $observation-category#exam "Exam"
 * code = $sct#364370007 "Breast observable (observable entity)"
-
 * subject 1..1
 * subject only Reference(LTBasePatient)
-
 * effective[x] 1..1
 * effective[x] only dateTime
-
 * bodyStructure 1..1
 * bodyStructure only Reference(BodyStructureBreastLt)
-
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from YesNo (preferred)
-
 * component ..0
 
 
@@ -63,6 +55,7 @@ Usage: #example
 Title: "Example Breast Scar Observation"
 Description: "An example instance of a breast scar observation."
 * status = #final
+* encounter = Reference(ExampleBreastStep1Encounter)
 * subject = Reference(LTBasePatient/example-patient)
 * effectiveDateTime = "2024-06-15T10:00:00+03:00"
 * contained[0] = lt-breast-scar-body-structure-example

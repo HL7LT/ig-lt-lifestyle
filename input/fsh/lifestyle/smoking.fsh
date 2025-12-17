@@ -291,3 +291,6 @@ Description: "Example instance showing a patient who is a cigarette smoker."
 * note.text = "Patient reports to be a cigarette smoker."
 
 
+
+
+

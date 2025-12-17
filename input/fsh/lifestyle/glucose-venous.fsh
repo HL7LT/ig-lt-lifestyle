@@ -1,8 +1,3 @@
-Alias: $sct = http://snomed.info/sct
-Alias: $loinc = http://loinc.org
-Alias: $ucum = http://unitsofmeasure.org
-
-
 Profile: LTGlucoseVenous
 Parent: LTBaseObservation
 Id: lt-glucose-venous
@@ -14,7 +9,6 @@ Description: "This profile constrains the Observation resource to represent gluc
 * ^date = "2025-11-06"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-
 // --- Category ---
 * category = $observation-category#laboratory "Laboratory"
 // --- Dual coding (LOINC + SNOMED) ---
@@ -28,6 +22,7 @@ Description: "This profile constrains the Observation resource to represent gluc
 * code.coding[sctCode] = $sct#122555007 "Venous blood specimen (specimen)"
 // --- Subject ---
 * subject 1..1
+* subject only Reference(LTBasePatient)
 // --- Timing ---
 * effective[x] 1..1
 * effective[x] only dateTime
