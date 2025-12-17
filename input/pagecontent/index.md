@@ -12,7 +12,6 @@ This guide provides structured FHIR profiles and guidance for a core set of life
 * **Alcohol Use:** Consumption patterns, screening results (e.g., AUDIT), and intervention history.
 * **Physical Activity:** Exercise frequency, duration, and intensity (e.g., using METs).
 * **Dietary Intake:** Specific nutrient consumption (e.g., sodium, sugar) and overall dietary patterns.
-* **Biometric Data:** Relevant screening observations like **Cholesterol** (Lipid Panel).
 
 ## Why Use This Guide?
 

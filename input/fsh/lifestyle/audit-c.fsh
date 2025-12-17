@@ -44,7 +44,7 @@ Description: "AUDIT-C total score (0–12) as a quantitative Observation; linked
 // Optional linkage with QuestionnaireResponse
 * derivedFrom 0..1
 * derivedFrom only Reference(QuestionnaireResponse)
-* derivedFrom ^short = "QuestionnaireResponse, millest skoor saadi"
+* derivedFrom ^short = "QuestionnaireResponse"
 
 
 * obeys auditc-range and auditc-ucum
@@ -76,5 +76,5 @@ Description: "Minimal QR to which the Observation refers."
 * status = #completed
 * subject = Reference(example-patient)
 // Reference to the US Core AUDIT-C sample questionnaire (optional, may be omitted)
-* questionnaire = "http://hl7.org/fhir/us/core/Questionnaire/AUDIT-C|8.0.0"
+* questionnaire = "http://hl7.org/fhir/us/core/Questionnaire/AUDIT-C"
 * authored = "2025-10-28T09:58:00+03:00"
