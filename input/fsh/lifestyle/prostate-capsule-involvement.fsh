@@ -6,9 +6,9 @@ ValueSet: ProstateCapsuleInvolvementStatus
 Id: lt-prostate-capsule-involvement-status
 Title: "Prostate Capsule Involvement Status"
 Description: "Codes representing the presence, absence, or suspicion of prostate capsule invasion/extracapsular extension, as required by the Prostate Cancer Prevention Program (Table 7.2 and 7.3)."
-^language = #en
-^status = #active
-^publisher = "HL7 Lithuania"
+* ^language = #en
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
 * $sct#260413007 "None (qualifier value)"
 * $sct#415684004 "Suspected (qualifier value)"
 * $sct#52101004 "Present (qualifier value)"
@@ -18,8 +18,8 @@ Parent: LTBaseObservation
 Id: lt-prostate-capsule-involvement
 Title: "Prostate Capsule Involvement on MRI"
 Description: "Observation profile representing the assessment of Prostate Capsule Involvement (Extracapsular Extension) on MRI."
-^status = #active
-^publisher = "HL7 Lithuania"
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
 * category = $observation-category#imaging "Imaging"
 * code = $sct#60405008 "Structure of capsule of prostate (body structure)"
 * subject 1..1
