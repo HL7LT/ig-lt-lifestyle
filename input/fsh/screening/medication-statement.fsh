@@ -34,7 +34,7 @@ Description: "Example instance of a MedicationStatement for screening programs."
 Usage: #example
 * status = #recorded
 * medication.concept.text = "Tylenol PM"
-* subject = Reference(Patient/example-patient) 
+* subject = Reference(example-patient-male) 
 * effectiveDateTime = "2015-01-23"
 * dateAsserted = "2015-02-22"
 * dosage

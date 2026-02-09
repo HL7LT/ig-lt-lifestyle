@@ -7,7 +7,7 @@ Description: "Patient has a confirmed diagnosis of hypercholesterolemia."
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
 * code = $sct#13644009 "Hypercholesterolemia (disorder)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * onsetDateTime = "2024-05-10"
 * recordedDate = "2024-05-12"
 * participant

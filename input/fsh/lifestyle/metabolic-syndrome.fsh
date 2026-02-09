@@ -47,7 +47,7 @@ Description: "Example showing metabolic syndrome present according to NCEP ATP I
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#364392006 "Metabolic observable"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#237602007 "Metabolic syndrome X (disorder)"
 * note.text = "There are at least 3 of 5 signs present (NCEP ATP III criteria)."

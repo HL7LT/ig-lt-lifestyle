@@ -134,7 +134,7 @@ Description: "Example showing a patient with negligible risk for hypertension; t
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#38341003 "Hypertensive disorder, systemic arterial (disorder)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[risk]
   * valueCodeableConcept = $risk-probability#negligible "Negligible likelihood"
@@ -153,7 +153,7 @@ Description: "Example showing a patient with confirmed dyslipidemia currently un
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#370992007 "Dyslipidemia (disorder)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[risk]
   * valueCodeableConcept = $risk-probability#certain "Certain"
@@ -173,7 +173,7 @@ Description: "Example showing a patient with confirmed diabetes mellitus but not
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#73211009 "Diabetes mellitus (disorder)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[risk]
   * valueCodeableConcept = $risk-probability#certain "Certain"
@@ -191,7 +191,7 @@ Description: "Example showing a patient identified with impaired glucose toleran
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#390951007 "Impaired fasting glycemia (disorder)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[risk]
   * valueCodeableConcept = $risk-probability#certain "Certain"
@@ -209,7 +209,7 @@ Description: "Example showing a patient identified as having central (abdominal)
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#248311001 "Central obesity (disorder)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[risk]
   * valueCodeableConcept = $risk-probability#certain "Certain"
@@ -225,7 +225,7 @@ Description: "Example showing a patient identified as having general obesity."
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#414916001 "Obesity (disorder)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[risk]
   * valueCodeableConcept = $risk-probability#certain "Certain"
@@ -240,7 +240,7 @@ Description: "Example showing a patient who has had Diabetes Mellitus for more t
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#161445009 "History of diabetes mellitus (situation)"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#373066001 "Yes (qualifier value)"
 * note.text = "Patient reports having diabetes for approximately 12 years."

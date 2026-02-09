@@ -65,6 +65,6 @@ Title: "Example of CVD High Risk Condition - Heart failure"
 Description: "Example instance showing a patient with a high-risk condition of heart failure."
 
 * code = $icd-10#I50 "Heart failure"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * onsetDateTime = "2025-10-01T09:00:00Z"
 

@@ -6,7 +6,7 @@ Description: "CVD screening plan for a patient at high cardiovascular risk, incl
 * status = #active
 * intent = #plan
 * created = 2025-10-31T10:00:00+02:00
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * contributor[0] = Reference(example-practitioner)
 * contributor[0].display = "Registrar"
 * contributor[+] = Reference(example-organization)
@@ -41,7 +41,7 @@ InstanceOf: Goal
 Usage: #inline
 * lifecycleStatus = #active
 * description.text = "Target LDL Cholesterol < 1.8 mmol/L based on cardiovascular risk group."
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * target[0].measure = $loinc#13457-7 "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation"
 * target[0].detailQuantity.value = 1.8
 * target[0].detailQuantity.unit = "mmol/L"
@@ -53,7 +53,7 @@ Instance: goal-bmi-cvdp
 InstanceOf: Goal
 Usage: #inline
 * lifecycleStatus = #active
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * description.text = "Target BMI 22.5 kg/m² (healthy weight range 18.5–24.9)."
 * target[0].measure = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * target[0].detailQuantity.value = 22.5
@@ -65,6 +65,6 @@ Instance: goal-bp-cvdp
 InstanceOf: Goal
 Usage: #inline
 * lifecycleStatus = #active
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * description.text = "Target BP 120–129/<80 mmHg."
 * target[0].measure = $loinc#85354-9 "Blood pressure panel with all children optional"

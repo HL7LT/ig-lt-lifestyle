@@ -52,7 +52,7 @@ Description: "Example showing a patient assessed as having a 24% cardiovascular 
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#827181004 "Risk of cardiovascular disease"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueQuantity.value = 24
 * interpretation = $observation-interpretation#H "High"

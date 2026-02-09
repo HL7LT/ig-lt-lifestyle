@@ -27,7 +27,7 @@ Description: "An example instance of a CarePlan for a patient at risk of Cardiov
 * created = 2025-10-31T10:00:00+02:00 // Plan creation date
 
 // Patient (subject)
-* subject = Reference(LTPatient/example-patient) // Data of a patient diagnosed with CVD risk.
+* subject = Reference(example-patient-male) // Data of a patient diagnosed with CVD risk.
 
 // Registrar (author)
 // * author = Reference(LTHealthcarePractitioner/example-practitioner) // Specialist implementing the plan.
@@ -118,7 +118,7 @@ InstanceOf: Goal
 Usage: #inline
 Title: "Goal: Target LDL Cholesterol"
 * lifecycleStatus = #active
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-male)
 //* achievementStatus = $goal-achievement-status#in-progress "In Progress"
 * description.text = "Target LDL Cholesterol, considering the cardiovascular disease risk group"
 * target[0].measure = $loinc#13457-7 "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation"
@@ -136,7 +136,7 @@ Usage: #inline
 Title: "Goal: Target Body Mass Index (BMI)"
 
 * lifecycleStatus = #active
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-male)
 //* achievementStatus = $goal-achievement-status#in-progress "In Progress"
 * description.text = "Target Body Mass Index (BMI) of 22.5 kg/m2"
 * target[0].measure = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
@@ -153,7 +153,7 @@ Title: "Goal: Target Blood Pressure (BP) 120-129/<80 mmHg"
 
 * lifecycleStatus = #planned
 * description.text = "Target BP 120-129/<80 mmHg" // Informational text. Mandatory
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-male)
 
 
 

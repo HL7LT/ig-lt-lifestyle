@@ -204,7 +204,7 @@ Description: "Example instance showing a patient who currently smokes."
 * code.coding[loincCode].code = #72166-2
 * code.coding[sctCode].system = $sct
 * code.coding[sctCode].code = #229819007 "Tobacco use and exposure (observable entity)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#77176002 "Smoker (finding)"
 * note.text = "Patient reports smoking approximately 10 cigarettes per day for 5 years."
@@ -219,7 +219,7 @@ Description: "Example instance showing a patient who is a light cigarette smoker
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $sct#266918002 "Tobacco smoking consumption (observable entity)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#160603005 "Light cigarette smoker (1–9 cigs/day)"
 * note.text = "Patient reports smoking approximately 8 cigarettes per day."
@@ -234,7 +234,7 @@ Description: "Example instance showing a patient who is a light cigarette smoker
 // * status = #final
 // * category = $observation-category#social-history "Social History"
 // * code = $loinc#72166-2 "Tobacco smoking status"
-// * subject = Reference(example-patient)
+// * subject = Reference(example-patient-male)
 // * effectiveDateTime = "2025-10-01T09:00:00Z"
 // * valueCodeableConcept = $sct#160605003 "Heavy cigarette smoker (20-39 cigs/day)"
 // * note.text = "Patient reports smoking around 25 cigarettes per day. Recorded using LOINC-based Observation code."
@@ -250,7 +250,7 @@ Description: "Example instance showing a patient who has been smoking for 5 year
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code.coding[loincCode] = $loinc#88029-4  "Tobacco use duration"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueQuantity = $ucum#a "years"
   * value = 5
@@ -267,7 +267,7 @@ Description: "Example instance showing a patient who has stopped smoking 2 years
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $sct#228486009 "Time since stopped smoking (observable entity)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueQuantity = $ucum#a "years"
   * value = 2
@@ -285,7 +285,7 @@ Description: "Example instance showing a patient who is a cigarette smoker."
 * category = $observation-category#social-history "Social History"
 * code.coding[loincCode] = $loinc#81228-9 "Tobacco product" 
 * code.coding[sctCode] = $sct#53661000146106 "Type of tobacco used"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#65568007 "Cigarette smoker (finding)"
 * note.text = "Patient reports to be a cigarette smoker."

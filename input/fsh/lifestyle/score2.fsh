@@ -69,7 +69,7 @@ Description: "Example of SCORE2 risk assessment showing 24% estimated risk (high
 * status = #final
 * category = $observation-category#exam "Exam"
 * code = $sct#827181004 "Risk of cardiovascular disease"
-* subject = Reference(Patient/example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueQuantity.value = 24
 * valueQuantity.unit = "%"

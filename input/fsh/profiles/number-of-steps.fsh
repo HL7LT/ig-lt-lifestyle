@@ -89,7 +89,7 @@ Description: "Example observation representing the number of steps taken by a pe
 * category[VSCat] = $observation-category#activity "Activity"
 * category[NumberOfStepsCode] = $loinc#41950-7 "Number of steps in 24 hour Measured"
 * code = $loinc#41950-7 "Number of steps in 24 hour Measured"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-27T23:59:00+03:00"
 * valueQuantity.value = 8642
 * valueQuantity.unit = "{#}/{24.h}"

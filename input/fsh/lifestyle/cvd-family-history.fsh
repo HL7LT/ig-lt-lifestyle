@@ -121,7 +121,7 @@ Description: "Patient reports a positive family history of cardiovascular diseas
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $sct#266894000 "Family history: Cardiovascular disease (situation)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#266894000 "Family history: Cardiovascular disease (situation)"
 * note.text = "Patient reports cardiovascular disease in a first-degree relative."
@@ -136,7 +136,7 @@ Description: "Patient reports a family history of diabetes mellitus."
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $sct#161445009 "History of diabetes mellitus (situation)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#161445009 "History of diabetes mellitus (situation)"
 * note.text = "Patient reports diabetes mellitus in a first-degree relative."
@@ -151,7 +151,7 @@ Description: "Patient reports a family history of familial hypercholesterolemia.
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $sct#473145005 "Possible familial hypercholesterolemia (situation)"
-* subject = Reference(example-patient)
+* subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueCodeableConcept = $sct#473145005 "Possible familial hypercholesterolemia (situation)"
 * note.text = "Patient reports elevated cholesterol and confirmed familial hypercholesterolemia in a first-degree relative."

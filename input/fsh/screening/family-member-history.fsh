@@ -43,7 +43,7 @@ Usage: #example
 Title: "Example of Family Member History of Cardiovascular Disease"
 Description: "Patient reports a positive family member history of cardiovascular disease, diabetes milites and familial hypercholesterolemia."
 * status = #completed
-* patient = Reference(example-patient)
+* patient = Reference(example-patient-male)
 * date = "2025-10-01T09:00:00Z"
 * relationship.text = "Unspecified family member"
 * condition[0].code = $sct#49601007 "Disorder of cardiovascular system"
@@ -58,7 +58,7 @@ Usage: #example
 Title: "Example of Family Member History - absent of disease in mother"
 Description: "Patient reports a positive family member history of cardiovascular disease."
 * status = #completed
-* patient = Reference(example-patient)
+* patient = Reference(example-patient-male)
 * date = "2025-10-01T09:00:00Z"
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH
 * dataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown
