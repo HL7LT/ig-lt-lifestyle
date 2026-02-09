@@ -63,7 +63,26 @@ Description: "History of disease involving the breast."
 * code = $sct#79604008 "Disorder of breast (disorder)"
 
 
+// BodyStructure EXAMPLES
+Instance: example-left-breast-uoq
+InstanceOf: BodyStructureBreastLt
+Usage: #example
+Title: "Left Breast – Upper Outer Quadrant"
+* patient = Reference(example-patient)
+* includedStructure[0].structure = $sct#110496004 "Structure of upper outer quadrant of left breast"
+* includedStructure[0].laterality = $sct#7771000 "Left"
 
+
+Instance: example-right-breast-uiq
+InstanceOf: BodyStructureBreastLt
+Usage: #example
+Title: "Right Breast – Upper Inner Quadrant"
+* patient = Reference(example-patient)
+* includedStructure[0].structure = $sct#110499006 "Structure of upper inner quadrant of right breast"
+* includedStructure[0].laterality = $sct#24028007 "Right"
+
+
+// Observation EXAMPLES
 Instance: ExampleBreastSurgeryHistory
 InstanceOf: lt-breast-surgery-history
 Usage: #example
