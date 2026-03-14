@@ -33,6 +33,6 @@ Naršykite toliau pateiktas skiltis, kad pasiektumėte profilius, terminologijos
 
 | Vardas | Pareigos | Organizacija |
 | ------------------------------------------------------------ | --------------------------------------------- | ---------------------------------------------------- |
-| [Igor Bossenko](https://about.askigor.eu)     | Pagrindinis autorius                | [HELEX](https://helex.health) |
-| [Kati Laidus](https://www.linkedin.com/in/kati-laidus/) | Bendraautoris                 | [HELEX](https://helex.health)               |
-| Martynas Bieliauskas                           | Reviewer                 | [LMB](https://lmb.lt)               |
+| [Igor Bossenko](https://about.askigor.eu)     | Primary Author                | [HELEX Solutions](https://helex.solutions) |
+| [Kati Laidus](https://www.linkedin.com/in/kati-laidus/) | Co-Author                 | [HELEX Solutions](https://helex.solutions)               |
+| Martynas Bieliauskas                           | Co-Author                  | [LMB](https://lmb.lt)               |

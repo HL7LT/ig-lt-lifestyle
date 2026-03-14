@@ -21,7 +21,7 @@ publisher:
   email: info@medicinosnk.lt
 
 dependencies:
-  lt.hl7.fhir.base: 0.2.0
+  lt.hl7.fhir.base: dev
   hl7.fhir.eu.base-r5: 0.1.0
 
 #  lt.hl7.fhir.vitalsigns: dev
@@ -73,7 +73,21 @@ dependencies:
 
 parameters:
   special-url-base: https://hl7.lt/fhir
-  special-url: https://terminology.hl7.lt/fhir
+  special-url:
+    - https://terminology.hl7.lt/fhir
+    - https://tx.hl7.lt/fhir/ValueSet/alcohol-consumption-status
+    - https://tx.hl7.lt/fhir/ValueSet/alcohol-use-frequency
+    - https://tx.hl7.lt/fhir/ValueSet/family-history-cvd-status
+    - https://tx.hl7.lt/fhir/ValueSet/family-history-diabetes-status
+    - https://tx.hl7.lt/fhir/ValueSet/family-history-fh-status
+    - https://tx.hl7.lt/fhir/ValueSet/metabolic-syndrome-assessment
+    - https://tx.hl7.lt/fhir/ValueSet/numeric-result-interpretation
+    - https://tx.hl7.lt/fhir/ValueSet/nutrition-status
+    - https://tx.hl7.lt/fhir/ValueSet/physical-activity-level
+    - https://tx.hl7.lt/fhir/ValueSet/smoking-status
+    - https://tx.hl7.lt/fhir/ValueSet/tobacco-smoking-consumption
+    - https://tx.hl7.lt/fhir/ValueSet/tobacco-type-used
+    - https://tx.hl7.lt/fhir/ValueSet/yes-no
 
   excludettl: true
   shownav: true
