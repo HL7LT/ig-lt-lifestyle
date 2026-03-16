@@ -1,4 +1,4 @@
-# Lietuvos bazės diegimo vadovas
+# Lietuvos gyvensenos įgyvendinimo gidas
 
 ## Įvadas ir Tikslas
 
@@ -6,12 +6,32 @@
 
 ## Apimtis ir Pagrindiniai Stebėjimai
 
-Šis gidas pateikia struktūrizuotus FHIR profilius ir gaires pagrindiniams gyvensenos veiksniams, įskaitant:
+Šis gidas pateikia struktūrizuotus FHIR profilius ir gaires pagrindiniams gyvensenos veiksniams ir susijusiam patikros palaikymui, įskaitant:
 
-- **Tabako vartojimas**: Rūkymo statusas, poveikis ir metimo istorija.
-- **Alkoholio vartojimas**: Vartojimo įpročiai, patikros rezultatai (pvz., AUDIT) ir intervencijos istorija.
-- **Fizinis aktyvumas**: Mankštos dažnumas, trukmė ir intensyvumas (pvz., naudojant MET).
+- **Tabako vartojimas**: Rūkymo statusas, poveikis, metimo istorija, vartojamo tipas, suvartojimo lygis ir trukmė.
+- **Alkoholio vartojimas**: Vartojimo įpročiai, patikros rezultatai (pvz., AUDIT-C) ir intervencijos istorija.
+- **Fizinis aktyvumas**: Mankštos dažnumas, trukmė, intensyvumas (pvz., MET), žingsnių skaičius ir matavimo įrenginiai.
 - **Mitybos įpročiai**: Specifinių maistinių medžiagų suvartojimas (pvz., natrio, cukraus) ir bendrieji mitybos modeliai.
+- **Šeimos istorija**: Širdies ir kraujagyslių ligų bei diabeto statusas; šeimos nario patikros istorija patikros programose.
+- **Metabolinio sindromo**: NCEP ATP III įvertinimas.
+- **Patikros palaikymas**: AUDIT-C bendras balas (ir nuoroda į QuestionnaireResponse), vaistų vartojimas patikros kontekste ir diabeto trukmės statusas.
+- **Plėtiniai**: Kitos veiklos aprašymas, kiti pageidaujami mitybos pakeitimai ir vaistų laiko plėtinys patikrai.
+
+### Apimtys iš esmės
+
+| Tabakas | Alkoholis | Fizinis aktyvumas | Mityba | Metabolinis sindromas | Šeimos istorija | Patikra ir klausimynai | Plėtiniai |
+|---------|-----------|-------------------|--------|----------------------|----------------|------------------------|-----------|
+| Vartojimas, suvartojimas, nutrauktas, tipas, trukmė | Suvartojimas, vartojimo istorija, AUDIT-C | Aktyvumo lygis, žingsniai, įrenginys | Mitybos statusas | NCEP ATP III | ŠKL, diabetas, nario patikra | Vaistų pareiškimas, AUDIT-C, diabeto trukmė | Kitos veiklos, mitybos pakeitimai, vaistų laikas |
+
+## Ištekliai – apžvalga
+
+Visi atitikties ir pavyzdžių ištekliai pateikti **Artefaktų** puslapyje. Iš ten galite atidaryti:
+
+* **Profiliai** — Observation, FamilyMemberHistory, MedicationStatement, Device, Questionnaire ir plėtinių StructureDefinition.
+* **Terminologija** — profiliuose naudojami ValueSets (ir CodeSystems).
+* **Pavyzdžiai** — pavyzdiniai įvykiai kiekvienam profiliui.
+
+Profilų apžvalgą pagal sritį rasite [Profiliai](profiles.html). Terminologiją pagal temą – [Terminologija](terminology.html).
 
 ## Kodėl verta naudoti šį gidą?
 
@@ -23,7 +43,7 @@ Duomenų kokybė: Pagerinti užfiksuotų stebėjimų nuoseklumą, išsamumą ir 
 
 Klinikinė nauda: Palaikyti klinikinio sprendimo palaikymo, kokybės rodiklių ataskaitų teikimo ir gyventojų sveikatos valdymo pastangas, kurios remiasi tiksliu elgsenos ir biometriniu kontekstu.
 
-Naršykite toliau pateiktas skiltis, kad pasiektumėte profilius, terminologijos susiejimus ir išsamius pavyzdžius, reikalingus standartui įdiegti.
+Naudokite [Profiliai](profiles.html) ir [Terminologija](terminology.html) puslapius apžvalgoms bei [Artefaktai](artifacts.html) puslapį pilnam profilių, terminologijos susiejimų ir pavyzdžių sąrašui, reikalingam standartui įdiegti.
 ---
 
 ## IP teiginiai
