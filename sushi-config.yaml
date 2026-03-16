@@ -49,6 +49,8 @@ pages:
     title: Profiles
   terminology.md:
     title: Terminology
+  examples.md:
+    title: Examples
   translationinfo.md:
     title: Translation Information
   changelog.md:
@@ -118,6 +120,7 @@ menu:
   Home: index.html
   Profiles: profiles.html
   Terminology: terminology.html
+  Examples: examples.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

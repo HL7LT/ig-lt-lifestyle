@@ -1,6 +1,6 @@
 ### In development
 
-Expanded scope and resource overview on the index page; added Profiles and Terminology narrative pages. Canonical URLs have been changed to `https://hl7.lt/fhir/` for conformance resources and `https://tx.lmb.lt/fhir/` for terminology resources to accommodate future IGs, which will follow a pattern of `https://hl7.lt/fhir/<ig>`.
+Expanded scope and resource overview on the index page; added Profiles and Terminology narrative pages. Canonical URLs follow the standard pattern: `https://hl7.lt/fhir/lifestyle` for this IG’s conformance resources (StructureDefinitions, Extensions), and `https://tx.hl7.lt/fhir/` for terminology (CodeSystems, ValueSets), without the IG suffix in the terminology URL path.
 
 ### Version 0.1.0
 

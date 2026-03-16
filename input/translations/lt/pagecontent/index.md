@@ -31,7 +31,7 @@ Visi atitikties ir pavyzdžių ištekliai pateikti **Artefaktų** puslapyje. Iš
 * **Terminologija** — profiliuose naudojami ValueSets (ir CodeSystems).
 * **Pavyzdžiai** — pavyzdiniai įvykiai kiekvienam profiliui.
 
-Profilų apžvalgą pagal sritį rasite [Profiliai](profiles.html). Terminologiją pagal temą – [Terminologija](terminology.html).
+Profilų apžvalgą pagal sritį rasite [Profiliai](profiles.html). Terminologiją pagal temą – [Terminologija](terminology.html). Pavyzdinius įvykius pagal sritį – [Pavyzdžiai](examples.html).
 
 ## Kodėl verta naudoti šį gidą?
 
@@ -43,7 +43,7 @@ Duomenų kokybė: Pagerinti užfiksuotų stebėjimų nuoseklumą, išsamumą ir 
 
 Klinikinė nauda: Palaikyti klinikinio sprendimo palaikymo, kokybės rodiklių ataskaitų teikimo ir gyventojų sveikatos valdymo pastangas, kurios remiasi tiksliu elgsenos ir biometriniu kontekstu.
 
-Naudokite [Profiliai](profiles.html) ir [Terminologija](terminology.html) puslapius apžvalgoms bei [Artefaktai](artifacts.html) puslapį pilnam profilių, terminologijos susiejimų ir pavyzdžių sąrašui, reikalingam standartui įdiegti.
+Naudokite [Profiliai](profiles.html), [Terminologija](terminology.html) ir [Pavyzdžiai](examples.html) puslapius apžvalgoms bei [Artefaktai](artifacts.html) puslapį pilnam profilių, terminologijos susiejimų ir pavyzdžių sąrašui, reikalingam standartui įdiegti.
 ---
 
 ## IP teiginiai

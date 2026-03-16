@@ -31,7 +31,7 @@ All conformance and example resources are listed on the **Artifacts** page. From
 * **Terminology** — ValueSets (and CodeSystems) used for binding codes in the profiles.
 * **Examples** — Instance examples for each profile.
 
-For a narrative overview of profiles by domain, see [Profiles](profiles.html). For terminology by theme, see [Terminology](terminology.html).
+For a narrative overview of profiles by domain, see [Profiles](profiles.html). For terminology by theme, see [Terminology](terminology.html). For example instances by domain, see [Examples](examples.html).
 
 ## Why Use This Guide?
 
@@ -41,7 +41,7 @@ By adopting these profiles, implementers can ensure a standardized approach to:
 2. **Data Quality:** Improve the consistency, completeness, and clinical utility of recorded observations through mandated value sets and data types.
 3. **Clinical Utility:** Support clinical decision support, quality measure reporting, and population health management efforts that rely on accurate behavioral and biometric context.
 
-Use the [Profiles](profiles.html) and [Terminology](terminology.html) pages for overviews, and the [Artifacts](artifacts.html) page for the full list of profiles, terminology bindings, and examples needed to implement the standard.
+Use the [Profiles](profiles.html), [Terminology](terminology.html), and [Examples](examples.html) pages for overviews, and the [Artifacts](artifacts.html) page for the full list of profiles, terminology bindings, and examples needed to implement the standard.
 
 ### IP Statements
 <!-- { // not yet supported by i18n in IG publisher: % include ip-statements.xhtml %} -->
