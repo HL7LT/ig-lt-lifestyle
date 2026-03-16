@@ -24,7 +24,7 @@ Description: "This profile constrains the Observation resource to represent a si
 * effective[x] only dateTime
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from YesNoLtLifestyle (preferred)
+* valueCodeableConcept from YesNoLt (preferred)
 * note 0..1
 * note.text ^short = "Optional free-text note describing details"
 * component 0..*

@@ -1,4 +1,4 @@
-Instance: example-practitioner
+Instance: practitioner-example
 InstanceOf: PractitionerLt
 Usage: #example
 Title: "Practitioner: Dr. Petras Kazlauskas (example)"

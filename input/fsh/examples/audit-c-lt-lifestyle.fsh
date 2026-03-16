@@ -7,7 +7,7 @@ Description: "AUDIT-C total score with reference to the answer."
 * category = $observation-category#survey "Survey"
 * code.coding[loincCode] = $loinc#75626-2 "Total score [AUDIT-C]"
 * code.coding[sctCode] = $sct#763256006 "Alcohol Use Disorders Identification Test - Consumption score (observable entity)"
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * effectiveDateTime = "2025-10-28T10:00:00+03:00"
 * valueQuantity.value = 7
 * valueQuantity.system = "http://unitsofmeasure.org"

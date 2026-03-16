@@ -6,7 +6,7 @@ Description: "Patient reports alcohol consumption with additional structured det
 * status = #final
 * category = $observation-category#social-history "Social History"
 * valueCodeableConcept = $sct#373066001 "Yes (qualifier value)"
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * component[Frequency].code = $sct#260864003 "Frequency (attribute)"
 * component[Frequency].valueCodeableConcept = $sct#69620002 "Daily (qualifier value)"

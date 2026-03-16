@@ -6,7 +6,7 @@ Description: "Example instance showing a patient who has been smoking for 5 year
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code.coding[loincCode] = $loinc#88029-4  "Tobacco use duration"
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueQuantity = $ucum#a "years"
   * value = 5

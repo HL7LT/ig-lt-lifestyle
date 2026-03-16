@@ -20,10 +20,11 @@ publisher:
   url: https://medicinosnk.lt
   email: info@medicinosnk.lt
 
+# don't change the order of dependencies!
 dependencies:
-  lt.hl7.fhir.base: 0.3.0 #current
+  lt.hl7.fhir.base: 0.3.0
   lt.hl7.fhir.eu: 0.0.2
-  hl7.fhir.eu.base-r5: 0.1.0    # The R5 EU Base
+  hl7.fhir.eu.base-r5: 0.1.0
 
   # lt.hl7.fhir.eu: 0.0.2
   # hl7.terminology.r5: 7.1.0
@@ -41,14 +42,17 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
-#   index.md:
-#     title: Example Home
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
+pages:
+  index.md:
+    title: Home
+  profiles.md:
+    title: Profiles
+  terminology.md:
+    title: Terminology
+  translationinfo.md:
+    title: Translation Information
+  changelog.md:
+    title: Changelog
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -78,6 +82,11 @@ parameters:
     - https://tx.hl7.lt/fhir/ValueSet/tobacco-smoking-consumption
     - https://tx.hl7.lt/fhir/ValueSet/tobacco-type-used
     - https://tx.hl7.lt/fhir/ValueSet/yes-no
+    - https://tx.hl7.lt/fhir/ValueSet/screening-programme
+    - https://tx.hl7.lt/fhir/ValueSet/screened-conditions
+    - https://tx.hl7.lt/fhir/ValueSet/medication-taken
+    - https://tx.hl7.lt/fhir/ValueSet/severity
+    - https://tx.hl7.lt/fhir/ValueSet/treatment-status
 
   excludettl: true
   shownav: true
@@ -107,6 +116,8 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Profiles: profiles.html
+  Terminology: terminology.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

@@ -7,10 +7,10 @@ Description: "Patient has a confirmed diagnosis of hypercholesterolemia."
 * clinicalStatus = $condition-clinical#active "Active"
 * verificationStatus = $condition-ver-status#confirmed "Confirmed"
 * code = $sct#13644009 "Hypercholesterolemia (disorder)"
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * onsetDateTime = "2024-05-10"
 * recordedDate = "2024-05-12"
 * participant
-  * actor = Reference(example-practitioner)
+  * actor = Reference(practitioner-example)
   * function = $provenance-participant-type#author "Author"
 * note.text = "Elevated LDL cholesterol. Lifestyle advice and statin therapy recommended."

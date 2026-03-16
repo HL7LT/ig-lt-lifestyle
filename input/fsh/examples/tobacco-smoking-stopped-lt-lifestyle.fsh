@@ -6,7 +6,7 @@ Description: "Example instance showing a patient who has stopped smoking 2 years
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $sct#228486009 "Time since stopped smoking (observable entity)"
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
 * valueQuantity = $ucum#a "years"
   * value = 2

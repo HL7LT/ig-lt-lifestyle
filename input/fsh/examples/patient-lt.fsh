@@ -1,4 +1,4 @@
-Instance: example-patient-male
+Instance: patient-male-example
 InstanceOf: PatientLt
 Usage: #example
 Title: "Patient: Jonas Petrauskas (example)"

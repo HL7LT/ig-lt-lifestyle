@@ -113,6 +113,6 @@ Usage: #example
 Title: "QuestionnaireResponse: AUDIT-C (example)"
 Description: "Minimal QR to which the Observation refers."
 * status = #completed
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * questionnaire = Canonical(questionnaire-audit-c-example)
 * authored = "2025-10-28T09:58:00+03:00"
