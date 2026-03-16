@@ -2,54 +2,52 @@
 
 ## Introduction and Purpose
 
-This IG specifies how to consistently represent and exchange critical non-clinical patient data related to **lifestyle and health behaviors** using the **Fast Healthcare Interoperability Resources (FHIR)** standard. The accurate capture and sharing of this information is vital for comprehensive patient care, risk stratification, chronic disease management, and public health initiatives.
+This Implementation Guide (IG) specifies how to consistently represent and exchange structured patient data related to lifestyle factors, health behaviours, and screening support using the Fast Healthcare Interoperability Resources (FHIR) standard. Accurate capture and exchange of this information is important for prevention, risk stratification, chronic disease management, screening workflows, and population health use cases.
 
-## Scope and Core Observations
+This guide supports the standardized representation of lifestyle-related data so that it can be consistently recorded, exchanged, and interpreted across clinical systems, patient-facing applications, research environments, and public health infrastructures.
 
-This guide provides structured FHIR profiles and guidance for a core set of lifestyle factors and related screening support, including:
+## Audience
 
-* **Tobacco Use:** Smoking status, exposure, cessation history, type used, consumption level, and duration.
-* **Alcohol Use:** Consumption patterns, screening results (e.g., AUDIT-C), and intervention history.
-* **Physical Activity:** Exercise frequency, duration, intensity (e.g., using METs), step counts, and measurement devices.
-* **Dietary Intake:** Specific nutrient consumption (e.g., sodium, sugar) and overall dietary patterns.
-* **Family History:** Cardiovascular disease (CVD) and diabetes status; family member screening history for screening programmes.
-* **Metabolic Syndrome:** NCEP ATP III assessment.
-* **Screening Support:** AUDIT-C total score (and link to QuestionnaireResponse), medication use in screening context, and diabetes duration status.
-* **Extensions:** Other activity description, other desired dietary changes, and medication timing for screening.
+This guide is intended for implementation guide authors, system vendors, integrators, healthcare solution developers, and other stakeholders involved in exchanging lifestyle and screening-related data using FHIR. Readers are expected to have at least a basic familiarity with FHIR and to refer to the core FHIR specification where additional background is needed.
 
-### Domains at a Glance
+## Scope and Key Content
 
-| Tobacco | Alcohol | Physical activity | Nutrition | Metabolic syndrome | Family history | Screening & questionnaires | Extensions |
-|---------|---------|-------------------|-----------|--------------------|----------------|---------------------------|------------|
-| Use, consumption, stopped, type, duration | Consumption, use history, AUDIT-C | Activity level, steps, device | Nutrition status | NCEP ATP III | CVD, diabetes, member screening | Medication statement, AUDIT-C, diabetes duration | Activity other, dietary changes, medication timing |
+This guide provides structured FHIR profiles and implementation guidance for a core set of lifestyle and screening-related domains, including:
 
-## Resource Overview
+- **Tobacco Use:** Smoking status, exposure, cessation history, type used, consumption level, and duration.
+- **Alcohol Use:** Consumption patterns, use history, and screening results such as AUDIT-C.
+- **Physical Activity:** Activity level, duration, intensity, step counts, and measurement devices.
+- **Nutrition:** Dietary intake and related nutritional observations.
+- **Family History:** Family history of cardiovascular disease, diabetes, and screening-related family history data.
+- **Metabolic Syndrome:** Assessment of metabolic syndrome based on NCEP ATP III criteria.
+- **Screening Support:** Questionnaire-based screening support, medication statements in screening context, and diabetes duration status.
 
-All conformance and example resources are listed on the **Artifacts** page. From there you can open:
-
-* **Profiles** — StructureDefinitions for Observation, FamilyMemberHistory, MedicationStatement, Device, Questionnaire, and Extensions.
-* **Terminology** — ValueSets (and CodeSystems) used for binding codes in the profiles.
-* **Examples** — Instance examples for each profile.
-
-For a narrative overview of profiles by domain, see [Profiles](profiles.html). For terminology by theme, see [Terminology](terminology.html). For example instances by domain, see [Examples](examples.html).
+Supporting artifacts also include extensions for other activity descriptions, dietary changes, and medication timing.
 
 ## Why Use This Guide?
 
-By adopting these profiles, implementers can ensure a standardized approach to:
+By adopting these profiles and guidance, implementers can support a standardized approach to:
 
-1. **Interoperability:** Facilitate seamless, semantic exchange of lifestyle data between Electronic Health Records (EHRs), patient portals, research systems, and public health registries.
-2. **Data Quality:** Improve the consistency, completeness, and clinical utility of recorded observations through mandated value sets and data types.
-3. **Clinical Utility:** Support clinical decision support, quality measure reporting, and population health management efforts that rely on accurate behavioral and biometric context.
+- **Interoperability:** Facilitate seamless, semantic exchange of lifestyle and screening-related data between Electronic Health Records (EHRs), patient portals, screening systems, research platforms, and public health registries.
+- **Data Quality:** Improve the consistency, completeness, and comparability of recorded observations and questionnaire-derived data through standardized structures, data types, and terminology bindings.
+- **Clinical Utility:** Support prevention, risk assessment, screening workflows, clinical decision support, and population health analysis by making lifestyle-related information available in a structured and reusable form.
 
-Use the [Profiles](profiles.html), [Terminology](terminology.html), and [Examples](examples.html) pages for overviews, and the [Artifacts](artifacts.html) page for the full list of profiles, terminology bindings, and examples needed to implement the standard.
+## How to Navigate This Guide
 
-### IP Statements
+This guide is organized into several sections that support implementation from overview to detailed conformance artifacts. All conformance and example resources are listed on the [**Artifacts**](artifacts.html) page. Key sections include:
+
+- [**Artifacts**](artifacts.html) — Complete list of profiles, extensions, terminology resources, and example instances defined by this guide.
+- [**Profiles**](profiles.html) — StructureDefinitions for observations, family history, medication statements, questionnaires, devices, and extensions.
+- [**Terminology**](terminology.html) — ValueSets and terminology bindings used by the profiles.
+- [**Examples**](examples.html) — Example instances across lifestyle, screening, and supporting resource domains.
+
+## IP Statements
 <!-- { // not yet supported by i18n in IG publisher: % include ip-statements.xhtml %} -->
 
-### Contributors
+## Contributors
 
-| Name                                             | Role                          | Organization                                    |
-| ------------------------------------------------ | ----------------------------- | ----------------------------------------------- |
-| [Igor Bossenko](https://about.askigor.eu)     | Primary Author                | [HELEX Solutions](https://helex.solutions) |
-| [Kati Laidus](https://www.linkedin.com/in/kati-laidus/) | Co-Author                 | [HELEX Solutions](https://helex.solutions)               |
-| Martynas Bieliauskas                           | Co-Author                  | [LMB](https://lmb.lt)               |
+| Name | Role | Organization |
+|------|------|--------------|
+| [Igor Bossenko](https://about.askigor.eu) | Primary Author | [HELEX Solutions](https://helex.solutions) |
+| [Kati Laidus](https://www.linkedin.com/in/kati-laidus-1512813b2/) | Co-Author | [HELEX Solutions](https://helex.solutions) |
+| Martynas Bieliauskas | Co-Author | [LMB](https://lmb.lt) |
