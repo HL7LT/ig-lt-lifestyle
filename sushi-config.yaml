@@ -21,25 +21,15 @@ publisher:
   email: info@medicinosnk.lt
 
 dependencies:
-  lt.hl7.fhir.base: dev
-  hl7.fhir.eu.base-r5: 0.1.0
+  lt.hl7.fhir.base: 0.3.0 #current
+  lt.hl7.fhir.eu: 0.0.2
+  hl7.fhir.eu.base-r5: 0.1.0    # The R5 EU Base
 
-#  lt.hl7.fhir.vitalsigns: dev
-#  hl7.fhir.us.core: 8.0.0
-#  hl7.fhir.uv.ips.r5: 4.0.0  #FHIR IPS R5 base
-#   fhir.base.template: 0.8.1
-#   # while we don't strictly needs this, this helps resolve the DICOM supplement correctly until tx.fhir.org can do this
-#   fhir.dicom:
-#     id: fhir_dicom
-#     uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom
-#     version: 2025.2.20250411
+  # lt.hl7.fhir.eu: 0.0.2
+  # hl7.terminology.r5: 7.1.0
+  # hl7.fhir.eu.base-r5: 0.1.0
+  # hl7.fhir.eu.extensions.r5: 1.2.0
 
-# the following are for offline use only
-#  hl7.fhir.uv.tools.r5: 0.5.0
-#  hl7.terminology.r5: 6.4.0
-#  hl7.fhir.uv.extensions.r5: 5.2.0
-#
-#
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
 # this file, it is assumed that the author will fully manage the

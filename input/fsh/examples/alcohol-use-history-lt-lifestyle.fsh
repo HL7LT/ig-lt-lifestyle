@@ -8,8 +8,9 @@ Description: "Patient reports alcohol consumption with additional structured det
 * valueCodeableConcept = $sct#373066001 "Yes (qualifier value)"
 * subject = Reference(example-patient-male)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
-* component[Frequency].code = $sct#370870000 "Frequency (qualifier value)"
+* component[Frequency].code = $sct#260864003 "Frequency (attribute)"
 * component[Frequency].valueCodeableConcept = $sct#69620002 "Daily (qualifier value)"
-* component[Type].code = $sct#424226004 "Type (qualifier value)"
-* component[Type].valueString = "Wine"
+* component[Type].code = $sct#53527002 "Alcoholic beverage (substance)"
+* component[Type].valueCodeableConcept = $sct#35748005 "Wine (substance)"
+* component[Type].valueCodeableConcept.text = "Wine"
 * note.text = "Patient drinks daily, typically wine."

@@ -34,15 +34,15 @@ Description: "This profile constrains the Observation resource to represent a si
 * component ^slicing.discriminator[0].path = "code"
 * component ^slicing.rules = #open
 * component contains Type 0..1
-* component[Type].code = $sct#424226004 "Type (qualifier value)"
-* component[Type].value[x] only string
-* component[Type].valueString ^short = "Type of alcoholic beverage"
+* component[Type].code = $sct#53527002 "Alcoholic beverage (substance)"
+* component[Type].value[x] only CodeableConcept
+* component[Type].valueCodeableConcept ^short = "Type of alcoholic beverage"
 * component contains Frequency 0..1
-* component[Frequency].code = $sct#370870000 "Frequency (qualifier value)"
+* component[Frequency].code = $sct#260864003 "Frequency (attribute)"
 * component[Frequency].value[x] only CodeableConcept
 * component[Frequency].valueCodeableConcept from AlcoholUseFrequencyVSLtLifestyle (preferred)
 * component[Frequency].valueCodeableConcept ^short = "Daily / Weekly / Monthly"
 * component contains Duration 0..1
-* component[Duration].code = $sct#424717009 "Duration (attribute)"
+* component[Duration].code = $sct#103335007 "Duration (attribute)"
 * component[Duration].value[x] only string
 * component[Duration].valueString ^short = "For how long"
