@@ -1,8 +1,8 @@
 ValueSet: MedicationTakenLtLifestyle
-Id: medication-taken-lt-lifestyle
+Id: medication-taken
 Title: "Medication taken by patient during treatment"
 Description: "SNOMED CT concepts representing medication given/used during treatment."
-* ^url = $medication-taken-lt-lifestyle-url
+* ^url = $medication-taken-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

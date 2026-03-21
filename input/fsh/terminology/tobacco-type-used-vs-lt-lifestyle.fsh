@@ -1,8 +1,8 @@
-ValueSet: TobaccoTypeUsedVSLtLifestyle
-Id: tobacco-type-used-vs-lt-lifestyle
-Title: "Tobacco Type Used" 
-Description: "Records the type of tobacco product currently or previously used by the patient (e.g., cigarettes, cigars, e-cigarettes)."
-* ^url = $tobacco-type-used-vs-lt-lifestyle-url
+ValueSet: TobaccoTypeUserLtLifestyle
+Id: tobacco-type-user
+Title: "Tobacco Type User" 
+Description: "Records the type of tobacco product currently or previously used by the person (e.g., cigarettes, cigars, e-cigarettes)."
+* ^url = $tobacco-type-user-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

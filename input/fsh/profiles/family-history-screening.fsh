@@ -14,6 +14,6 @@ Description: "Family Member History record."
 * status MS
 * condition MS
 * condition.code MS
-* condition.code from $screened-conditions-lt-lifestyle-url (preferred)
+* condition.code from $screened-condition-url (preferred)
 * date ..1 MS
 * dataAbsentReason MS

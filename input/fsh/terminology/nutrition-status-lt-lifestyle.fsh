@@ -1,8 +1,8 @@
 ValueSet: NutritionStatusLtLifestyle
-Id: nutrition-status-lt-lifestyle
+Id: nutrition-status
 Title: "Nutrition Status"
 Description: "Categorical assessment of whether the patient's nutrition is balanced or unbalanced."
-* ^url = $nutrition-status-lt-lifestyle-url
+* ^url = $nutrition-status-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

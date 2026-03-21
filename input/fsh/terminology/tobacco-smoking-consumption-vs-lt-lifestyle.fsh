@@ -1,8 +1,8 @@
 ValueSet: TobaccoSmokingConsumptionVSLtLifestyle
-Id: tobacco-smoking-consumption-vs-lt-lifestyle
+Id: tobacco-smoking-consumption
 Title: "Tobacco Smoking Consumption - Cigarettes per day" 
 Description: "Categorical representation of average cigarettes smoked per day."
-* ^url = $tobacco-smoking-consumption-vs-lt-lifestyle-url
+* ^url = $tobacco-smoking-consumption-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

@@ -1,8 +1,8 @@
 ValueSet: YesNoLt
-Id: yes-no-lt
+Id: yes-no
 Title: "Yes-No options"
 Description: "Selection Yes or No."
-* ^url = $yes-no-lt-url
+* ^url = $yes-no-url
 * ^status = #active
 * ^experimental = false
 * ^language = #en

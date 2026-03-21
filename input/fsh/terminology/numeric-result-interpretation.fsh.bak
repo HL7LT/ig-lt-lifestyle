@@ -1,8 +1,8 @@
 ValueSet: NumericResultInterpretationLtLifestyle
-Id: numeric-result-interpretation-lt-lifestyle
+Id: numeric-result-interpretation
 Title: "Numeric Result Interpretation value set"
 Description: "The HL7 V3:ObservationInterpretation code set (OID: 2.16.840.1.113883.5.83) that describes interpretations associated with a measured value."
-* ^url = $numeric-result-interpretation-lt-lifestyle-url
+* ^url = $numeric-result-interpretation-url
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false

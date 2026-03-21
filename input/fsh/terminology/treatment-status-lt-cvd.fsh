@@ -1,8 +1,8 @@
 ValueSet: TreatmentStatusLtLifestyle
-Id: treatment-status-lt-lifestyle
+Id: treatment-status
 Title: "Treatment Status"
 Description: "Indicates whether a screening treatment or intervention has been provided for a risk factor."
-* ^url = $treatment-status-lt-lifestyle-url
+* ^url = $treatment-status-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

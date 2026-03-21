@@ -1,8 +1,8 @@
 ValueSet: ScreenedConditionsLt
-Id: screened-conditions-lt
+Id: screened-condition
 Title: "Family Member History Screening Program Diseases"
 Description: "Indicates whether the patient has a family member history related to the screening program."
-* ^url = $screened-conditions-lt-lifestyle-url
+* ^url = $screened-condition-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

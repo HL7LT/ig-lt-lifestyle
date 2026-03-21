@@ -1,8 +1,8 @@
 ValueSet: ScreeningProgrammeLtCvd
-Id: screening-programme-lt-lifestyle
+Id: screening-programme
 Title: "Screening Programme"
 Description: "Represents the various screening programmes supported in Lithuania."
-* ^url = $screening-programme-lt-lifestyle-url
+* ^url = $screening-programme-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

@@ -25,5 +25,5 @@ Description: "Records the type of tobacco product currently or previously used b
 * effective[x] only dateTime
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from TobaccoTypeUsedVSLtLifestyle (preferred)
+* valueCodeableConcept from TobaccoTypeUserLtLifestyle (preferred)
 * component ..0

@@ -1,8 +1,8 @@
 ValueSet: FamilyHistoryDiabetesStatusLtLifestyle
-Id: family-history-diabetes-status-lt-lifestyle
-Title: "Family History of Diabetes"
+Id: family-history-diabetes-status
+Title: "Status of the Family History of Diabetes"
 Description: "Indicates whether the patient has a family history of diabetes mellitus."
-* ^url = $family-history-diabetes-status-lt-lifestyle-url
+* ^url = $family-history-diabetes-status-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

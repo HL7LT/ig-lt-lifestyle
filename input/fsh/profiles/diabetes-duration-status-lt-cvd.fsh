@@ -17,5 +17,5 @@ Description: "Observation indicating whether the patient has had Diabetes Mellit
 * effective[x] 1..
 * effective[x] only dateTime
 * value[x] only CodeableConcept
-* valueCodeableConcept from $yes-no-lt-url (required)
+* valueCodeableConcept from $yes-no-url (required)
 * valueCodeableConcept ^short = "Indicates whether diabetes duration exceeds 10 years."

@@ -1,8 +1,8 @@
 ValueSet: AlcoholUseFrequencyVSLtLifestyle
-Id: alcohol-use-frequency-lt-lifestyle
+Id: alcohol-use-frequency
 Title: "Alcohol Use Frequency"
 Description: "Frequency of alcohol consumption."
-* ^url = $alcohol-use-frequency-lt-lifestyle-url
+* ^url = $alcohol-use-frequency-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

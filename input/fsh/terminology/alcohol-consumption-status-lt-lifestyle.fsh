@@ -1,8 +1,8 @@
 ValueSet: AlcoholConsumptionStatusLtLifestyle
-Id: alcohol-consumption-status-lt-lifestyle
+Id: alcohol-consumption-status
 Title: "Alcohol Consumption Status"
 Description: "Whether the patient currently consumes alcohol, does not consume alcohol, or the status is unknown."
-* ^url = $alcohol-consumption-status-lt-lifestyle-url
+* ^url = $alcohol-consumption-status-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

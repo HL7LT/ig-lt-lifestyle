@@ -1,8 +1,8 @@
 ValueSet: FamilyHistoryCVDStatusLtLifestyle
-Id: family-history-cvd-status-lt-lifestyle
-Title: "Family History of Cardiovascular Disease"
+Id: family-history-cvd-status
+Title: "Status of the Family History of Cardiovascular Disease"
 Description: "Indicates whether the patient has a family history of cardiovascular disease."
-* ^url = $family-history-cvd-status-lt-lifestyle-url
+* ^url = $family-history-cvd-status-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

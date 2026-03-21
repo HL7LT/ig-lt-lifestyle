@@ -82,12 +82,11 @@ parameters:
     - https://tx.hl7.lt/fhir/ValueSet/physical-activity-level
     - https://tx.hl7.lt/fhir/ValueSet/smoking-status
     - https://tx.hl7.lt/fhir/ValueSet/tobacco-smoking-consumption
-    - https://tx.hl7.lt/fhir/ValueSet/tobacco-type-used
+    - https://tx.hl7.lt/fhir/ValueSet/tobacco-type-user
     - https://tx.hl7.lt/fhir/ValueSet/yes-no
     - https://tx.hl7.lt/fhir/ValueSet/screening-programme
-    - https://tx.hl7.lt/fhir/ValueSet/screened-conditions
+    - https://tx.hl7.lt/fhir/ValueSet/screened-condition
     - https://tx.hl7.lt/fhir/ValueSet/medication-taken
-    - https://tx.hl7.lt/fhir/ValueSet/severity
     - https://tx.hl7.lt/fhir/ValueSet/treatment-status
 
   excludettl: true

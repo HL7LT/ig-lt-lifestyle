@@ -30,25 +30,25 @@ Alias: $other-dietary-changes-ext-lt-lifestyle-url = https://hl7.lt/fhir/lifesty
 
 
 // ValueSet URL aliases (terminology URLs omit -lt-lifestyle suffix)
-Alias: $alcohol-consumption-status-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/alcohol-consumption-status
-Alias: $alcohol-use-frequency-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/alcohol-use-frequency
-Alias: $family-history-cvd-status-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/family-history-cvd-status
-Alias: $family-history-diabetes-status-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/family-history-diabetes-status
-Alias: $family-history-fh-status-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/family-history-fh-status
-Alias: $metabolic-syndrome-assessment-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/metabolic-syndrome-assessment
-Alias: $numeric-result-interpretation-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/numeric-result-interpretation
-Alias: $nutrition-status-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/nutrition-status
-Alias: $physical-activity-level-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/physical-activity-level
-Alias: $screening-programme-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/screening-programme
-Alias: $severity-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/severity
-Alias: $smoking-status-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/smoking-status
-Alias: $tobacco-smoking-consumption-vs-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/tobacco-smoking-consumption
-Alias: $tobacco-type-used-vs-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/tobacco-type-used
-Alias: $cvd-risk-degree-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/cvd-risk-degree
-Alias: $screening-programme-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/screening-programme
+Alias: $alcohol-consumption-status-url = https://tx.hl7.lt/fhir/ValueSet/alcohol-consumption-status
+Alias: $alcohol-use-frequency-url = https://tx.hl7.lt/fhir/ValueSet/alcohol-use-frequency
+Alias: $family-history-cvd-status-url = https://tx.hl7.lt/fhir/ValueSet/family-history-cvd-status
+Alias: $family-history-diabetes-status-url = https://tx.hl7.lt/fhir/ValueSet/family-history-diabetes-status
+Alias: $family-history-fh-status-url = https://tx.hl7.lt/fhir/ValueSet/family-history-fh-status
+Alias: $metabolic-syndrome-assessment-url = https://tx.hl7.lt/fhir/ValueSet/metabolic-syndrome-assessment
+Alias: $numeric-result-interpretation-url = https://tx.hl7.lt/fhir/ValueSet/numeric-result-interpretation
+Alias: $nutrition-status-url = https://tx.hl7.lt/fhir/ValueSet/nutrition-status
+Alias: $physical-activity-level-url = https://tx.hl7.lt/fhir/ValueSet/physical-activity-level
+Alias: $screening-programme-url = https://tx.hl7.lt/fhir/ValueSet/screening-programme
+Alias: $severity-url = https://tx.hl7.lt/fhir/ValueSet/severity
+Alias: $smoking-status-url = https://tx.hl7.lt/fhir/ValueSet/smoking-status
+Alias: $tobacco-smoking-consumption-url = https://tx.hl7.lt/fhir/ValueSet/tobacco-smoking-consumption
+Alias: $tobacco-type-user-url = https://tx.hl7.lt/fhir/ValueSet/tobacco-type-user
+Alias: $cvd-risk-degree-url = https://tx.hl7.lt/fhir/ValueSet/cvd-risk-degree
+Alias: $screening-programme-url = https://tx.hl7.lt/fhir/ValueSet/screening-programme
 
-Alias: $screened-conditions-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/screened-conditions
-Alias: $yes-no-lt-url = https://tx.hl7.lt/fhir/ValueSet/yes-no
-Alias: $severity-lt-url = https://tx.hl7.lt/fhir/ValueSet/severity
-Alias: $treatment-status-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/treatment-status
-Alias: $medication-taken-lt-lifestyle-url = https://tx.hl7.lt/fhir/ValueSet/medication-taken
+Alias: $screened-condition-url = https://tx.hl7.lt/fhir/ValueSet/screened-condition
+Alias: $yes-no-url = https://tx.hl7.lt/fhir/ValueSet/yes-no
+Alias: $severity-url = https://tx.hl7.lt/fhir/ValueSet/severity
+Alias: $treatment-status-url = https://tx.hl7.lt/fhir/ValueSet/treatment-status
+Alias: $medication-taken-url = https://tx.hl7.lt/fhir/ValueSet/medication-taken

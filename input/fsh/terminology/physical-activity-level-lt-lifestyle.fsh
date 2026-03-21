@@ -1,8 +1,8 @@
 ValueSet: PhysicalActivityLevelLtLifestyle
-Id: physical-activity-level-lt-lifestyle
+Id: physical-activity-level
 Title: "Physical Activity Level"
 Description: "Categorical assessment of whether the patient's physical activity meets, exceeds, or falls below recommended levels."
-* ^url = $physical-activity-level-lt-lifestyle-url
+* ^url = $physical-activity-level-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

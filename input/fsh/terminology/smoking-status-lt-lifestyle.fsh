@@ -1,8 +1,8 @@
 ValueSet: SmokingStatusLtLifestyle
-Id: smoking-status-lt-lifestyle
+Id: smoking-status
 Title: "Tobacco. Current Smoking Status"
 Description: "HL7 LT SNOMED value set for smoking status."
-* ^url = $smoking-status-lt-lifestyle-url
+* ^url = $smoking-status-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active

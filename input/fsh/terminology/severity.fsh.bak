@@ -1,8 +1,8 @@
 ValueSet: SeverityLt
-Id: severity-lt
+Id: severity
 Title: "Severity"
 Description: "Represents the severity or risk group classification of a clinical finding or Screening status, based on SNOMED CT severity qualifiers (e.g., mild, moderate, severe)."
-* ^url = $severity-lt-url
+* ^url = $severity-url
 * ^language = #en
 * ^version = "1.0.0"
 * ^status = #active
