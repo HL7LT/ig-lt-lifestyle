@@ -10,7 +10,7 @@ Description: "Observation indicating whether the patient has a family history of
 * ^date = "2025-10-27T19:55:00+03:00"
 * ^experimental = true
 * ^publisher = "HL7 Lithuania"
-* category = $observation-category#social-history "Social History"
+* category = $observation-category#survey "Survey"
 * code = $sct#266894000 "Family history: Cardiovascular disease (situation)"
 * subject 1..
 * subject only Reference(PatientLt)
@@ -19,3 +19,4 @@ Description: "Observation indicating whether the patient has a family history of
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from FamilyHistoryCVDStatusLtLifestyle (preferred)
+* note MS
