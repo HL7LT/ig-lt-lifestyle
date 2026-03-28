@@ -20,3 +20,4 @@ Description: "This profile constrains the Observation resource to represent the 
 * valueCodeableConcept 1..1
 * valueCodeableConcept from PhysicalActivityLevelLtLifestyle (preferred)
 * component ..0
+* note MS
