@@ -45,10 +45,7 @@ Alias: $smoking-status-url = https://tx.hl7.lt/fhir/ValueSet/smoking-status
 Alias: $tobacco-smoking-consumption-url = https://tx.hl7.lt/fhir/ValueSet/tobacco-smoking-consumption
 Alias: $tobacco-type-user-url = https://tx.hl7.lt/fhir/ValueSet/tobacco-type-user
 Alias: $cvd-risk-degree-url = https://tx.hl7.lt/fhir/ValueSet/cvd-risk-degree
-Alias: $screening-programme-url = https://tx.hl7.lt/fhir/ValueSet/screening-programme
-
 Alias: $screened-condition-url = https://tx.hl7.lt/fhir/ValueSet/screened-condition
 Alias: $yes-no-url = https://tx.hl7.lt/fhir/ValueSet/yes-no
-Alias: $severity-url = https://tx.hl7.lt/fhir/ValueSet/severity
 Alias: $treatment-status-url = https://tx.hl7.lt/fhir/ValueSet/treatment-status
 Alias: $medication-taken-url = https://tx.hl7.lt/fhir/ValueSet/medication-taken

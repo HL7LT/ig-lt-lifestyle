@@ -84,7 +84,3 @@ Alias: $valueset-supplement = http://hl7.org/fhir/StructureDefinition/valueset-s
 // VitalSigns
 Alias: $ucum-vitalsignsrate = http://hl7.org/fhir/ValueSet/ucum-vitalsignsrate
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-
-
-// LtBase
-Alias: $lt-base-patient = https://hl7.lt/fhir/base/StructureDefinition/lt-patient
