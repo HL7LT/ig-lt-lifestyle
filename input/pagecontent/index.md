@@ -49,5 +49,8 @@ This guide is organized into several sections that support implementation from o
 | Name | Role | Organization |
 |------|------|--------------|
 | [Igor Bossenko](https://about.askigor.eu) | Primary Author | [HELEX Solutions](https://helex.solutions) |
-| [Kati Laidus](https://www.linkedin.com/in/kati-laidus-1512813b2/) | Co-Author | [HELEX Solutions](https://helex.solutions) |
+| [Kati Laidus](https://www.linkedin.com/in/kati-laidus-1512813b2/) | Primary Author | [HELEX Solutions](https://helex.solutions) |
 | Martynas Bieliauskas | Co-Author | [LMB](https://lmb.lt) |
+| Audra Stepanauskaite | Co-Author | [LMB](https://lmb.lt) |
+| Albert Kuslevic | Co-Author | [LMB](https://lmb.lt) |
+
