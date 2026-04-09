@@ -1,50 +1,45 @@
 # Lietuvos gyvensenos įgyvendinimo gidas
 
-## Įvadas ir Tikslas
+## Įvadas ir tikslas
 
-Šis Įgyvendinimo Gidas (IG) nurodo, kaip nuosekliai atvaizduoti ir keistis kritiniais ne klinikiniais paciento duomenimis, susijusiais su gyvensena ir sveikatos elgsena, naudojant Fast Healthcare Interoperability Resources (FHIR) standartą. Tikslus šios informacijos fiksavimas ir dalijimasis yra gyvybiškai svarbus visapusiškai pacientų priežiūrai, rizikos stratifikacijai, lėtinių ligų valdymui ir visuomenės sveikatos iniciatyvoms.
+Šis **Įgyvendinimo Gidas (IG)** nurodo, kaip nuosekliai atvaizduoti ir keistis **struktūrizuotais paciento duomenimis**, susijusiais su **gyvensenos veiksniais**, **sveikatos elgsena** ir **patikros palaikymu**, naudojant **Fast Healthcare Interoperability Resources (FHIR)** standartą. Tikslus šios informacijos fiksavimas ir dalijimasis yra svarbus **prevencijos**, **rizikos stratifikacijos**, **lėtinių ligų valdymo**, **patikros darbo eigos** ir **populiacijos sveikatos** tikslams.
 
-## Apimtis ir Pagrindiniai Stebėjimai
+Šis gidas palaiko **standartizuotą su gyvensenai susijusių duomenų atvaizdavimą**, kad jie galėtų būti nuosekliai **registruojami, keičiami ir interpretuojami** per **klinikinius sistemas**, **pacientų programėles**, **tyrimų aplinkas** ir **visuomenės sveikatos infrastruktūras**.
 
-Šis gidas pateikia struktūrizuotus FHIR profilius ir gaires pagrindiniams gyvensenos veiksniams ir susijusiam patikros palaikymui, įskaitant:
+## Auditorija
 
-- **Tabako vartojimas**: Rūkymo statusas, poveikis, metimo istorija, vartojamo tipas, suvartojimo lygis ir trukmė.
-- **Alkoholio vartojimas**: Vartojimo įpročiai, patikros rezultatai (pvz., AUDIT-C) ir intervencijos istorija.
-- **Fizinis aktyvumas**: Mankštos dažnumas, trukmė, intensyvumas (pvz., MET), žingsnių skaičius ir matavimo įrenginiai.
-- **Mitybos įpročiai**: Specifinių maistinių medžiagų suvartojimas (pvz., natrio, cukraus) ir bendrieji mitybos modeliai.
-- **Šeimos istorija**: Širdies ir kraujagyslių ligų bei diabeto statusas; šeimos nario patikros istorija patikros programose.
-- **Metabolinio sindromo**: NCEP ATP III įvertinimas.
-- **Patikros palaikymas**: AUDIT-C bendras balas (ir nuoroda į QuestionnaireResponse), vaistų vartojimas patikros kontekste ir diabeto trukmės statusas.
-- **Plėtiniai**: Kitos veiklos aprašymas, kiti pageidaujami mitybos pakeitimai ir vaistų laiko plėtinys patikrai.
+Šis gidas skirtas **įgyvendinimo gidų autoriams, sistemų tiekėjams, integruotojams, sveikatos sprendimų kūrėjams ir kitiems suinteresuotiesiems**, dalyvaujantiems keičiantis **su gyvensenai ir patikrai susijusiais duomenimis naudojant FHIR**. Tikimasi, kad skaitytojai turi bent **bazinį FHIR supratimą** ir prireikus kreips į **pagrindinę FHIR specifikaciją**.
 
-### Apimtys iš esmės
+## Apimtis ir pagrindinis turinys
 
-| Tabakas | Alkoholis | Fizinis aktyvumas | Mityba | Metabolinis sindromas | Šeimos istorija | Patikra ir klausimynai | Plėtiniai |
-|---------|-----------|-------------------|--------|----------------------|----------------|------------------------|-----------|
-| Vartojimas, suvartojimas, nutrauktas, tipas, trukmė | Suvartojimas, vartojimo istorija, AUDIT-C | Aktyvumo lygis, žingsniai, įrenginys | Mitybos statusas | NCEP ATP III | ŠKL, diabetas, nario patikra | Vaistų pareiškimas, AUDIT-C, diabeto trukmė | Kitos veiklos, mitybos pakeitimai, vaistų laikas |
+Šis gidas pateikia **struktūrizuotus FHIR profilius ir įgyvendinimo gaires** pagrindiniam **gyvensenos** ir **su patikra susijusių sričių** rinkiniui, įskaitant:
 
-## Ištekliai – apžvalga
+- **Tabako vartojimas:** Rūkymo statusas, poveikis, metimo istorija, vartojamo tipas, suvartojimo lygis ir trukmė.
+- **Alkoholio vartojimas:** Vartojimo įpročiai, vartojimo istorija ir patikros rezultatai, pvz. **AUDIT-C**.
+- **Fizinis aktyvumas:** Aktyvumo lygis, trukmė, intensyvumas, **žingsnių skaičius** ir **matavimo įrenginiai**.
+- **Mityba:** Maisto suvartojimas ir susiję **mitybos stebėjimai**.
+- **Šeimos istorija:** Širdies ir kraujagyslių ligų, **diabeto** šeimos istorija ir **su patikra susiję šeimos nario istorijos duomenys**.
+- **Metabolinis sindromas:** **Metabolinio sindromo** įvertinimas pagal **NCEP ATP III** kriterijus.
+- **Patikros palaikymas:** **Klausimyno patikros palaikymas**, **vaistų vartojimo pareiškimai patikros kontekste** ir **diabeto trukmės statusas**.
 
-Visi atitikties ir pavyzdžių ištekliai pateikti **Artefaktų** puslapyje. Iš ten galite atidaryti:
-
-* **Profiliai** — Observation, FamilyMemberHistory, MedicationStatement, Device, Questionnaire ir plėtinių StructureDefinition.
-* **Terminologija** — profiliuose naudojami ValueSets (ir CodeSystems).
-* **Pavyzdžiai** — pavyzdiniai įvykiai kiekvienam profiliui.
-
-Profilų apžvalgą pagal sritį rasite [Profiliai](profiles.html). Terminologiją pagal temą – [Terminologija](terminology.html). Pavyzdinius įvykius pagal sritį – [Pavyzdžiai](examples.html).
+Palaikantys artefaktai taip pat apima **plėtinius** kitų veiklos aprašymams, mitybos pakeitimams ir vaistų laikui.
 
 ## Kodėl verta naudoti šį gidą?
 
-Priimdami šiuos profilius, diegėjai gali užtikrinti standartizuotą požiūrį į:
+Priimdami šiuos profilius ir gaires, diegėjai gali palaikyti standartizuotą požiūrį į:
 
-Sąveika: Palengvinti vientisą, semantinį gyvensenos duomenų mainus tarp Elektroninių sveikatos įrašų (ESI) sistemų, pacientų portalų, tyrimų sistemų ir visuomenės sveikatos registrų.
+- **Sąveikumą:** Palengvinti **vientisą, semantinį** gyvensenos ir patikros duomenų mainus tarp **Elektroninių sveikatos įrašų (ESI)**, **pacientų portalų**, **patikros sistemų**, **tyrimų platformų** ir **visuomenės sveikatos registrų**.
+- **Duomenų kokybę:** Pagerinti užfiksuotų stebėjimų ir **klausimyno duomenų** **nuoseklumą**, **išsamumą** ir **palyginamumą** per **standartizuotas struktūras**, **duomenų tipus** ir **terminologijos susiejimus**.
+- **Klinikinę naudą:** Palaikyti **prevenciją**, **rizikos vertinimą**, **patikros darbo eigą**, **klinikinių sprendimų palaikymą** ir **populiacijos sveikatos analizę**, pateikiant su gyvensenai susijusią informaciją **struktūrizuota ir daugkartinio naudojimo forma**.
 
-Duomenų kokybė: Pagerinti užfiksuotų stebėjimų nuoseklumą, išsamumą ir klinikinę naudą per privalomus reikšmių rinkinius (ValueSets) ir duomenų tipus.
+## Kaip naršyti šiame gide?
 
-Klinikinė nauda: Palaikyti klinikinio sprendimo palaikymo, kokybės rodiklių ataskaitų teikimo ir gyventojų sveikatos valdymo pastangas, kurios remiasi tiksliu elgsenos ir biometriniu kontekstu.
+Šis gidas suskirstytas į kelias dalis, kurios palaiko įgyvendinimą nuo apžvalgos iki išsamių atitikties artefaktų. Visi **atitikties** ir **pavyzdiniai ištekliai** išvardyti [**Artefaktų**](artifacts.html) puslapyje. Pagrindiniai skyriai:
 
-Naudokite [Profiliai](profiles.html), [Terminologija](terminology.html) ir [Pavyzdžiai](examples.html) puslapius apžvalgoms bei [Artefaktai](artifacts.html) puslapį pilnam profilių, terminologijos susiejimų ir pavyzdžių sąrašui, reikalingam standartui įdiegti.
----
+- [**Artefaktai**](artifacts.html) — Pilnas **profilių, plėtinių, terminologijos išteklių ir pavyzdinių įvykių** sąrašas, apibrėžtas šiame gide.
+- [**Profiliai**](profiles.html) — **StructureDefinition** stebėjimams, šeimos istorijai, vaistų vartojimo pareiškimams, klausimynams, įrenginiams ir plėtiniams.
+- [**Terminologija**](terminology.html) — **ValueSets** ir terminologijos susiejimai, naudojami profiliuose.
+- [**Pavyzdžiai**](examples.html) — Pavyzdiniai įvykiai **gyvensenos**, **patikros** ir **palaikančių išteklių** srityse.
 
 ## IP teiginiai
 <!-- { // dar nepalaiko i18n IG leidėjuje: % include ip-statements.xhtml %} -->
@@ -52,7 +47,9 @@ Naudokite [Profiliai](profiles.html), [Terminologija](terminology.html) ir [Pavy
 ## Prisidėjusieji
 
 | Vardas | Pareigos | Organizacija |
-| ------------------------------------------------------------ | --------------------------------------------- | ---------------------------------------------------- |
-| [Igor Bossenko](https://about.askigor.eu)     | Primary Author                | [HELEX Solutions](https://helex.solutions) |
-| [Kati Laidus](https://www.linkedin.com/in/kati-laidus/) | Co-Author                 | [HELEX Solutions](https://helex.solutions)               |
-| Martynas Bieliauskas                           | Co-Author                  | [LMB](https://lmb.lt)               |
+|--------|----------|--------------|
+| [Igor Bossenko](https://about.askigor.eu) | Pagrindinis autorius | [HELEX Solutions](https://helex.solutions) |
+| [Kati Laidus](https://www.linkedin.com/in/kati-laidus-1512813b2/) | Pagrindinis autorius | [HELEX Solutions](https://helex.solutions) |
+| Martynas Bieliauskas | Bendraautoris | [LMB](https://lmb.lt) |
+| Audra Stepanauskaite | Bendraautoris | [LMB](https://lmb.lt) |
+| Albert Kuslevic | Bendraautoris | [LMB](https://lmb.lt) |
