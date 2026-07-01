@@ -1,0 +1,44 @@
+name: Rebuild on build.fhir.org
+
+# Manually re-trigger the HL7 CI build (build.fhir.org) for this IG without
+# having to push a new commit. It POSTs to the FHIR/auto-ig-builder commit
+# trigger, which reschedules the build for the selected branch.
+#
+# Run it from the "Actions" tab -> "Rebuild on build.fhir.org" -> "Run workflow".
+# Results appear at:
+#   https://build.fhir.org/ig/<owner>/<repo>/branches/<branch>
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Branch to rebuild (defaults to the branch this workflow runs on)
+        required: false
+        default: ""
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger auto-ig-builder
+        run: |
+          set -euo pipefail
+          branch="${{ github.event.inputs.branch }}"
+          branch="${branch:-${{ github.ref_name }}}"
+          repo="${{ github.repository }}"
+          echo "Requesting rebuild of ${repo}@${branch} on build.fhir.org"
+
+          response=$(curl -sS -X POST \
+            https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger \
+            -H 'Content-Type: application/json' \
+            -d "{\"ref\":\"refs/heads/${branch}\",\"repository\":{\"full_name\":\"${repo}\"}}")
+
+          echo "Trigger response: ${response}"
+          echo "Follow the build at: https://build.fhir.org/ig/${repo}/branches/${branch}"
+
+          # The trigger returns {"created":false,"reason":"..."} when it declines
+          # to schedule (e.g. missing ig.ini). Fail the job so it is visible.
+          if echo "${response}" | grep -q '"created":false'; then
+            echo "::error::Build was not scheduled. See reason above."
+            exit 1
+          fi
