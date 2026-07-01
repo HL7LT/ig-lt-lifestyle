@@ -4,7 +4,7 @@ Usage: #example
 Title: "Observation: Family History of Cardiovascular Disease – Positive (example)"
 Description: "Patient reports a positive family history of cardiovascular disease."
 * status = #final
-* category = $observation-category#social-history "Social History"
+* category = $observation-category#survey "Survey"
 * code = $sct#266894000 "Family history: Cardiovascular disease (situation)"
 * subject = Reference(patient-male-example)
 * effectiveDateTime = "2025-10-01T09:00:00Z"
