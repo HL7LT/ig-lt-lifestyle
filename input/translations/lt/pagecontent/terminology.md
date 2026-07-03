@@ -14,7 +14,7 @@
 | ValueSet | Aprašymas |
 |----------|-----------|
 | [Tabakas. Dabartinis rūkymo statusas](ValueSet-smoking-status.html) | Dabartinis rūkymo statusas. |
-| [Vartojamo tabako tipas](ValueSet-tobacco-type-used.html) | Tabako produkto tipas. |
+| [Vartojamo tabako tipas](ValueSet-tobacco-type-user.html) | Tabako produkto tipas. |
 | [Tabako rūkymo suvartojimas](ValueSet-tobacco-smoking-consumption.html) | Cigaretės per dieną (arba ekvivalentas). |
 
 ## Šeimos istorija
@@ -47,7 +47,7 @@
 | ValueSet | Aprašymas |
 |----------|-----------|
 | [Patikros programa](ValueSet-screening-programme.html) | Patikros programos identifikatorius. |
-| [Šeimos nario istorijos patikros programos ligos](ValueSet-screened-conditions-lt.html) | Šeimos nario istorijoje tikrinamos būsenos. |
+| [Šeimos nario istorijos patikros programos ligos](ValueSet-screened-condition.html) | Šeimos nario istorijoje tikrinamos būsenos. |
 
 ## Vaistai ir gydymas
 
@@ -60,4 +60,4 @@
 
 | ValueSet | Aprašymas |
 |----------|-----------|
-| [Taip-Ne parinktys](ValueSet-yes-no-lt.html) | Taip/ne atsakymas. |
+| [Taip-Ne parinktys](ValueSet-yes-no.html) | Taip/ne atsakymas. |
