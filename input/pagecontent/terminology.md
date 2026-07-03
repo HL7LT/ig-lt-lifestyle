@@ -14,7 +14,7 @@ This page lists the ValueSets (and CodeSystems, if any) used in this IG, grouped
 | ValueSet | Description |
 |----------|-------------|
 | [Tobacco. Current Smoking Status](ValueSet-smoking-status.html) | Current smoking status. |
-| [Tobacco Type Used](ValueSet-tobacco-type-used.html) | Type of tobacco product. |
+| [Tobacco Type Used](ValueSet-tobacco-type-user.html) | Type of tobacco product. |
 | [Tobacco Smoking Consumption](ValueSet-tobacco-smoking-consumption.html) | Cigarettes per day (or equivalent). |
 
 ## Family History
@@ -47,7 +47,7 @@ This page lists the ValueSets (and CodeSystems, if any) used in this IG, grouped
 | ValueSet | Description |
 |----------|-------------|
 | [Screening Programme](ValueSet-screening-programme.html) | Screening programme identifier. |
-| [Family Member History Screening Program Diseases](ValueSet-screened-conditions-lt.html) | Conditions screened in family member history. |
+| [Family Member History Screening Program Diseases](ValueSet-screened-condition.html) | Conditions screened in family member history. |
 
 ## Medication and Treatment
 
@@ -60,4 +60,4 @@ This page lists the ValueSets (and CodeSystems, if any) used in this IG, grouped
 
 | ValueSet | Description |
 |----------|-------------|
-| [Yes-No options](ValueSet-yes-no-lt.html) | Yes/no response. |
+| [Yes-No options](ValueSet-yes-no.html) | Yes/no response. |
