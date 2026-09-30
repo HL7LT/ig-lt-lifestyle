@@ -4,6 +4,11 @@ Instance: questionnaire-audit-c-example
 InstanceOf: Questionnaire
 Usage: #example
 Description: "The Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) is a 3-item alcohol screen that can help identify persons who are hazardous drinkers or have active alcohol use disorders (including alcohol abuse or dependence). It is a subset of the 10-question AUDIT instrument and has been found to be as effective as the full AUDIT in identifying patients who are hazardous drinkers or have active alcohol use disorders. [PMID: 12695273]"
+// questionnaire-response-auditc-example references this Questionnaire by canonical,
+// so it needs a url; without one the reference resolved to nothing and the response
+// could not be validated against the form at all. Every other Questionnaire in the
+// portfolio sets one.
+* url = "https://hl7.lt/fhir/lifestyle/Questionnaire/questionnaire-audit-c-example"
 * version = "8.0.1"
 * name = "AUDIT_C"
 * title = "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"

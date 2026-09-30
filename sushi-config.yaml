@@ -9,7 +9,7 @@ name: LTLifestyle
 title: Lithuanian Lifestyle Implementation Guide
 description: Lithuanian Lifestyle Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.0.1
+version: 0.1.0
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build
@@ -22,8 +22,8 @@ publisher:
 
 # don't change the order of dependencies!
 dependencies:
-  lt.hl7.fhir.base: 0.3.0
-  lt.hl7.fhir.eu: 0.0.2
+  lt.hl7.fhir.base: 0.4.0
+  lt.hl7.fhir.eu: 0.0.3
   hl7.fhir.eu.base-r5: 0.1.0
 
   # lt.hl7.fhir.eu: 0.0.2
@@ -68,26 +68,26 @@ pages:
 
 
 parameters:
-  special-url-base: https://hl7.lt/fhir
+  # Canonicals this guide deliberately hosts outside its own base. See
+  # _audit/fix-special-url.js for why each namespace is re-hosted here.
+  special-url-base:
+    - https://tx.hl7.lt/fhir
   special-url:
-    - https://terminology.hl7.lt/fhir
     - https://tx.hl7.lt/fhir/ValueSet/alcohol-consumption-status
     - https://tx.hl7.lt/fhir/ValueSet/alcohol-use-frequency
     - https://tx.hl7.lt/fhir/ValueSet/family-history-cvd-status
     - https://tx.hl7.lt/fhir/ValueSet/family-history-diabetes-status
-    - https://tx.hl7.lt/fhir/ValueSet/family-history-fh-status
+    - https://tx.hl7.lt/fhir/ValueSet/medication-taken
     - https://tx.hl7.lt/fhir/ValueSet/metabolic-syndrome-assessment
-    - https://tx.hl7.lt/fhir/ValueSet/numeric-result-interpretation
     - https://tx.hl7.lt/fhir/ValueSet/nutrition-status
     - https://tx.hl7.lt/fhir/ValueSet/physical-activity-level
+    - https://tx.hl7.lt/fhir/ValueSet/screened-condition
+    - https://tx.hl7.lt/fhir/ValueSet/screening-programme
     - https://tx.hl7.lt/fhir/ValueSet/smoking-status
     - https://tx.hl7.lt/fhir/ValueSet/tobacco-smoking-consumption
     - https://tx.hl7.lt/fhir/ValueSet/tobacco-type-user
-    - https://tx.hl7.lt/fhir/ValueSet/yes-no
-    - https://tx.hl7.lt/fhir/ValueSet/screening-programme
-    - https://tx.hl7.lt/fhir/ValueSet/screened-condition
-    - https://tx.hl7.lt/fhir/ValueSet/medication-taken
     - https://tx.hl7.lt/fhir/ValueSet/treatment-status
+    - https://tx.hl7.lt/fhir/ValueSet/yes-no
 
   excludettl: true
   shownav: true
